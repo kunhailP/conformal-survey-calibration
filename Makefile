@@ -1,5 +1,9 @@
-.PHONY: all exp01 test clean
-all: exp01 test
+.PHONY: all exp01 test numbers paper clean
+all: exp01 test numbers
+numbers:
+	python3 paper/build_numbers.py
+paper: numbers
+	cd paper && latexmk -pdf main.tex
 exp01:
 	python3 experiments/exp01_shape_audit.py
 test:

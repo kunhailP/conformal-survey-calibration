@@ -1,0 +1,74 @@
+\section{Survey applications}\label{sec:applications}
+
+\subsection{Data and design}
+We use European Social Survey rounds 9--11, which carry primary sampling unit,
+stratum, region and weight variables for all 33 participating countries
+\citep{essdata2024}. Curves are weighted cumulative distributions of trust in
+parliament on the preregistered low-trust core $t\in\{1,2,3,4\}$, the grid of
+the implementation under study; since $D$ in~\eqref{eq:D} is a maximum over
+coordinates, the grid is not a cosmetic choice. Design variances come from a
+Rao--Wu--Yue rescaled stratified bootstrap with $B=400$
+\citep{rao1992recent,wolter2007introduction}.
+
+\paragraph{The resampling unit.} The regional estimand is a region's departure
+from its own national distribution, and region and national curves are
+recomputed inside each replicate before differencing so that their covariance
+propagates. The resampling unit is $(\text{stratum},\text{psu})$, never
+$(\text{stratum},\text{psu},\text{region})$: a primary sampling unit spanning
+two regions must enter a replicate whole, or the dependence the resample exists
+to represent is destroyed.
+
+Whether this matters is an empirical question about the design files, and we
+audited all \AudCountryRounds{} country-rounds and \AudRespondents{}
+respondents. Sampling units nest inside regions for all but \AudSplitShare\% of
+respondents, with violations in \AudSplit{} of \AudInformative{} country-rounds
+carrying informative units. Strata fail to nest in regions in
+\AudStratumSplit{} of \AudCountryRounds. In \AudDegenerate{} country-rounds the
+unit identifier is degenerate, equalling the respondent identifier: correct for
+individual-level register samples, but it means the pooled analysis mixes
+design variances that do and do not contain a clustering component, which we
+report separately rather than average over.
+
+\subsection{National estimates: the correction is unnecessary}
+At the national unit the design share is \NatRhoLo--\NatRhoHi{} on full samples,
+per round and for the stacked trajectory, and reaches \NatScanHi{} in a
+\NatScanCells-cell subgroup scan by age band and minimum sample size. The need
+gate opens in \NatGateA{} of \NatConfigs{} configurations. Whatever else is
+true, there is little sampling variance to remove relative to the dispersion
+between countries. Consistently with Proposition~\ref{prop:coupling}, the
+dispersion term $h$ is negligible here, \NatHeteroLo--\NatHeteroHi\%: at
+$K\le33$ the diagnostic is essentially its sample-size floor.
+
+\subsection{Regional estimates: needed, and mostly unreachable}
+One unit down the picture reverses. Across \RegConfigs{} configurations, two
+pools by three rounds by five minimum region sizes, the design share runs
+\RegRhoLo--\RegRhoHi{} and the need gate opens in \RegGateA. The reliability
+gate opens in \RegGateB, and the correction activates in \RegActivations.
+
+The sample-size floor is not the obstacle. It is cleared in
+\RegFloorCleared{} of \RegConfigs{} configurations, at counts up to \RegKmax.
+What binds is the coupling. The identity~\eqref{eq:identity} reproduces the
+realised diagnostic to \IdErr\% mean and \IdErrMax\% maximum relative error, the
+correlation between the design share and the diagnostic's inflation above its
+floor is \RegCorrRhoRatio, and the closed-form boundary~\eqref{eq:boundary}
+predicts the gate in \BoundCorrect{} of \RegConfigs{} configurations against
+\BoundNaive{} admitted by the $K\ge94$ rule. The four activations sit where the
+boundary says they can: at the smallest region size, and three of four in
+round~11, the round with the lowest design share.
+
+\subsection{Verification}
+Three checks accompany the above. The conclusion does not move with the
+bootstrap draw (four seeds, $D$ within $0.001$) or the replicate count
+($B=200$ to $2000$, $D$ within $0.002$).
+
+The third check separates the two departures from the inherited analysis. Under
+the archive's own settings our implementation reproduces its reported diagnostic
+to four decimal places, so the comparison is between the same statistic computed
+two ways. The variance estimator is then decisive and the resampling unit is
+not: the reliability gate opens in \VerMofmOpen{} of \VerMofmN{} $m$-of-$m$ arms
+and \VerRwyOpen{} of \VerRwyN{} Rao--Wu--Yue arms, with $\tau=0.147$ falling
+inside that gap, while the resampling unit moves $D$ by under
+$0.1\%$ and never flips a gate. The latter follows from the design audit: with
+\AudSplitShare\% of respondents in a region-splitting unit, there was little for
+that correction to move. A downward-biased variance estimator makes a
+correction look reachable that a defensible one does not.

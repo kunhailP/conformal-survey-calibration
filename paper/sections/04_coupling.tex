@@ -1,0 +1,74 @@
+\section{Two gates, one quantity}\label{sec:coupling}
+
+An adaptive implementation of the correction guards it with gates computed from
+the calibration set \citep{park2026wrongunit}. Two matter here. A \emph{need}
+gate requires the design share to exceed a frozen cutoff, $\rhohat>\rho_0$ with
+$\rho_0=0.47$. A \emph{reliability} gate requires
+\begin{equation}\label{eq:D}
+D=\max_j\frac{\sqrt{2\,s_Y^4(j)/(K-1)+\big(\mathrm{SD}_K(\widehat v^2(j))/\sqrt K\big)^2}}
+{\widehat s_G^2(j)}\ \le\ \tau,
+\end{equation}
+where $\widehat s_G^2$ is the guarded scale, which subtracts a one-sided margin
+below the mean design variance so that an uncertain estimate subtracts less. At
+the frozen $\tau=0.147$ the implementation reports the requirement $K\ge94$,
+obtained by noting $\widehat s_G^2\le s_Y^2$, whence $D\ge\sqrt{2/(K-1)}$.
+
+That floor is correct and, as an account of what blocks the correction,
+misleading. The two gates are not independent requirements on two dimensions.
+
+\begin{proposition}[Gate coupling]\label{prop:coupling}
+Let $\kappa(j)=\widehat s_G^2(j)/s_Y^2(j)\in(0,1]$ be the scale shrinkage and let
+\[
+h(j)=\frac{\big(\mathrm{SD}_K(\widehat v^2(j))/\sqrt K\big)^2}
+{2s_Y^4(j)/(K-1)+\big(\mathrm{SD}_K(\widehat v^2(j))/\sqrt K\big)^2}
+\]
+be the share of the squared standard error contributed by dispersion of design
+variances across populations. Then at the coordinate attaining the maximum
+in~\eqref{eq:D},
+\begin{equation}\label{eq:identity}
+D=\sqrt{\frac{2}{K-1}}\cdot\frac{1}{\kappa\sqrt{1-h}},
+\end{equation}
+and under~(S), where the guarded subtraction recovers the design share,
+$\kappa\approx1-\rho^2$, so the reliability gate $D\le\tau$ is
+\begin{equation}\label{eq:boundary}
+K\ \ge\ 1+\frac{2}{\tau^2\,(1-\rho^2)^2\,(1-h)}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write $A=2s_Y^4/(K-1)$ and $B=(\mathrm{SD}_K(\widehat v^2)/\sqrt K)^2$ at the
+maximising coordinate, so $h=B/(A+B)$ and $A+B=A/(1-h)$. Then
+$D=\sqrt{A+B}/\widehat s_G^2=\sqrt{A/(1-h)}/(\kappa s_Y^2)
+=\sqrt{2/(K-1)}\,/(\kappa\sqrt{1-h})$, which is~\eqref{eq:identity}.
+Substituting $\kappa=1-\rho^2$ and solving $D\le\tau$ for $K$
+gives~\eqref{eq:boundary}.
+\end{proof}
+
+The content is the placement of $\rho$ in~\eqref{eq:boundary}. The
+deconvolution shrinks the target scale by $1-\rho^2$, and the diagnostic
+divides by that shrunken scale, so the same design share that opens the need
+gate inflates the diagnostic by $(1-\rho^2)^{-1}$ and works to close the
+reliability gate. \textbf{Design noise large enough to be worth removing is, by
+that magnitude, large enough to leave the remainder poorly determined.}
+
+The reported floor of $94$ is~\eqref{eq:boundary} evaluated at $\rho\to0$ and
+$h\to0$: it is the requirement in the regime where the correction is not needed.
+At the need cutoff itself, $\rho=\rho_0=0.47$, the requirement is already
+$K\ge\KreqCut$; at $\rho=0.60$ it is $\KreqSix$, and at $\rho=0.66$, the largest
+design share in our applications, $\KreqMax$.
+
+\begin{table}[htbp]\centering
+\caption{Populations required by~\eqref{eq:boundary} at $\tau=0.147$ and $h=0$.
+The reported floor of 94 is the entry at a design share of zero, where nothing
+needs removing. The need gate opens at $\rho_0=0.47$.}\label{tab:boundary}
+\begin{tabular}{lrrrrr}\toprule
+design share $\rho$ & $0$ & $0.30$ & $0.47$ & $0.60$ & $0.66$\\\midrule
+populations required & \KreqZero & 113 & \KreqCut & \KreqSix & \KreqMax\\
+\bottomrule\end{tabular}
+\end{table}
+
+Section~\ref{sec:applications} checks~\eqref{eq:identity}
+and~\eqref{eq:boundary} against \RegConfigs{} survey configurations. The
+identity holds to \IdErr\% mean and \IdErrMax\% maximum relative error, and the
+boundary predicts the gate correctly in \BoundCorrect{} of \RegConfigs{}
+configurations, against \BoundNaive{} that the $K\ge94$ rule would admit.

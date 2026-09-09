@@ -1,0 +1,42 @@
+\section{The scale correction and the assumption it needs}\label{sec:correction}
+
+A narrower latent-target band is available under a stronger model. Suppose,
+for deterministic design scales,
+\begin{equation}\label{eq:shape}
+Y_c(j)=\sqrt{s_G^2(j)+v_c^2(j)}\,W_c(j),\qquad G_{K+1}(j)=s_G(j)W_{K+1}(j),
+\end{equation}
+where $W_1,\dots,W_{K+1}$ are independent curves with a common law, zero
+coordinate means and unit coordinate variances. Call this assumption~(S). The
+oracle scores $M_c=\max_j|Y_c(j)|/\sqrt{s_G^2(j)+v_c^2(j)}$ are then copies of
+$\|W\|_\infty$, and their conformal quantile placed on the latent scale gives a
+T2 band by the same rank argument.
+
+Assumption~(S) is stronger than a variance decomposition, and the difference is
+the subject of Section~\ref{sec:simulation}. Knowing $v_c^2(j)$ does not
+identify the cross-coordinate dependence of the latent scores. Gaussian latent
+curves and Gaussian sampling errors can violate~(S) whenever their correlation
+matrices differ, because a standardised sum of independent processes need not
+share a summand's law. Substantively, (S) requires the sampling error to carry
+the same cross-threshold correlation profile as the population differences, so
+that noise changes only the scale of a common shape.
+
+Write $s_Y^2(j)=s_G^2(j)+\overline{v^2}(j)$ for the observed spread and
+\begin{equation}\label{eq:rho}
+\rho^2(j)=\overline{v^2}(j)\big/s_Y^2(j)\in[0,1)
+\end{equation}
+for the \emph{design share}, the fraction of observed dispersion attributable to
+sampling. The oracle scale ratio is $s_G/s_Y=\sqrt{1-\rho^2}$, so the
+correction's maximal proportional gain is $1-\sqrt{1-\rho^2}$, second order in
+$\rho$. That ratio is not the ratio of realised band widths, which also carries
+the ratio of two conformal quantiles.
+
+\paragraph{Estimated scales.} With estimated denominators differing from oracle
+values by relative error at most $\delta<1$ outside an event of probability
+$\eta$,
+\begin{equation}\label{eq:perturb}
+\Pr(\mathrm{miss})\le\alpha+\eta+
+\Pr\!\left\{M_{K+1}\in\left(M_{(m)}\tfrac{1-\delta}{1+\delta},\,M_{(m)}\right]\right\},
+\end{equation}
+which names the two further ingredients: control of scale-estimation error, and
+anti-concentration of the score law near the calibration quantile. Rates for
+these do not supply a numerical finite-sample level without their constants.

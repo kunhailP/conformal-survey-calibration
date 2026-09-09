@@ -1,0 +1,25 @@
+Repeated surveys produce estimated distributions for many populations, and
+those estimates are increasingly used to calibrate a prediction band for a
+further population. The calibration objects then carry sampling error of their
+own, so a band calibrated on them covers a further survey estimate but not
+automatically the underlying population distribution. We separate these two
+targets and ask when the sampling error can be removed. An exchangeable-
+population conformal band gives finite-sample coverage for a further survey
+estimate; coverage for the underlying distribution requires either a
+sampling-error bound, which is shape-free and wide, or a scale correction,
+which requires the standardised observed and underlying curves to share a law.
+We then show that the two conditions an adaptive implementation of that
+correction gates on are not independent. The correction shrinks the target
+scale in proportion to the design share, and its reliability diagnostic is
+evaluated on that shrunken scale, so the requirement is a closed-form boundary
+in which the needed population count rises as the fourth power of the design
+share's complement. The implementation's reported floor of 94 populations is
+this boundary at a design share of zero, the regime where nothing needs
+removing; at the share where its own need gate opens the requirement is 153.
+Across 30 configurations of European Social Survey regional estimates the
+boundary predicts the gate correctly in all of them, while the fixed floor is
+cleared in 27 and the correction activates in 4. National estimates sit in the
+unnecessary regime. A simulation with exactly correct variances shows that
+mismatched correlation structures cost simultaneous coverage in the direction
+expected for cumulative distributions, growing with the number of coordinates
+rather than shrinking with the number of populations.

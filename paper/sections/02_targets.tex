@@ -1,0 +1,64 @@
+\section{Two prediction targets}\label{sec:targets}
+
+Let $c=1,\dots,K$ index calibration populations and $j=1,\dots,d$ a fixed stack
+of response thresholds, and where applicable survey rounds. Relative to a
+prediction centre $\mu$,
+\begin{equation}\label{eq:decomp}
+Y_c(j)=\Ftilde_c(j)-\mu(j)=G_c(j)+S_c(j),\qquad G_c(j)=F_c(j)-\mu(j),
+\end{equation}
+with $S_c$ the survey estimation error and $v_c^2(j)$ its design variance.
+Conditional on a finite population, design-unbiased or approximately unbiased
+estimation motivates a centred error; for a weighted empirical distribution the
+usual ratio form is not exactly design-unbiased, and we keep the idealised
+centred model of the theory separate from its survey approximation.
+
+The two statements of interest are
+\begin{equation}\label{eq:t1t2}
+\Pr\{\Ftilde_{K+1}(j)\in\Bhat(j)\ \forall j\}\ge 1-\alpha
+\quad\text{(T1)},\qquad
+\Pr\{F_{K+1}(j)\in\Bhat(j)\ \forall j\}\ge 1-\alpha
+\quad\text{(T2)}.
+\end{equation}
+Both average over the population-level model and, for observed objects, their
+sampling mechanisms. Neither is conditional coverage for a named population.
+Exchangeability is assumed of the observed curves \emph{together with their
+designs and observation patterns}; a shared label such as ``country'' does not
+establish it, and unlike designs can defeat it even when the latent curves are
+exchangeable. Departures are a separate problem with its own
+framework \citep{barber2023conformal}.
+
+Table~\ref{tab:targets} states what each construction may claim.
+
+\begin{table}[htbp]\centering
+\caption{Constructions, the target each may claim, and the basis of the claim.
+All statements are simultaneous on a fixed finite grid.}\label{tab:targets}
+\begin{tabular}{p{.24\linewidth}p{.20\linewidth}p{.46\linewidth}}\toprule
+Construction & Target & Basis\\\midrule
+Observed anchor & T1 & Exchangeable observed curves; finite-sample rank bound\\
+Noise enlargement & T2 & Anchor, widened by a bound on the target's maximum sampling error\\
+Oracle scale correction & T2 & Common standardised-shape law (S), with known scales\\
+Estimated correction & T2 & (S), plus control of scale, centring and design-variance approximation error\\
+\bottomrule\end{tabular}
+\end{table}
+
+\paragraph{Anchor.} For a centre fixed independently of the curves, let
+$A_c=\max_j|Y_c(j)|$, $m=\lceil(1-\alpha)(K+1)\rceil$ and $q_\alpha=A_{(m)}$,
+with $q_\alpha=\infty$ when $m>K$. Exchangeability gives T1 coverage at least
+$m/(K+1)$. A radius that does not exist is reported as infinite rather than
+silently replaced by the sample maximum: the band is uninformative, and saying
+so is part of the guarantee.
+
+\paragraph{Enlargement.} If a deterministic $u\ge0$ satisfies
+$\Pr\{\|S_{K+1}\|_\infty>u\}\le\beta$, then a T1 band at level $1-\alpha_0$
+enlarged by $u$ covers the latent curve with probability at least
+$1-\alpha_0-\beta$, by the triangle inequality on the intersection of the two
+events. No independence is needed and no shape is assumed. The route is
+shape-free but wide, and it is not operational for an unsurveyed population
+without information bounding the design error of its hypothetical survey.
+
+\paragraph{Non-identification.} Without information restricting $S$, the law of
+$G$ is not identified by that of $Y=G+S$: distinct signal and noise laws
+generate the same convolution \citep{fan1991optimal}. This motivates the
+additional assumptions below. It does not establish that any particular
+conformal radius is optimal among latent-target procedures, and we make no
+width-optimality claim.

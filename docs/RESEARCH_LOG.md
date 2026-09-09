@@ -138,3 +138,38 @@ The lesson for this repository is procedural. A reimplementation must reproduce
 the statistic it characterises before its disagreements mean anything, and that
 reproduction check belongs in the protocol, not in a verification run afterwards.
 `docs/PROTOCOL_exp03_regional.md` did not require it. Future protocols will.
+
+## 2026-09-09 — the coupling result, and the draft
+
+Following the exp03 correction, the mechanism was pinned down in closed form.
+At the coordinate attaining the maximum in the reliability diagnostic,
+
+    D = sqrt(2/(K-1)) / [kappa sqrt(1-h)]
+
+with `kappa` the scale shrinkage and `h` the share of the squared standard
+error contributed by dispersion of design variances. Under the shape assumption
+`kappa` is approximately `1 - rho^2`, so the reliability gate becomes
+
+    K >= 1 + 2 / [tau^2 (1-rho^2)^2 (1-h)].
+
+The identity reproduces the realised diagnostic to 3.2% mean and 7.1% maximum
+relative error over the thirty regional configurations, and the boundary
+predicts the gate correctly in **30 of 30**, against 27 that the fixed `K >= 94`
+rule would admit while only 6 open.
+
+The reading: the reported floor of 94 is this boundary at a design share of
+zero, the regime where nothing needs removing. At the need gate's own cutoff of
+0.47 the requirement is 153, at 0.60 it is 227, and at 0.66 it is 292. The two
+gates read the same quantity in opposite directions, because the diagnostic is
+evaluated on the scale the correction shrinks.
+
+This is the manuscript's centrepiece and it exists only because the exp03
+correction forced the diagnostic to be reproduced exactly. The wrong version of
+exp03 would have supported a vaguer and weaker claim about heterogeneity.
+
+Draft written to `paper/`: 3,581 words of body prose, abstract, statement of
+significance. Every reported number is a macro emitted by
+`paper/build_numbers.py` from the result tables, so a figure cannot drift from
+its artefact. Macro, cross-reference and citation resolution verified
+programmatically; the document has not been compiled, since no TeX distribution
+is available in this environment.

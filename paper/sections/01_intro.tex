@@ -1,0 +1,74 @@
+\section{Introduction}
+
+Repeated probability surveys describe a population by a distribution rather
+than a mean. For an ordinal item the cumulative distribution function records
+the share of the population below each response threshold, and a survey
+programme covering many countries or many regions produces one such curve per
+population per round. These curves are increasingly used as inputs to a second
+analysis: information from the observed populations is used to construct a
+prediction band for a further one.
+
+The inputs to that second analysis are estimates. Each carries sampling error
+from its own complex design, and a band calibrated on the discrepancies between
+those estimates and a prediction centre inherits that error. This paper asks
+what such a band guarantees, about which object, and under which assumption.
+
+\paragraph{Two targets.} Write $\Ftilde_c$ for population $c$'s survey estimate
+and $F_c$ for the population distribution behind it. A band may be asked to
+cover a further \emph{survey estimate} $\Ftilde_{K+1}$, which we call target
+T1, or the \emph{population distribution} $F_{K+1}$, target T2. The two are not
+interchangeable. Exchangeability of the observed curves delivers T1 in finite
+samples by the ordinary conformal rank argument. It delivers nothing about T2
+on its own, because the calibration scores contain sampling error that the
+latent target does not.
+
+Reaching T2 requires additional information, and there are two routes. A bound
+on the target's own sampling error gives a shape-free enlargement of the T1
+band. Alternatively, subtracting an estimate of sampling variance from the
+calibration spread gives a narrower band, at the price of a distributional
+assumption: that the standardised observed and latent curves follow a common
+law. Correct coordinate variances do not imply it.
+
+\paragraph{What this paper adds.} We do not claim novelty for the conformal
+rank argument, for the observation that measurement error is not identified
+from a convolution, or for simultaneous scoring of a curve. The contribution
+is to connect these to survey-estimated distribution curves and to characterise
+when the variance-subtraction route is reachable in practice.
+
+The characterisation turns on a result we did not anticipate. An adaptive
+implementation of this correction gates on two quantities: whether there is
+enough design noise to be worth removing, and whether the remaining scale is
+determined precisely enough to trust. These read as independent requirements,
+and the implementation's own documentation treats them as two dimensions of a
+feasibility region. They are not independent. The deconvolution shrinks the
+target scale in proportion to the design share, and the reliability diagnostic
+is inflated by exactly that shrinkage. Across our survey applications the
+correlation between the design share and the diagnostic's inflation above its
+sample-size floor is \RegCorrRhoRatio. \textbf{Design noise large enough to be
+worth removing is, by that very magnitude, large enough to leave the remainder
+poorly determined.} The feasible region is a narrow diagonal band, not a corner.
+
+This displaces the account the implementation carried. Its documented obstacle
+was a population-count floor of ninety-four, derived from the diagnostic's
+sampling term. In our regional applications that floor is cleared in
+\RegFloorCleared{} of \RegConfigs{} configurations, at population counts up to
+\RegKmax, and the correction still activates in only \RegActivations. The
+floor is not what binds.
+
+\paragraph{Empirical characterisation.} At the national unit of the European
+Social Survey the design share is \NatRhoLo--\NatRhoHi{} on full samples and
+reaches \NatScanHi{} in a subgroup scan; the need gate opens in none of
+\NatConfigs{} configurations. The correction is unnecessary there. One unit
+down, on regions within the same survey, the design share runs
+\RegRhoLo--\RegRhoHi{} and the correction becomes both needed and, in a few
+configurations, feasible. Which configurations depends on the variance
+estimator: a plain $m$-of-$m$ resample opens the reliability gate in
+\VerMofmOpen{} of \VerMofmN{} arms and a Rao--Wu--Yue rescaled resample in
+\VerRwyOpen{} of \VerRwyN, with the frozen threshold falling inside that gap.
+
+Finally, a simulation isolates the distributional assumption from
+scale estimation. With exact coordinate variances throughout, mismatched
+correlation structures cost simultaneous coverage in a direction that is
+predictable for cumulative distribution functions, and the cost grows with the
+number of coordinates carried simultaneously rather than shrinking with the
+number of calibration populations.

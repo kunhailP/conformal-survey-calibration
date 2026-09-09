@@ -1,0 +1,53 @@
+\section{Discussion}\label{sec:discussion}
+
+Prediction from survey-estimated curves requires naming the target.
+Exchangeability of observed curves yields a finite-sample guarantee for a
+further survey estimate, and nothing more. Reaching the population
+distribution requires either a sampling-error bound, which is shape-free and
+wide, or a scale correction, which is efficient and rests on a distributional
+assumption that coordinate variances cannot verify.
+
+Where the correction is reachable is governed by
+Proposition~\ref{prop:coupling}, and the answer is narrower than a
+population-count threshold suggests. The quantity that makes a correction worth
+attempting is the quantity that makes its result hard to certify, because the
+diagnostic is evaluated on the scale the correction itself shrinks. A
+feasibility region drawn as ``enough populations, and enough noise'' is a
+diagonal band, and the reported floor of $94$ is its intercept at a design
+share of zero, where nothing needs removing.
+
+The survey evidence is consistent throughout. National estimates sit in the
+unnecessary regime. Regional estimates within the same survey generate real
+sampling noise, and mostly fail the reliability requirement at the very design
+shares that make them candidates. Whether the few surviving configurations
+activate depends on the variance estimator, which is not a reassuring place for
+a feasibility result to rest.
+
+\paragraph{What we do not claim.} No universal width-optimality for any
+latent-target band; the non-identification argument motivates assumptions
+rather than certifying a radius. No demonstrated improvement over existing
+noisy-calibration or small-area methods, since no matched comparison was run.
+Activation of a selector is not evidence that~(S) holds: the gates read scale
+precision, and a procedure that abstains has not thereby proved its
+approximation accurate anywhere else. Coverage measured against survey
+estimates does not validate coverage for latent curves, and where the latent
+object is unobserved, as in the regional application, that check is unavailable
+in principle rather than merely absent.
+
+\paragraph{For practice.} Three levels should be reported separately and never
+interchanged: a finite-sample level for the observed target, a latent-target
+level with the assumptions and error terms that support it, and an empirical
+coverage assessment under a stated simulation design. Alongside them belong the
+unit assumed exchangeable, the grid, and the branch a selector returned. Where
+a correction is contemplated, \eqref{eq:boundary} gives the population count
+required at the design share actually present, which is a more useful planning
+quantity than a fixed floor.
+
+\paragraph{Open problems.} Informative latent-target guarantees under weaker
+shape restrictions than~(S), since Section~\ref{sec:simulation} shows the cost
+of violating it is directional and grows with simultaneity. A version
+of~\eqref{eq:boundary} for biased, shrinkage, or structured-covariance variance
+estimators, which the present statement excludes and which are exactly the
+estimators small-area practice is built on. And design-variance estimation that
+does not force a choice between a downward-biased scheme under which a
+correction appears reachable and a defensible one under which it does not.
