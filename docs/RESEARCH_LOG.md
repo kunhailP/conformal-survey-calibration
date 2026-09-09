@@ -326,3 +326,30 @@ absorbed.
 **Unresolved.** The `K >= 94` figure has no source outside our own working
 paper. That is consistent with it being ours, and the manuscript now attributes
 it there explicitly.
+
+## 2026-09-09 — exp07 closes the comparison gap, and improves the message
+
+The literature check named Yoshimori-Lahiri as the benchmark a referee would ask
+for. Running it would have been a mistake: it covers a scalar parameter of an
+observed area, asymptotically, while this construction covers a curve for a
+held-out population in finite samples. Racing them invites the objection that
+incommensurable things were compared. The manuscript argues the point instead
+and runs the two comparisons that are commensurable.
+
+**The correction buys more than expected.** Against the anchor, at the same
+level on the same calibration set, its realised radius is 0.805 of it at the
+median and 0.805 to 0.849 where the gates open: a 15 to 20 percent reduction,
+inside the oracle ceiling of 17 to 22 percent for those cells. The predecessor's
+comparator, the conservative envelope, is 1.63 times the anchor, so beating it
+was easy and the reported gain against it was not the informative number.
+
+This changes the message. The correction is worth having where it is reachable,
+so the boundary is a search instruction, not a discouragement, and the paper
+should not read as a negative result. Section 6.2 now says so.
+
+**The anchor holds.** Michal et al. document plain split conformal undercovering
+under complex designs. Leave-one-country-out marginal coverage of the observed
+target is 0.896 at the median across fifteen configurations, 0.891 to 0.906,
+against a nominal 0.90, within one standard error at the smallest evaluation
+count. The finite-sample guarantee survives a real complex design. Conditional
+coverage on the worst held-out country runs 0.10 to 0.60 and is not claimed.

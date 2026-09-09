@@ -23,6 +23,8 @@ def main() -> None:
     shp = pd.read_csv(R / "exp01_shape_audit.csv")
     inf = pd.read_csv(R / "exp05_information.csv")
     clm = pd.read_csv(R / "exp06_claims.csv")
+    wid = pd.read_csv(R / "exp07_widths.csv")
+    acov = pd.read_csv(R / "exp07_anchor_coverage.csv")
     ref = pd.read_csv(R / "exp06_claims_mofm.csv")
     aud = pd.read_csv(R / "exp02_design_audit.csv")
 
@@ -119,6 +121,23 @@ def main() -> None:
         "ZeroHiRhoLoK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 30)].share_at_zero.iloc[0]) * 100, 1),
         "ZeroHiRhoMidK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 100)].share_at_zero.iloc[0]) * 100, 1),
         "ZeroHiRhoHiK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 500)].share_at_zero.iloc[0]) * 100, 1),
+        "WidMed": fmt(wid.corr_over_anchor.median()),
+        "WidLo": fmt(wid.corr_over_anchor.min()),
+        "WidHi": fmt(wid.corr_over_anchor.max()),
+        "WidActLo": fmt(wid[wid.branch == "deconvolution"].corr_over_anchor.min()),
+        "WidActHi": fmt(wid[wid.branch == "deconvolution"].corr_over_anchor.max()),
+        "WidGainLo": fmt((1 - wid[wid.branch == "deconvolution"].corr_over_anchor.max()) * 100, 0),
+        "WidGainHi": fmt((1 - wid[wid.branch == "deconvolution"].corr_over_anchor.min()) * 100, 0),
+        "WidConsMed": fmt(wid.cons_over_anchor.median(), 2),
+        "WidCeilLo": fmt(wid[wid.branch == "deconvolution"].ceiling.min() * 100, 0),
+        "WidCeilHi": fmt(wid[wid.branch == "deconvolution"].ceiling.max() * 100, 0),
+        "AcovMed": fmt(acov.marginal_coverage.median(), 4),
+        "AcovLo": fmt(acov.marginal_coverage.min(), 4),
+        "AcovHi": fmt(acov.marginal_coverage.max(), 4),
+        "AcovN": len(acov),
+        "AcovSE": fmt((0.9 * 0.1 / acov.n_eval.min()) ** 0.5, 3),
+        "AcovWorstLo": fmt(acov.worst_country.min(), 2),
+        "AcovWorstHi": fmt(acov.worst_country.max(), 2),
         "ClmN": len(clm),
         "ClmAnyPoint": int(clm.any_point.sum()),
         "ClmAnyPointwise": int(clm.any_pointwise.sum()),

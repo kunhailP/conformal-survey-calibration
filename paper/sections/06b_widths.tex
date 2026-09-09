@@ -1,0 +1,48 @@
+\subsection{What the correction buys, and whether the anchor holds}
+\label{sec:widths}
+
+Two questions remain, and both are answered on the same target rather than
+against a benchmark covering a different one.
+
+\paragraph{Realised width against the anchor.} The archive reported the
+correction's gain against the \emph{conservative envelope}, and reported a scale
+ratio rather than a realised radius. Neither answers what a reader asks, which
+is what the correction buys over the band a sensible analyst would otherwise
+use. That band is the anchor, and the envelope is a weak comparator: across our
+configurations it is \WidConsMed{} times the anchor's radius.
+
+Measured against the anchor at the same level on the same calibration set, the
+correction's realised radius is \WidMed{} of it at the median and
+\WidLo--\WidHi{} across configurations. Where the gates actually open it is
+\WidActLo--\WidActHi, a reduction of \WidGainLo--\WidGainHi{} percent. This sits
+inside the oracle ceiling $1-\sqrt{1-\rho^2}$, which the same configurations put
+at \WidCeilLo--\WidCeilHi{} percent, the shortfall being the ratio of the two
+conformal quantiles that Section~\ref{sec:correction} noted.
+
+The correction is therefore worth having where it is reachable. That changes how
+Proposition~\ref{prop:coupling} should be read: the boundary is not a reason to
+abandon the correction but the quantity that says where to look for it, and the
+answer at these design shares is a narrow band of configurations rather than
+none.
+
+\paragraph{Does the anchor hold?} \citet{michal2024model} document that plain
+split conformal undercovers under complex survey designs. Our anchor is a
+different construction, taking the whole curve of a population as one
+exchangeable unit rather than splitting units of a designed sample, but the
+concern transfers and is worth testing rather than arguing away.
+
+Calibrating on all other countries' regions and evaluating on the held-out
+country's, marginal coverage of the observed target is \AcovMed{} at the median
+over \AcovN{} configurations and \AcovLo--\AcovHi{} across them, against a
+nominal $0.90$. The largest deviation is below one standard error of a
+proportion at these evaluation counts, \AcovSE{} at the smallest. The
+finite-sample guarantee for the observed target survives contact with a real
+complex design.
+
+Coverage conditional on the held-out country does not, and is not claimed: the
+worst country in each configuration runs \AcovWorstLo--\AcovWorstHi. This is the
+ordinary marginal-versus-conditional distinction of conformal prediction, and it
+is the reason the guarantee is stated over populations rather than for a named
+one. A reader who needs a guarantee for one country in particular should use an
+area-level construction designed for it \citep{burris2020exact,bersson2024optimal},
+not this band.

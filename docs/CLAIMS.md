@@ -229,6 +229,38 @@ effect. Reported in the manuscript as such.
 contains a pandemic round and a mode transition in several countries, and
 measurement comparability across rounds is assumed rather than shown.
 
+## From exp07 (verified, `results/exp07_widths.csv`, `exp07_anchor_coverage.csv`)
+
+Same target, same level, same calibration set. 15 regional configurations.
+
+| finding | value |
+|---|---|
+| Correction radius / anchor radius, median | **0.805** (range 0.780-0.895) |
+| Where the gates open | **0.805-0.849**, a 15-20% reduction |
+| Oracle ceiling `1 - sqrt(1-rho^2)` in those cells | 17-22% |
+| Conservative envelope / anchor | **1.63** |
+| Anchor leave-one-country-out marginal coverage | **0.896** median, 0.891-0.906 |
+| Nominal | 0.900 |
+| Largest deviation vs one SE at the smallest evaluation count | within 0.018 |
+| Worst held-out country, conditional | 0.10-0.60 |
+
+**Reading.** The correction buys 15 to 20 percent against the anchor where it
+activates, inside the oracle ceiling. It is worth having where reachable, so the
+boundary is a search instruction rather than a discouragement.
+
+The anchor's finite-sample guarantee for the observed target survives a real
+complex design. Conditional coverage does not and is not claimed.
+
+**Correction to the predecessor's comparator.** It reported the gain against the
+conservative envelope, which is 1.63 times the anchor here, and reported a scale
+ratio rather than a realised radius. Against the anchor the gain is smaller than
+the headline it replaced but is measured on the band an analyst would otherwise
+use.
+
+**No external head-to-head is run,** because the available benchmarks cover
+scalar parameters of observed areas rather than a simultaneous band for a
+held-out population. Argued in the manuscript rather than dodged.
+
 ## Claims deliberately not made
 
 - No universal width-optimality for any latent-target band.
