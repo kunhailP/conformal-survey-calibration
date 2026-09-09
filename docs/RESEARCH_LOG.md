@@ -399,3 +399,41 @@ reads as what it is: a boundary that says where to look, not a discouragement.
 
 The section heading "needed, and mostly unreachable" was likewise reversed to
 "reachable only in a narrow band".
+
+## 2026-09-09 — exp08 supplies the consequence the paper was missing
+
+The paper could characterise when the correction is reachable but had nothing a
+practitioner would do differently. A boundary that says "you need 300
+populations and you have 30" is precise and inert. `exp08` asks the question a
+practitioner would actually ask: can the unit be refined until the requirement
+is met?
+
+Refinement raises supply and requirement together, and the dimension decides
+which wins. Cutting the survey by sex yields 60 populations against a
+requirement of 2,006; cutting the same survey by region yields 236 against 256.
+The domain counts differ only fourfold, so the count is not the operative
+quantity. Sex halves each sample without adding between-domain dispersion,
+because men and women have nearly the same trust distribution, and the design
+share reaches 0.85. Regions differ, dispersion grows with the noise, and the
+share stays at 0.60.
+
+That is a design instruction, and it is the first thing in this project that
+tells someone what to do rather than what not to do: **refine along a dimension
+on which the domains actually differ.**
+
+It also strengthens the boundary's evidence considerably. It now predicts the
+gate correctly across five domain definitions rather than one, and six
+configurations open, so the manuscript has positive cases and Section 6.5's
+15 to 19 percent applies to something reachable.
+
+**A level was dropped after the first run,** and it is recorded rather than
+quietly removed. The country level was in the original sweep and is degenerate
+for this estimand: a domain that is the country has zero departure from its own
+national curve. Its points sat at a design share of exactly zero and were
+visible as an artefact in the frontier figure. The level was removed, the sweep
+re-run, and the national reference is `exp04`.
+
+**A lapse worth recording.** The first version of this section hard-coded the
+ledger figures into `build_numbers.py` rather than computing them from the
+result table, which is precisely what the claims-ledger discipline exists to
+prevent. They are now derived.

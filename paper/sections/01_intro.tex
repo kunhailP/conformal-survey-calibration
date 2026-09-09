@@ -69,6 +69,14 @@ estimator: a plain $m$-of-$m$ resample opens the reliability gate in
 \VerMofmOpen{} of \VerMofmN{} arms and a Rao--Wu--Yue rescaled resample in
 \VerRwyOpen{} of \VerRwyN, with the frozen threshold falling inside that gap.
 
+Refining the calibration unit is the natural response to a population-count
+requirement, and it works only in one direction. Cutting the survey into regions yields \DomRegK{} populations against a
+requirement of \DomRegReq, within reach; cutting the same survey by sex yields
+\DomSexK{} against \DomSexReq, because men and women have nearly the same trust
+distribution and the split adds sampling noise without adding dispersion. Across
+\DomConfigs{} configurations spanning \DomTypes{} domain definitions the
+boundary predicts the gate in \DomCorrect{} of them, and \DomOpen{} open.
+
 Finally, a simulation isolates the distributional assumption from
 scale estimation. With exact coordinate variances throughout, mismatched
 correlation structures cost simultaneous coverage in a direction that is

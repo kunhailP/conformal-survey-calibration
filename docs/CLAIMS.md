@@ -261,6 +261,44 @@ use.
 scalar parameters of observed areas rather than a simultaneous band for a
 held-out population. Argued in the manuscript rather than dodged.
 
+## From exp08 (verified, `results/exp08_domains.csv`)
+
+Estimand held fixed as a domain's departure from its own national curve;
+only the domain definition varies. 45 configurations: five definitions x three
+rounds x three minimum sizes. Protocol: `docs/PROTOCOL_exp08_domains.md`.
+
+| domains cut by | K | design share | required by the boundary |
+|---|---|---|---|
+| sex | **60** | **0.85** | **2006** |
+| age band | 119 | 0.52 | 189 |
+| region | **236** | **0.60** | **256** |
+| age band and sex | 232 | 0.65 | 330 |
+| region and sex | 292 | 0.68 | 393 |
+
+| | |
+|---|---|
+| Boundary predicts the gate correctly | **44 of 45** |
+| Gate opens | 6 of 45, five of them in round 11 |
+
+**Reading.** Refinement raises the supply and the requirement together, and the
+dimension decides which wins. Cutting by sex yields 60 populations against a
+requirement of 2,006; cutting by region yields 236 against 256. The domain
+counts differ only fourfold, so the count is not what separates them: sex adds
+sampling variance without adding between-domain dispersion, because men and
+women have nearly the same trust distribution, and the design share reaches
+0.85. Regions genuinely differ, so dispersion grows with the noise and the share
+stays at 0.60.
+
+The design instruction is to refine along a dimension on which the domains
+actually differ. A cut that only subdivides a homogeneous population cannot
+reach the correction at any depth.
+
+**A level dropped after the first run.** The country level was included
+initially and is degenerate for this estimand: a domain that is the country has
+zero departure from its own national curve by construction. It was removed and
+the sweep re-run; the national reference is `exp04`, which uses deviations from
+a cross-country centre instead.
+
 ## Claims deliberately not made
 
 - No universal width-optimality for any latent-target band.

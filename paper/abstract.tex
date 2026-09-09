@@ -9,15 +9,16 @@ coverage for the underlying distribution requires either a sampling-error bound,
 which is shape-free and wide, or a scale correction, which requires the
 standardised observed and underlying curves to share a law. We then show that
 the two conditions an adaptive implementation of that correction gates on are
-not independent. The algebra is classical, familiar from variance-component
-estimation, but its consequence for a criterion deciding whether a correction
-may be used has not been drawn out. The correction shrinks the target scale in
-proportion to the design share and its reliability diagnostic is evaluated on
-that shrunken scale, so the requirement is a closed-form boundary in which the
-needed population count rises steeply as the design share grows. A reported
-floor of 94 populations is that boundary at a design share of zero, where
-nothing needs removing; where the need gate opens it is 153. Across 30
-configurations of European Social Survey regional estimates the boundary
-predicts the gate correctly in all of them, while the fixed floor is cleared in
-27 and the correction activates in 4. Where it activates it is 15 to 19 percent
-narrower than the uncorrected band.
+not independent. The algebra is classical, from variance-component estimation,
+but its consequence for a criterion deciding whether a correction may be used
+has not been drawn out. The correction shrinks the target scale in proportion to
+the design share and its reliability diagnostic is evaluated on that shrunken
+scale, so the requirement is a closed-form boundary rising steeply in the design
+share. A reported floor of 94 populations is that boundary
+at a design share of zero, where nothing needs removing; where the need gate
+opens it is 153. Across 54 configurations of European Social Survey estimates it
+predicts the gate correctly in 53. Where it activates it is 15 to 19 percent
+narrower than the uncorrected band. Refining the calibration unit can reach those
+configurations, but only along a dimension on which the domains genuinely
+differ: cutting the survey by region comes within reach of the requirement,
+while cutting it by sex falls an order of magnitude short.

@@ -1,0 +1,54 @@
+\subsection{Can the boundary be outrun by refining the unit?}\label{sec:domains}
+
+A practitioner facing~\eqref{eq:boundary} has one obvious move: refine the unit.
+Splitting countries into regions or demographic domains multiplies the
+calibration count. Refinement is not free, though. Smaller domains carry smaller
+samples, the design variance rises, the design share rises with it, and so does
+the requirement. Which side wins decides whether the boundary can be engineered
+around.
+
+We hold the estimand fixed as a domain's departure from its own national
+distribution and vary only how domains are cut, over three rounds and three
+minimum sizes. Table~\ref{tab:refine} gives the result, and the answer is that
+the number of domains is not what matters.
+
+\begin{table}[htbp]\centering
+\caption{Ways to cut the same survey into domains, at a minimum domain size of
+60, averaged over rounds. ``Required'' is~\eqref{eq:boundary} evaluated at the
+design share each cut produces.}\label{tab:refine}
+\begin{tabular}{lrrrr}\toprule
+domains cut by & $K$ & design share & required & shortfall\\\midrule
+sex & \DomSexK & \DomSexRho & \DomSexReq & $-1946$\\
+age band & \DomAgeK & \DomAgeRho & \DomAgeReq & $-70$\\
+region & \DomRegK & \DomRegRho & \DomRegReq & $-20$\\
+age band and sex & \DomAgeSexK & \DomAgeSexRho & \DomAgeSexReq & $-98$\\
+region and sex & \DomRegSexK & \DomRegSexRho & \DomRegSexReq & $-101$\\
+\bottomrule\end{tabular}
+\end{table}
+
+\paragraph{The dimension matters more than the count.} Splitting by sex yields
+\DomSexK{} populations against a requirement of \DomSexReq. Splitting by region
+yields \DomRegK{} against \DomRegReq, within reach. The difference is not the
+number of domains, which differs only fourfold, but the design share: sex
+produces \DomSexRho{} and region \DomRegRho. Halving each sample by sex adds
+sampling variance without adding between-domain dispersion, because men and
+women have nearly the same trust distribution. Cutting by region adds both,
+because regions genuinely differ.
+
+Adding a second, homogeneous dimension on top behaves the same way in miniature.
+Region and sex together give more populations than region alone, but the
+requirement rises faster still, and the cut is worse than the one it refines.
+
+The design instruction follows, and it is the useful thing the boundary yields:
+\textbf{refine along a dimension on which the domains actually differ.} A cut
+that only subdivides a homogeneous population raises the requirement far faster
+than the supply, and no amount of it reaches the correction. A cut that tracks
+real heterogeneity can.
+
+\paragraph{The boundary holds across domain definitions.} Over \DomConfigs{}
+configurations spanning \DomTypes{} domain definitions, three rounds and three
+size thresholds, \eqref{eq:boundary} predicts the reliability gate correctly in
+\DomCorrect. The gate opens in \DomOpen, \DomRoundEleven{} of them in round~11,
+the round with the lowest design share throughout. Those are the configurations
+in which the correction may be used on this survey, and
+Section~\ref{sec:widths} measures what it is worth there.

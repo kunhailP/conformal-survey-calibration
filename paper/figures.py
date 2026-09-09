@@ -46,11 +46,14 @@ def fig_frontier():
     ax.text(0.045, 46, "reliability gate shut", fontsize=8,
             color=SHUT_C, style="italic")
 
-    for df, mk, lab in ((reg, "o", "ESS regional"), (nat, "^", "ESS national")):
+    dom = pd.read_csv(R / "exp08_domains.csv")
+    for df, mk, lab in ((reg, "o", "ESS regional"), (nat, "^", "ESS national"),
+                        (dom, "D", "ESS domains")):
         for opened, c in ((True, OPEN_C), (False, SHUT_C)):
             s = df[df.gate_B == opened]
             if len(s):
-                ax.scatter(s.rho_hat, s.K, marker=mk, s=34, zorder=4,
+                ax.scatter(s.rho_hat, s.K, marker=mk,
+                           s=26 if mk == "D" else 34, zorder=4,
                            facecolor=c if opened else "none", edgecolor=c,
                            linewidths=1.1,
                            label=f"{lab}, gate {'open' if opened else 'shut'}")

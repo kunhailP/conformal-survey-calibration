@@ -1,0 +1,46 @@
+domain,essround,min_n,K,rho_hat,D,K_required,supply_minus_need,gate_A,gate_B,branch
+country x sex,9,40,58,0.774041,0.444243,609.713,-551.713,True,False,conservative
+country x sex,9,60,58,0.774041,0.444243,609.713,-551.713,True,False,conservative
+country x sex,9,100,58,0.774041,0.444243,609.713,-551.713,True,False,conservative
+country x sex,10,40,63,0.880864,1.20178,3246.25,-3183.25,True,False,conservative
+country x sex,10,60,63,0.880864,1.20178,3246.25,-3183.25,True,False,conservative
+country x sex,10,100,63,0.880864,1.20178,3246.25,-3183.25,True,False,conservative
+country x sex,11,40,58,0.884353,1.09065,2160.68,-2102.68,True,False,conservative
+country x sex,11,60,58,0.884353,1.09065,2160.68,-2102.68,True,False,conservative
+country x sex,11,100,58,0.884353,1.09065,2160.68,-2102.68,True,False,conservative
+country x age,9,40,116,0.514075,0.198973,183.939,-67.9391,False,False,anchor
+country x age,9,60,116,0.514075,0.198973,183.939,-67.9391,False,False,anchor
+country x age,9,100,113,0.496784,0.19024,169.174,-56.1736,False,False,anchor
+country x age,10,40,124,0.588404,0.20381,232.173,-108.173,True,False,conservative
+country x age,10,60,124,0.588404,0.20381,232.173,-108.173,True,False,conservative
+country x age,10,100,124,0.588404,0.20381,232.173,-108.173,True,False,conservative
+country x age,11,40,116,0.456089,0.169415,151.025,-35.0251,False,False,anchor
+country x age,11,60,116,0.456089,0.169415,151.025,-35.0251,False,False,anchor
+country x age,11,100,115,0.446321,0.168242,147.086,-32.0857,False,False,anchor
+country x age x sex,9,40,230,0.651829,0.190534,322.03,-92.03,True,False,conservative
+country x age x sex,9,60,225,0.636333,0.174747,283.815,-58.8147,True,False,conservative
+country x age x sex,9,100,210,0.65517,0.187746,304.917,-94.9172,True,False,conservative
+country x age x sex,10,40,249,0.727037,0.224242,505.577,-256.577,True,False,conservative
+country x age x sex,10,60,246,0.722696,0.221766,484.035,-238.035,True,False,conservative
+country x age x sex,10,100,226,0.708701,0.209236,428.031,-202.031,True,False,conservative
+country x age x sex,11,40,230,0.596178,0.149188,234.825,-4.82516,True,False,conservative
+country x age x sex,11,60,226,0.584536,0.146551,223.33,2.6702,True,True,deconvolution
+country x age x sex,11,100,201,0.579997,0.157392,215.837,-14.837,True,False,conservative
+country x region,9,40,275,0.62684,0.142151,277.547,-2.54677,True,True,deconvolution
+country x region,9,60,229,0.623524,0.156859,281.357,-52.3569,True,False,conservative
+country x region,9,100,171,0.589338,0.168664,236.589,-65.5888,True,False,conservative
+country x region,10,40,290,0.656731,0.153695,377.484,-87.4838,True,False,conservative
+country x region,10,60,248,0.645081,0.154912,301.23,-53.2297,True,False,conservative
+country x region,10,100,187,0.607797,0.159925,249.444,-62.4443,True,False,conservative
+country x region,11,40,285,0.549924,0.122609,196.063,88.9373,True,True,deconvolution
+country x region,11,60,232,0.53661,0.130729,186.692,45.3079,True,True,deconvolution
+country x region,11,100,160,0.509615,0.151939,172.694,-12.6936,False,False,anchor
+country x region x sex,9,40,391,0.711455,0.15265,449.817,-58.8166,True,False,conservative
+country x region x sex,9,60,284,0.713473,0.180597,446.616,-162.616,True,False,conservative
+country x region x sex,9,100,167,0.744877,0.242514,493.634,-326.634,True,False,conservative
+country x region x sex,10,40,429,0.739318,0.151707,496.464,-67.4641,True,False,conservative
+country x region x sex,10,60,320,0.728659,0.173287,489.475,-169.475,True,False,conservative
+country x region x sex,10,100,158,0.684242,0.201709,367.493,-209.493,True,False,conservative
+country x region x sex,11,40,391,0.618861,0.121498,251.313,139.687,True,True,deconvolution
+country x region x sex,11,60,273,0.60989,0.136837,243.016,29.9844,True,True,deconvolution
+country x region x sex,11,100,140,0.564839,0.171289,204.556,-64.5557,True,False,conservative

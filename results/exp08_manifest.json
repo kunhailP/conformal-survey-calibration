@@ -1,0 +1,11 @@
+{
+  "protocol": "docs/PROTOCOL_exp08_domains.md",
+  "tau": 0.1474019088016967,
+  "specs": [
+    "country x sex",
+    "country x age",
+    "country x age x sex",
+    "country x region",
+    "country x region x sex"
+  ]
+}

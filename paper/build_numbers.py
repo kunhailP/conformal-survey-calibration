@@ -24,6 +24,7 @@ def main() -> None:
     inf = pd.read_csv(R / "exp05_information.csv")
     clm = pd.read_csv(R / "exp06_claims.csv")
     wid = pd.read_csv(R / "exp07_widths.csv")
+    dom = pd.read_csv(R / "exp08_domains.csv")
     acov = pd.read_csv(R / "exp07_anchor_coverage.csv")
     ref = pd.read_csv(R / "exp06_claims_mofm.csv")
     aud = pd.read_csv(R / "exp02_design_audit.csv")
@@ -121,6 +122,19 @@ def main() -> None:
         "ZeroHiRhoLoK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 30)].share_at_zero.iloc[0]) * 100, 1),
         "ZeroHiRhoMidK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 100)].share_at_zero.iloc[0]) * 100, 1),
         "ZeroHiRhoHiK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 500)].share_at_zero.iloc[0]) * 100, 1),
+        "DomConfigs": len(dom),
+        "DomCorrect": int(((dom.K >= dom.K_required) == dom.gate_B).sum()),
+        "DomOpen": int(dom.gate_B.sum()),
+        "DomTypes": dom.domain.nunique(),
+        "DomRoundEleven": int((dom[dom.gate_B].essround == 11).sum()),
+        **{f"Dom{tag}{q}": v for tag, name in
+           (("Sex", "country x sex"), ("Age", "country x age"),
+            ("Reg", "country x region"), ("AgeSex", "country x age x sex"),
+            ("RegSex", "country x region x sex"))
+           for q, v in (
+               ("K", f"{dom[(dom.min_n == 60) & (dom.domain == name)].K.mean():.0f}"),
+               ("Rho", fmt(dom[(dom.min_n == 60) & (dom.domain == name)].rho_hat.mean(), 2)),
+               ("Req", f"{dom[(dom.min_n == 60) & (dom.domain == name)].K_required.mean():.0f}"))},
         "WidMed": fmt(wid.corr_over_anchor.median()),
         "WidLo": fmt(wid.corr_over_anchor.min()),
         "WidHi": fmt(wid.corr_over_anchor.max()),
