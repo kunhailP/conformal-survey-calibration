@@ -52,7 +52,11 @@ microdata not redistributed. See `docs/DATA.md`.
 | National activations | 0 | both of the above |
 | Regional activations, original bootstrap | 4 of 23 unit-rounds | `small_area_transport.csv` |
 | Regional activations, Rao-Wu-Yue rescaled | 1 of 23 unit-rounds | `small_area_transport_rescaled.csv` |
-| Regional activations, common coding level, either bootstrap | **0 of 21** | both of the above |
+| Regional activations, common coding level, either bootstrap | 0 of 21 | both of the above |
+
+The three regional rows above are **superseded by exp03**, which recomputes them
+under correct joint resampling and finds no activation anywhere. They are kept
+here as the record of what the inherited analysis reported.
 | Leave-one-country-out anchor coverage | 0.893-0.903 vs 0.900 | `small_area_exchangeability.csv` |
 | Worst held-out country conditional coverage | 0.53-0.63 | `small_area_loco_by_country.csv` |
 
@@ -91,6 +95,49 @@ and strata almost never nest in regions. Two consequences follow.
    which are individual-level register samples, not a data defect. It must be
    stated, because a design share estimated without a clustering component is
    not comparable to one estimated with it, and the regional pool mixes both.
+
+## From exp03 (verified, `results/exp03_regional.csv`)
+
+Regional departures from own national distribution, `trstprl`, ESS rounds 9-11,
+d = 10 thresholds, B = 400 Rao-Wu-Yue rescaled replicates, resampling unit
+`(stratum, psu)` so region-splitting PSUs are carried whole. 30 configurations:
+two pools x three rounds x five minimum region sizes. Protocol:
+`docs/PROTOCOL_exp03_regional.md`, outcome 3 of the three written before running.
+
+| finding | value |
+|---|---|
+| Configurations where the correction activates | **0 of 30** |
+| Need gate A opens (design noise is real at this unit) | **27 of 30** |
+| Reliability gate B opens | **0 of 30** |
+| Regional design share `rho_hat` | **0.49 - 0.66** |
+| Reliability diagnostic `D` | 0.16 - 0.59, against `tau_D = 0.147` |
+
+**The reported `K >= 94` floor is not what blocks the correction.**
+
+| | |
+|---|---|
+| Configurations clearing the K-floor `sqrt(2/(K-1)) <= tau_D` | **27 of 30** |
+| Of those, configurations where gate B opens | **0** |
+| Median share of `D^2` from design-variance heterogeneity | **30.1%** |
+| Round 10, min_n 40: K = 290, K-floor 0.0832, realised D | **0.2438** |
+| Same cell, heterogeneity share of `D^2` | **60.2%** |
+| Configurations passing even with homogeneous design variances | **1 of 30** |
+| Ratio of largest to smallest regional design variance | **1,143x - 16,386x** |
+
+**Reading.** At the national unit the correction is unnecessary: the design
+share is small. At the regional unit it is needed — gate A opens in 27 of 30
+configurations — and it remains unreachable, at population counts up to 290,
+three times the reported floor. What blocks it is not the sampling error of a
+variance estimate, which more populations would cure, but the *dispersion* of
+design variances across units, which they would not. Small areas have wildly
+unequal design variances because they have wildly unequal sizes, and the same
+refinement of the unit that raises the population count raises that dispersion.
+The barrier is therefore structural rather than a sample-size threshold.
+
+This supersedes the inherited regional activation, which was obtained under an
+`m`-of-`m` bootstrap that biases design variance downward and under resampling
+that could split a PSU across regions. Both corrections push the diagnostic the
+same way.
 
 ## Claims deliberately not made
 

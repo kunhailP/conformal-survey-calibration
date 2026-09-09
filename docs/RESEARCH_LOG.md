@@ -68,3 +68,33 @@ This does not overturn the inherited regional result. It does mean the result
 cannot be reported until it is shown to survive correct joint resampling of the
 offending regions, which is the next experiment. Recorded now so that the
 obligation is not lost.
+
+## 2026-09-09 — exp03 returns outcome 3, and reframes the paper
+
+The protocol wrote down three possible outcomes. The answer is the third:
+under Rao-Wu-Yue rescaling with the resampling unit set to `(stratum, psu)`,
+the correction activates in **none** of thirty configurations. The inherited
+single activation does not survive.
+
+The mechanism matters more than the count. The need gate opens in 27 of 30
+configurations — design noise at the regional unit is real, with shares of 0.49
+to 0.66 against a national maximum of 0.29 — and the reliability gate opens in
+none. Decomposing the diagnostic shows why. At round 10 with a minimum region
+size of 40 there are 290 regions, more than three times the reported floor of
+94, and the K-floor term is 0.083 against a threshold of 0.147. It passes
+comfortably. The realised diagnostic is 0.244, and 60% of its square comes from
+the *dispersion* of design variances across regions, whose largest-to-smallest
+ratio reaches four figures.
+
+**The `K >= 94` floor, which the predecessor manuscript carried as its negative
+headline, is cleared in 27 of 30 configurations and blocks nothing.** The
+binding constraint is heterogeneity of design variances, which more units do
+not fix, because the refinement that raises the unit count is the same
+refinement that raises the dispersion.
+
+This is a better result than the one it replaces. It is structural rather than
+arithmetic, it explains the inherited activation as an artefact of a downward-
+biased bootstrap, and it holds at population counts where the stated floor has
+no purchase. The manuscript's negative characterisation should be rebuilt on
+it, and the K-floor demoted to what it is: a property of one diagnostic that
+turns out not to be the operative obstacle.

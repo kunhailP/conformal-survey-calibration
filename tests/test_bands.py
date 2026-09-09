@@ -97,3 +97,30 @@ def test_design_share_inverts_the_noise_scale():
         sigma = generators.noise_scale(rho)
         assert diagnostics.design_share(np.array([sigma ** 2]),
                                         np.array([1 + sigma ** 2])) == pytest.approx(rho)
+
+
+def test_rwy_bootstrap_preserves_the_weighted_total():
+    """Rao-Wu-Yue at m = n - 1 reproduces the population total on every replicate."""
+    from dac.survey import replicate_weights
+    rng = np.random.default_rng(41)
+    stratum = np.repeat(np.arange(5), 8 * 4)
+    psu = np.repeat(np.arange(40), 4)
+    w = rng.uniform(0.5, 2.0, size=len(stratum))
+    W, n_single = replicate_weights(stratum, psu, w, 200, rng)
+    assert n_single == 0
+    assert np.allclose(W.sum(axis=0), w.sum())
+
+
+def test_rwy_bootstrap_recovers_a_clustered_standard_error():
+    """The replicate SD must match the analytic clustered SE of a mean."""
+    from dac.survey import replicate_weights
+    rng = np.random.default_rng(5)
+    n_psu, per = 60, 6
+    stratum = np.zeros(n_psu * per, dtype=int)
+    psu = np.repeat(np.arange(n_psu), per)
+    w = np.ones(n_psu * per)
+    y = (rng.normal(size=(n_psu, 1)) + 0.4 * rng.normal(size=(n_psu, per))).ravel()
+    W, _ = replicate_weights(stratum, psu, w, 4000, rng)
+    boot = ((W * y[:, None]).sum(0) / W.sum(0)).std()
+    analytic = y.reshape(-1, per).mean(1).std(ddof=1) / np.sqrt(n_psu)
+    assert abs(boot - analytic) / analytic < 0.10

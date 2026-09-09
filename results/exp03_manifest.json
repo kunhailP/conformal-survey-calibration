@@ -1,0 +1,14 @@
+{
+  "protocol": "docs/PROTOCOL_exp03_regional.md",
+  "resample_unit": "(stratum, psu)",
+  "bootstrap": "Rao-Wu-Yue rescaled",
+  "B": 400,
+  "d": 10,
+  "estimand": "region minus own nation, trstprl",
+  "frozen": {
+    "rho_0": 0.47,
+    "delta_max": 0.02,
+    "tau_D": 0.1474,
+    "K_floor": 94
+  }
+}
