@@ -99,16 +99,29 @@ def test_design_share_inverts_the_noise_scale():
                                         np.array([1 + sigma ** 2])) == pytest.approx(rho)
 
 
-def test_rwy_bootstrap_preserves_the_weighted_total():
-    """Rao-Wu-Yue at m = n - 1 reproduces the population total on every replicate."""
+def test_rwy_replicate_weights_are_unbiased():
+    """Rao-Wu-Yue reproduces the weighted total in expectation, not per replicate.
+
+    At m = n - 1 the replicate factor is (n / m) r_i with E r_i = m / n, so each
+    weight is unbiased.  The total is exactly preserved only when every PSU in a
+    stratum carries the same weight; with unequal weights it varies, which is
+    the sampling variability the scheme exists to express.
+    """
     from dac.survey import replicate_weights
     rng = np.random.default_rng(41)
     stratum = np.repeat(np.arange(5), 8 * 4)
     psu = np.repeat(np.arange(40), 4)
-    w = rng.uniform(0.5, 2.0, size=len(stratum))
-    W, n_single = replicate_weights(stratum, psu, w, 200, rng)
+
+    equal = np.ones(len(stratum))
+    W_eq, n_single = replicate_weights(stratum, psu, equal, 200, rng)
     assert n_single == 0
-    assert np.allclose(W.sum(axis=0), w.sum())
+    assert np.allclose(W_eq.sum(axis=0), equal.sum())
+
+    w = rng.uniform(0.5, 2.0, size=len(stratum))
+    W, _ = replicate_weights(stratum, psu, w, 20000, rng)
+    assert not np.allclose(W.sum(axis=0), w.sum())
+    totals = W.sum(axis=0)
+    assert abs(totals.mean() - w.sum()) < 4 * totals.std() / np.sqrt(len(totals))
 
 
 def test_rwy_bootstrap_recovers_a_clustered_standard_error():
