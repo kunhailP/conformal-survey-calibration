@@ -10,6 +10,21 @@ coordinates, the grid is not a cosmetic choice. Design variances come from a
 Rao--Wu--Yue rescaled stratified bootstrap with $B=400$
 \citep{rao1992recent,wolter2007introduction}.
 
+\paragraph{Survey reporting.} The target population is residents aged 15 and
+over in private households in each participating country, regardless of
+nationality or language. Rounds 9, 10 and 11 were fielded in 2018--19,
+2020--22 and 2022--24 respectively, with country-specific fieldwork periods
+recorded in the provider's documentation. The item is \texttt{trstprl}, asked
+as: \emph{``Using this card, please tell me on a score of 0--10 how much you
+personally trust each of the institutions I read out. 0 means you do not trust
+an institution at all, and 10 means you have complete trust. Firstly,
+$\ldots$ [country]'s parliament?''} Responses of ``refusal'', ``don't know'' and
+``no answer'' are excluded, as are records with non-positive analysis weight.
+Country-level response rates vary and are documented by the provider per country
+and round; we do not report a pooled rate, since no single field period or
+population underlies it. All estimates use the analysis weight, which combines
+design, post-stratification and population-size components.
+
 \paragraph{The resampling unit.} The regional estimand is a region's departure
 from its own national distribution, and region and national curves are
 recomputed inside each replicate before differencing so that their covariance
@@ -39,7 +54,7 @@ between countries. Consistently with Proposition~\ref{prop:coupling}, the
 dispersion term $h$ is negligible here, \NatHeteroLo--\NatHeteroHi\%: at
 $K\le33$ the diagnostic is essentially its sample-size floor.
 
-\subsection{Regional estimates: needed, and mostly unreachable}
+\subsection{Regional estimates: needed, and reachable only in a narrow band}
 One unit down the picture reverses. Across \RegConfigs{} configurations, two
 pools by three rounds by five minimum region sizes, the design share runs
 \RegRhoLo--\RegRhoHi{} and the need gate opens in \RegGateA. The reliability
@@ -61,10 +76,10 @@ Three checks accompany the above. The conclusion does not move with the
 bootstrap draw (four seeds, $D$ within $0.001$) or the replicate count
 ($B=200$ to $2000$, $D$ within $0.002$).
 
-The third check separates the two departures from the inherited analysis. Under
-the archive's own settings our implementation reproduces its reported diagnostic
-to four decimal places, so the comparison is between the same statistic computed
-two ways. The variance estimator is then decisive and the resampling unit is
+The third check separates two departures from an earlier implementation of the
+same procedure, described on the title page. Run under that implementation's own
+settings, ours reproduces its reported diagnostic to four decimal places, so the
+comparison is between one statistic computed two ways. The variance estimator is then decisive and the resampling unit is
 not: the reliability gate opens in \VerMofmOpen{} of \VerMofmN{} $m$-of-$m$ arms
 and \VerRwyOpen{} of \VerRwyN{} Rao--Wu--Yue arms, with $\tau=0.147$ falling
 inside that gap, while the resampling unit moves $D$ by under

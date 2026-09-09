@@ -353,3 +353,49 @@ target is 0.896 at the median across fifteen configurations, 0.891 to 0.906,
 against a nominal 0.90, within one standard error at the smallest evaluation
 count. The finite-sample guarantee survives a real complex design. Conditional
 coverage on the worst held-out country runs 0.10 to 0.60 and is not claimed.
+
+## 2026-09-09 — format compliance and a full read-through
+
+**Format.** JSSAM allows 6,500 words of body text; ours is 5,929. The abstract
+limit is 300 and it was 315, now 271. Statement of Significance is 123 against a
+limit of 200, with no acronyms as required. Set in twelve-point Times on US
+letter, double-spaced, ragged right, fonts embedded. Figure alt text sits
+beneath each legend as the guidelines ask.
+
+**The one requirement that forced a rewrite.** JSSAM instructs authors not to
+cite unpublished manuscripts, and three citations pointed at the working paper
+whose implementation this characterises. The implementation is now stated in
+full in Section 4 and the manuscript is self-contained; the title page carries
+the relationship. This is a better paper for it, since a reader no longer needs
+a document they cannot obtain.
+
+**PRICSSA.** Added a survey-reporting paragraph: target population, field
+periods by round, the exact question wording, exclusions, weight composition,
+and why no pooled response rate is quoted. The checklist itself is an external
+form for the author to complete at submission.
+
+**Read-through, four substantive corrections.**
+
+Section 7 still listed a version of the boundary for shrinkage estimators as an
+open problem. `exp05` closed that: REML attains the information bound, and
+shrinkage is not what carries the result. The open problem is now structured
+covariance across populations, which the equal-variance closed form genuinely
+does not address.
+
+Section 7 also said no improvement over any method had been demonstrated, which
+`exp07` had already made false in the internal comparison. It now distinguishes:
+no matched comparison against external methods is possible without agreeing a
+common target, and the improvement against the uncorrected band on the same
+target is measured.
+
+Four references to "the archive" and "the predecessor manuscript" survived the
+removal of the citation and pointed at nothing a reader could reach. All now
+name an earlier implementation of the same procedure, identified on the title
+page.
+
+The introduction and Section 7 ended on the negative result, written before the
+width comparison existed. Both now carry the 15 to 19 percent gain, so the paper
+reads as what it is: a boundary that says where to look, not a discouragement.
+
+The section heading "needed, and mostly unreachable" was likewise reversed to
+"reachable only in a narrow band".

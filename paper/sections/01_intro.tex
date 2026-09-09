@@ -40,8 +40,8 @@ appears not to have been drawn out for a calibration procedure. An adaptive
 implementation of this correction gates on two quantities: whether there is
 enough design noise to be worth removing, and whether the remaining scale is
 determined precisely enough to trust. These read as independent requirements,
-and the implementation's own documentation treats them as two dimensions of a
-feasibility region. They are not independent. The deconvolution shrinks the
+and a feasibility region drawn from them looks like a corner of a plane. They
+are not independent. The deconvolution shrinks the
 target scale in proportion to the design share, and the reliability diagnostic
 is inflated by exactly that shrinkage. Across our survey applications the
 correlation between the design share and the diagnostic's inflation above its
@@ -49,9 +49,9 @@ sample-size floor is \RegCorrRhoRatio. \textbf{Design noise large enough to be
 worth removing is, by that very magnitude, large enough to leave the remainder
 poorly determined.} The feasible region is a narrow diagonal band, not a corner.
 
-This displaces the account the implementation carried. Its documented obstacle
-was a population-count floor of ninety-four \citep{park2026wrongunit}, derived
-from the diagnostic's sampling term. In our regional applications that floor is cleared in
+This displaces the account that accompanies the implementation. Its stated
+obstacle is a population-count floor of ninety-four, derived from the
+diagnostic's sampling term. In our regional applications that floor is cleared in
 \RegFloorCleared{} of \RegConfigs{} configurations, at population counts up to
 \RegKmax, and the correction still activates in only \RegActivations. The
 floor is not what binds.
@@ -62,7 +62,9 @@ reaches \NatScanHi{} in a subgroup scan; the need gate opens in none of
 \NatConfigs{} configurations. The correction is unnecessary there. One unit
 down, on regions within the same survey, the design share runs
 \RegRhoLo--\RegRhoHi{} and the correction becomes both needed and, in a few
-configurations, feasible. Which configurations depends on the variance
+configurations, feasible. Where it activates it narrows the band by
+\WidGainLo--\WidGainHi{} percent against the uncorrected alternative, so the
+boundary tells a practitioner where to look rather than telling them to stop. Which configurations depends on the variance
 estimator: a plain $m$-of-$m$ resample opens the reliability gate in
 \VerMofmOpen{} of \VerMofmN{} arms and a Rao--Wu--Yue rescaled resample in
 \VerRwyOpen{} of \VerRwyN, with the frozen threshold falling inside that gap.
