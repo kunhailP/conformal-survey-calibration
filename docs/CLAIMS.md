@@ -167,6 +167,36 @@ verified. Its diagnostic has a different structure from the regional one: at
 `K <= 33` the K-floor term dominates and heterogeneity is negligible, the
 reverse of the regional unit.
 
+## From exp05 (verified, `results/exp05_information.csv`)
+
+Fay-Herriot with known sampling variances, REML, 40 conditions x 2,000 replicates. Protocol outcome 1.
+
+| finding | value |
+|---|---|
+| Fisher information for the model variance | `I(A) = (1/2) sum_c (A + D_c)^-2` |
+| Closed form vs exact bound, equal `D` | agree to **3e-16** relative |
+| REML realised / bound, `K >= 100` | median **1.002**, range 0.952-1.035 |
+| REML returns `A_hat = 0`, `rho <= 0.5`, any `K` | **0.0%** |
+| REML returns `A_hat = 0`, `rho = 0.9` | **25.3%** at K=30, 8.3% at K=100, 1.3% at K=250, 0.0% at K=500 |
+| Dispersed `D_c` at the same mean | exact bound falls below the closed form; the closed form is conservative |
+
+**Reading.** The `(1 - rho^2)^-1` inflation is an information bound, not an
+artefact of a moment estimator, and REML attains it. This closes the scope gap
+the predecessor left open, which excluded biased, shrinkage and prior-informed
+estimators and left a minimax version unproved: the restriction to unbiased
+estimation is not what carries the result, since the estimator small-area
+practice actually uses sits on the bound.
+
+It also connects the boundary to a recognised failure mode. Zero and negative
+estimates of a between-area variance appear in exactly the regime the boundary
+calls infeasible, and are absent at design shares up to 0.5 at every `K`
+examined.
+
+**Not claimed as novel.** Equation~(9) is the standard asymptotic variance of
+the model-variance estimator in this model. What the manuscript claims is
+overlooked is its consequence for feasibility criteria, and the empirical
+demonstration in exp03.
+
 ## Claims deliberately not made
 
 - No universal width-optimality for any latent-target band.

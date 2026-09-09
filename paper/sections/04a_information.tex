@@ -1,0 +1,76 @@
+\subsection{The inflation is an information bound}\label{sec:information}
+
+Proposition~\ref{prop:coupling} is a statement about one diagnostic, built on a
+moment estimator. Its content is more general, and the generality matters for
+whether the boundary is a property of an implementation or of the estimation
+problem.
+
+Subtracting sampling variance from between-population dispersion is exactly
+what estimating the model variance of a Fay--Herriot small-area model does
+\citep{fay1979estimates,rao2015small}. For area $c$, a direct estimate
+$y_c=\theta_c+e_c$ with known sampling variance $D_c$, and
+$\theta_c=x_c'\beta+u_c$ with $u_c\sim N(0,A)$. The Fisher information for $A$
+with the $D_c$ known is $I(A)=\tfrac12\sum_c(A+D_c)^{-2}$, so any unbiased
+estimator obeys
+\begin{equation}\label{eq:crlb}
+\mathrm{RSE}(\widehat A)\ \ge\ \frac{1}{A}\sqrt{\frac{2}{\sum_c(A+D_c)^{-2}}}
+\ \ \overset{D_c\equiv D}{=}\ \ \sqrt{\frac{2}{K}}\cdot\frac{1}{1-\rho^2},
+\qquad \rho^2=\frac{D}{A+D},
+\end{equation}
+the same $(1-\rho^2)^{-1}$ inflation, now from the information rather than from
+a particular estimator. Requiring relative precision $\tau$ gives
+$K\ge2/[\tau^2(1-\rho^2)^2]$, which is~\eqref{eq:boundary} up to the unit
+arising from the moment estimator's $K-1$.
+
+We claim no novelty for~\eqref{eq:crlb}: it is the standard asymptotic variance
+of the model-variance estimator in this model, and the general phenomenon --
+subtracting a component leaves the standard error unchanged while shrinking what
+it is divided by -- is the familiar difficulty of variance-component estimation
+with a small between-group component. What appears to have been overlooked is
+its consequence for feasibility criteria, which is the subject of
+Section~\ref{sec:applications}.
+
+Two properties of~\eqref{eq:crlb} matter for practice, and we verify both on
+\InfCells{} simulated conditions at \InfReps{} replicates
+(Table~\ref{tab:crlb}).
+
+\emph{The bound is attained by the estimator practitioners use.} Restricted
+maximum likelihood tracks it closely: over conditions with $K\ge100$ the ratio
+of realised to bound relative standard error has median \InfRatioMed{} and
+range \InfRatioLo--\InfRatioHi. The inflation therefore cannot be evaded by a
+better estimator, and the earlier restriction to unbiased estimation, which
+excluded exactly the shrinkage estimators small-area practice is built on, is
+not what carries the result.
+
+\emph{The closed form is the equal-variance case, and it is conservative.}
+With $D_c\equiv D$ it reproduces the exact bound to \InfClosedErr{} relative
+error. With sampling variances dispersed across areas at the same mean, the
+exact bound falls below it, by Jensen's inequality on $\sum_c(A+D_c)^{-2}$; the
+closed form then overstates the requirement, so using it for planning is
+conservative rather than optimistic.
+
+\paragraph{A familiar symptom.} If the boundary is real, the regime it calls
+infeasible should be recognisable to practitioners, and it is. The share of
+replicates on which REML returns the boundary estimate $\widehat A=0$ is
+\ZeroLoRho\% or less at design shares up to $0.5$ at every $K$ examined, and at
+$\rho=0.9$ it is \ZeroHiRhoLoK\% at $K=30$, \ZeroHiRhoMidK\% at $K=100$ and
+\ZeroHiRhoHiK\% at $K=500$. Zero and negative estimates of a between-area
+variance are a long-standing nuisance in small-area work. They arise, on this
+reading, in precisely the regime where the component is too small relative to
+sampling error for the available number of areas to determine it, which is what
+the boundary states.
+
+\begin{table}[htbp]\centering
+\caption{Relative standard error of the Fay--Herriot model variance:
+information bound, REML, and the share of replicates returning a zero estimate.
+Equal sampling variances, \InfReps{} replicates per condition.}\label{tab:crlb}
+\begin{tabular}{rrrrrr}\toprule
+& \multicolumn{2}{c}{$\rho=0.5$} & \multicolumn{3}{c}{$\rho=0.9$}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+$K$ & bound & REML & bound & REML & at zero\\\midrule
+30 & 0.344 & 0.346 & 1.359 & 1.191 & \ZeroHiRhoLoK\%\\
+100 & 0.189 & 0.183 & 0.744 & 0.708 & \ZeroHiRhoMidK\%\\
+250 & 0.119 & 0.121 & 0.471 & 0.467 & 1.3\%\\
+500 & 0.084 & 0.085 & 0.333 & 0.334 & \ZeroHiRhoHiK\%\\
+\bottomrule\end{tabular}
+\end{table}

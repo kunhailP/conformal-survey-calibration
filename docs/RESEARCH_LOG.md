@@ -219,3 +219,37 @@ referee can puncture.
 
 Prepared before the literature result arrives so that the framing is not chosen
 to protect a conclusion.
+
+## 2026-09-09 — exp05: the coupling is a property of the problem
+
+The generalisation asked for after the tier question. The Fisher information
+for the model variance of a Fay-Herriot model with known sampling variances is
+`I(A) = (1/2) sum_c (A + D_c)^-2`, so any unbiased estimator has relative
+standard error at least `sqrt(2/K)/(1-rho^2)` at equal sampling variances.
+Protocol outcome 1: REML attains it, median ratio 1.002 over conditions with
+`K >= 100`, and the closed form reproduces the exact bound to 3e-16.
+
+Three consequences.
+
+The result is no longer about one implementation's diagnostic. It is about any
+workflow that subtracts sampling variance from between-population dispersion,
+which includes the standard small-area model. That is the difference between a
+paper about an uncited selector and a paper about survey practice.
+
+It closes the scope gap the predecessor left open. Its floor was proved for
+unbiased estimation and explicitly excluded shrinkage estimators, which is what
+small-area practice is built on. The information version covers the estimator
+practitioners use, and that estimator sits on the bound.
+
+It connects to a symptom practitioners already know. REML returns a zero
+estimate on a quarter of replicates at `rho = 0.9, K = 30` and never at design
+shares up to 0.5, so zero and negative between-area variance estimates arise in
+exactly the regime the boundary calls infeasible.
+
+**Novelty is not claimed for the bound itself.** It is the standard asymptotic
+variance in this model, and the contingency entry above anticipated that the
+identity would prove to be known. The manuscript says so in the text rather
+than waiting to be told. The claim is the consequence: a published feasibility
+criterion for this correction is a fixed count of 94 populations, and that count
+is the boundary at zero design share, the regime where the correction is
+unnecessary.

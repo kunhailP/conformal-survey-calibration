@@ -21,6 +21,7 @@ def main() -> None:
     nat = pd.read_csv(R / "exp04_national.csv")
     ver = pd.read_csv(R / "exp03b_verification.csv")
     shp = pd.read_csv(R / "exp01_shape_audit.csv")
+    inf = pd.read_csv(R / "exp05_information.csv")
     aud = pd.read_csv(R / "exp02_design_audit.csv")
 
     reg = reg.assign(ratio=reg.D / reg.K_floor,
@@ -106,6 +107,17 @@ def main() -> None:
         "AudSplitShare": fmt((split.share_resp_in_split_psu * split.n).sum()
                              / aud.n.sum() * 100, 2),
         "AudStratumSplit": int((aud.stratum_split_across_regions > 0).sum()),
+        # exp05 information bound
+        "InfCells": len(inf),
+        "InfReps": int(inf.reps.iloc[0]),
+        "InfRatioMed": fmt(inf[inf.K >= 100].ratio.median()),
+        "InfRatioLo": fmt(inf[inf.K >= 100].ratio.min()),
+        "InfRatioHi": fmt(inf[inf.K >= 100].ratio.max()),
+        "InfClosedErr": f"{(abs(inf[~inf.dispersed].rse_closed_form - inf[~inf.dispersed].rse_bound) / inf[~inf.dispersed].rse_bound).max():.0e}",
+        "ZeroHiRhoLoK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 30)].share_at_zero.iloc[0]) * 100, 1),
+        "ZeroHiRhoMidK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 100)].share_at_zero.iloc[0]) * 100, 1),
+        "ZeroHiRhoHiK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 500)].share_at_zero.iloc[0]) * 100, 1),
+        "ZeroLoRho": fmt(float(inf[(~inf.dispersed) & (inf.rho <= 0.5)].share_at_zero.max()) * 100, 1),
     }
     out = "\n".join(rf"\newcommand{{\{k}}}{{{val}}}" for k, val in v.items()) + "\n"
     (ROOT / "paper" / "numbers.tex").write_text(out)

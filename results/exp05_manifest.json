@@ -1,0 +1,21 @@
+{
+  "protocol": "docs/PROTOCOL_exp05_information.md",
+  "model": "Fay-Herriot, known sampling variances, intercept only",
+  "estimator": "REML",
+  "reps_per_cell": 2000,
+  "A_true": 1.0,
+  "K": [
+    30,
+    100,
+    250,
+    500
+  ],
+  "rho": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "code_sha256": "6d42122401c33101fe4c402850f13ca1295b1a0c4e784c1bce79382d11f45bbf"
+}
