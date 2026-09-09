@@ -4,6 +4,7 @@ __pycache__/
 data/
 *.pdf
 !paper/*.pdf
+!paper/figures/*.pdf
 paper/*.aux
 paper/*.log
 paper/*.out

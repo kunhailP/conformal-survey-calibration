@@ -59,6 +59,11 @@ written before it was executed.
 Cell seeds derive from cell labels by SHA-256, so any cell reproduces on its
 own and no cell can be selected after its outcome is known.
 
+## Status
+
+The manuscript is complete and format-compliant. Two substantive additions
+remain before submission; see [docs/NEXT.md](docs/NEXT.md).
+
 ## Working rules
 
 1. **A protocol before an experiment.** Written, dated, committed before
