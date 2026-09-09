@@ -26,7 +26,11 @@ CACHE = ROOT / "data" / "ess_r9_11.pkl"
 OUT = ROOT / "results"
 
 B = 400
-THRESHOLDS = np.arange(0, 10)          # F(t) = P(trstprl <= t), d = 10
+# Preregistered low-trust core of the implementation under study: t in {1,2,3,4}.
+# The diagnostic D is a maximum over coordinates, so the grid is not a cosmetic
+# choice and must match the implementation being characterised.
+THRESHOLDS = np.array([1, 2, 3, 4])
+FLOOR_FRAC = 0.05
 MIN_N_GRID = (40, 60, 80, 100, 150)
 ROUNDS = (9, 10, 11)
 Z = 1.645
@@ -56,22 +60,48 @@ def country_departures(g: pd.DataFrame, rng, rescaled=True):
     return regions, dep, v, sizes, n_single
 
 
+def _spread(v2: np.ndarray) -> float:
+    """Robust dispersion of design variances across units, per coordinate.
+
+    A plain max-over-min ratio is meaningless here: a unit whose weighted CDF is
+    degenerate at some threshold has zero design variance there, and the ratio
+    diverges on a numerical guard rather than on anything about the design.  We
+    report the largest 95th-to-5th percentile ratio over coordinates, taken over
+    units with strictly positive variance at that coordinate.
+    """
+    out = []
+    for j in range(v2.shape[1]):
+        col = v2[:, j]
+        col = col[col > 0]
+        if col.size >= 20:
+            lo = np.percentile(col, 5)
+            if lo > 0:
+                out.append(np.percentile(col, 95) / lo)
+    return float(max(out)) if out else float("nan")
+
+
 def gates(dep: np.ndarray, v: np.ndarray):
-    """Diagnostics and gate decisions for a pooled set of regional departures."""
+    """Diagnostics and gate decisions, matching the implementation under study.
+
+    The formulas follow `pcb.inference.design_aware` of the predecessor archive
+    exactly: a floored pointwise modulation for the plug-in scale, population
+    standard deviations, and a coordinate-averaged ratio for rho.  Reproducing
+    a characterisation requires reproducing the statistic being characterised.
+    """
     K = dep.shape[0]
-    s_plug2 = dep.var(axis=0, ddof=1)                     # between-region
+    s = dep.std(axis=0)                                   # ddof = 0, as in the archive
+    s_plug = np.maximum(s, FLOOR_FRAC * max(s.max(), 1e-12))
+    s_plug2 = s_plug ** 2
     v2 = v ** 2
     vbar2 = v2.mean(axis=0)
-    se_vbar2 = v2.std(axis=0, ddof=1) / np.sqrt(K)
-
-    # rho: t-averaged LCB on mean design variance over t-averaged UCB on total
-    lcb_v = max(vbar2.mean() - Z * se_vbar2.mean() / np.sqrt(len(vbar2)), 0.0)
-    ucb_s = s_plug2.mean() * (1.0 + Z * np.sqrt(2.0 / (K - 1)))
-    rho_hat = float(np.sqrt(vbar2.mean() / s_plug2.mean()))
-    rho_lcb = float(np.sqrt(lcb_v / ucb_s))
+    se_vbar2 = v2.std(axis=0) / np.sqrt(K)
 
     guard = np.maximum(vbar2 - Z * se_vbar2, 0.0)
-    floor = 0.01 * s_plug2
+    rho_hat = float(np.sqrt(vbar2.mean()) / s_plug.mean())
+    rho_lcb = float(np.sqrt(guard.mean()
+                           / (s_plug2 * (1 + Z * np.sqrt(2 / max(K - 1, 1)))).mean()))
+
+    floor = (FLOOR_FRAC * s_plug.max()) ** 2
     sT2 = np.maximum(s_plug2 - guard, floor)
     term_sampling = np.sqrt(2 * s_plug2 ** 2 / (K - 1))   # the K-floor term
     term_hetero = se_vbar2                                # dispersion of design variances
@@ -87,7 +117,7 @@ def gates(dep: np.ndarray, v: np.ndarray):
                 K_floor=float(np.sqrt(2.0 / (K - 1))),
                 D_sampling_only=float(np.max(term_sampling / sT2)),
                 hetero_share_of_D2=float(term_hetero[j] ** 2 / se_sT2[j] ** 2),
-                design_var_spread=float(np.max(v2.max(axis=0) / np.maximum(v2.min(axis=0), 1e-30))),
+                design_var_spread=_spread(v2),
                 branch="deconvolution" if (gate_a and gate_b)
                 else ("conservative" if gate_a else "anchor"),
                 scale_ratio=float(np.sqrt(sT2.mean() / s_plug2.mean())))

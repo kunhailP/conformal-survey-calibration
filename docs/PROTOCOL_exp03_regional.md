@@ -40,6 +40,14 @@ transport, not on this estimand, and the manuscript must not transfer it.
 4. Region and national curves are recomputed **inside the same replicate**
    before differencing, so their covariance is propagated rather than assumed.
 
+## Reproduction gate (added 2026-09-09, after this protocol failed to require it)
+
+Before any disagreement with the archive is reported as a finding, the
+reimplementation must reproduce the archive's reported diagnostic under the
+archive's own settings, to the precision the archive reports. A reimplementation
+that has not cleared this gate is not characterising the same statistic and its
+disagreements carry no information.
+
 ## Procedure
 
 `B = 400` replicates. Within each stratum of `n_h` PSUs draw `m_h = n_h - 1`

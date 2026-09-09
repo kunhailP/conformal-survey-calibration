@@ -98,3 +98,43 @@ biased bootstrap, and it holds at population counts where the stated floor has
 no purchase. The manuscript's negative characterisation should be rebuilt on
 it, and the K-floor demoted to what it is: a property of one diagnostic that
 turns out not to be the operative obstacle.
+
+## 2026-09-09 — exp03 was wrong, and exp03b is why we know
+
+The exp03 entry above reported no activation in thirty configurations and
+concluded that the `K >= 94` floor is displaced by design-variance
+heterogeneity. **Both claims were artefacts of a reimplementation that did not
+match the statistic it was characterising.** The verification run found it.
+
+Four differences from `pcb.inference.design_aware`: the threshold grid was all
+ten thresholds rather than the preregistered low-trust core `t in {1,2,3,4}`,
+and `D` is a maximum over coordinates, so the grid is not cosmetic; the plug-in
+scale lacked the floored modulation; standard deviations used `ddof=1` where the
+archive uses `ddof=0`; and the rho lower bound carried a spurious `1/sqrt(d)`.
+
+With the formulas aligned the archive reproduces to four decimal places, and
+the result changes: four activations of thirty under Rao-Wu-Yue, not none.
+
+Two further corrections to what was reported.
+
+- The claim that the bootstrap choice and the resampling-unit correction "push
+  the diagnostic the same way" was half wrong. The bootstrap is decisive: gate B
+  opens in eight of eight m-of-m arms and two of eight Rao-Wu-Yue arms. The
+  resampling unit moves `D` by under one percent and never flips a gate, which
+  follows directly from `exp02` finding only 0.52% of respondents in a
+  region-splitting PSU. That should have been anticipated from `exp02` itself.
+- The heterogeneity account was overstated. Its median share of `D^2` is 7.3%,
+  not 30%.
+
+What replaces them is better than either. The ratio of the realised diagnostic
+to its K-floor is predicted by scale shrinkage times a heterogeneity factor at
+correlation 0.984, `corr(rho_hat, D / K-floor)` is 0.964, and scale shrinkage is
+the dominant term. **The need gate and the reliability gate read the same
+quantity in opposite directions**: design noise large enough to be worth
+removing is, by that very magnitude, large enough to make the remainder poorly
+determined. The frontier is a diagonal, not two independent dimensions.
+
+The lesson for this repository is procedural. A reimplementation must reproduce
+the statistic it characterises before its disagreements mean anything, and that
+reproduction check belongs in the protocol, not in a verification run afterwards.
+`docs/PROTOCOL_exp03_regional.md` did not require it. Future protocols will.

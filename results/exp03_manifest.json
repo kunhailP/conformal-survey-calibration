@@ -3,7 +3,7 @@
   "resample_unit": "(stratum, psu)",
   "bootstrap": "Rao-Wu-Yue rescaled",
   "B": 400,
-  "d": 10,
+  "d": 4,
   "estimand": "region minus own nation, trstprl",
   "frozen": {
     "rho_0": 0.47,

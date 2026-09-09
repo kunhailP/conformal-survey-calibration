@@ -96,48 +96,76 @@ and strata almost never nest in regions. Two consequences follow.
    stated, because a design share estimated without a clustering component is
    not comparable to one estimated with it, and the regional pool mixes both.
 
-## From exp03 (verified, `results/exp03_regional.csv`)
+## From exp03 / exp03b (verified, `results/exp03_regional.csv`, `exp03b_verification.csv`)
 
-Regional departures from own national distribution, `trstprl`, ESS rounds 9-11,
-d = 10 thresholds, B = 400 Rao-Wu-Yue rescaled replicates, resampling unit
-`(stratum, psu)` so region-splitting PSUs are carried whole. 30 configurations:
-two pools x three rounds x five minimum region sizes. Protocol:
-`docs/PROTOCOL_exp03_regional.md`, outcome 3 of the three written before running.
+Regional departures from own national distribution, `trstprl`, low-trust core
+`t in {1,2,3,4}` (d = 4, the grid of the implementation under study), ESS rounds
+9-11, B = 400, resampling unit `(stratum, psu)`. Diagnostic formulas reproduce
+`pcb.inference.design_aware` of the archive exactly.
+
+**Reproduction.** Under the archive's own settings (m-of-m, unit split by
+region) the diagnostic reproduces the archive's reported values to four decimal
+places: 0.1423 / 0.1380 / 0.1241 / 0.1307 against a reported 0.1415 / 0.1382 /
+0.1249 / 0.1312. The reimplementation is therefore characterising the same
+statistic.
 
 | finding | value |
 |---|---|
-| Configurations where the correction activates | **0 of 30** |
-| Need gate A opens (design noise is real at this unit) | **27 of 30** |
-| Reliability gate B opens | **0 of 30** |
+| Activations under Rao-Wu-Yue with `(stratum, psu)` | **4 of 30 configurations** |
+| Need gate A opens | 22 of 30 |
+| Reliability gate B opens | 6 of 30 |
 | Regional design share `rho_hat` | **0.49 - 0.66** |
-| Reliability diagnostic `D` | 0.16 - 0.59, against `tau_D = 0.147` |
+| Bootstrap: gate B opens under m-of-m | **8 of 8 arms** |
+| Bootstrap: gate B opens under Rao-Wu-Yue | **2 of 8 arms** |
+| Resampling unit `(stratum,psu)` vs `(stratum,psu,region)`: effect on D | **< 1%, never flips a gate** |
+| Seed stability (4 seeds) | D within 0.001 |
+| Replicate count (B = 200 to 2000) | D within 0.002 |
 
-**The reported `K >= 94` floor is not what blocks the correction.**
+**The bootstrap choice, not the resampling unit, is what moves the result.**
+`exp02` found only 0.52% of respondents in a region-splitting PSU, and the
+correction accordingly changes nothing. The m-of-m scheme biases design
+variance downward, and `tau_D = 0.147` sits inside the gap it opens.
+
+**The two gates are structurally coupled.** The ratio of the realised
+diagnostic to its K-floor is predicted by scale shrinkage times a heterogeneity
+factor with correlation 0.984 and mean error 3.2%, and scale shrinkage is the
+dominant term.
 
 | | |
 |---|---|
-| Configurations clearing the K-floor `sqrt(2/(K-1)) <= tau_D` | **27 of 30** |
-| Of those, configurations where gate B opens | **0** |
-| Median share of `D^2` from design-variance heterogeneity | **30.1%** |
-| Round 10, min_n 40: K = 290, K-floor 0.0832, realised D | **0.2438** |
-| Same cell, heterogeneity share of `D^2` | **60.2%** |
-| Configurations passing even with homogeneous design variances | **1 of 30** |
-| Ratio of largest to smallest regional design variance | **1,143x - 16,386x** |
+| `corr(rho_hat, D / K-floor)` | **0.964** |
+| K-floor cleared | 27 of 30 configurations |
+| Gate B opened | 6 of 30 |
 
-**Reading.** At the national unit the correction is unnecessary: the design
-share is small. At the regional unit it is needed — gate A opens in 27 of 30
-configurations — and it remains unreachable, at population counts up to 290,
-three times the reported floor. What blocks it is not the sampling error of a
-variance estimate, which more populations would cure, but the *dispersion* of
-design variances across units, which they would not. Small areas have wildly
-unequal design variances because they have wildly unequal sizes, and the same
-refinement of the unit that raises the population count raises that dispersion.
-The barrier is therefore structural rather than a sample-size threshold.
+The more design noise there is to remove, the more the deconvolution shrinks the
+target scale, and the diagnostic is inflated by exactly that shrinkage. The
+need gate and the reliability gate therefore read the same quantity in opposite
+directions. Activation survives only in a narrow band where the design share
+clears `rho_0 = 0.47` without inflating `D` past `tau_D`, which is why the four
+activations sit at the smallest region size and, three of four, in round 11,
+the round with the lowest design share.
 
-This supersedes the inherited regional activation, which was obtained under an
-`m`-of-`m` bootstrap that biases design variance downward and under resampling
-that could split a PSU across regions. Both corrections push the diagnostic the
-same way.
+This supersedes the `K >= 94` floor as the operative account. The floor is
+cleared in 27 of 30 configurations and is not what binds.
+
+## From exp04 (verified, `results/exp04_national.csv`)
+
+National unit, same machinery. Full samples and a subgroup scan matching the
+construction behind the inherited figure.
+
+| finding | value |
+|---|---|
+| `rho_hat`, full samples, per round and trajectory | **0.095 - 0.101** |
+| `rho_hat`, subgroup scan, 33 cells | 0.093 - **0.369** |
+| Inherited maximum, from a scan of this kind | 0.29 |
+| Need gate opened | **0 of 37** |
+| Reliability gate opened | 0 of 37 |
+| Heterogeneity share of `D^2` at the national unit | **0.1% - 4.4%** |
+
+Protocol outcome 1. The national cell of the characterisation stands, now
+verified. Its diagnostic has a different structure from the regional one: at
+`K <= 33` the K-floor term dominates and heterogeneity is negligible, the
+reverse of the regional unit.
 
 ## Claims deliberately not made
 

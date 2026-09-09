@@ -1,0 +1,7 @@
+{
+  "protocol": "docs/PROTOCOL_exp04_national.md",
+  "bootstrap": "Rao-Wu-Yue rescaled",
+  "resample_unit": "(stratum, psu)",
+  "B": 400,
+  "estimand": "country deviation from cross-country mean, trstprl"
+}
