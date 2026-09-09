@@ -1,0 +1,50 @@
+\subsection{Where this sits}\label{sec:related}
+
+Conformal prediction has barely reached survey venues. \emph{Survey
+Methodology} contains one conformal paper, \citet{wieczorek2023design}, which
+gives design-based prediction for a unit drawn from the same finite population.
+This journal contains two, both in one 2024 issue:
+\citet{bersson2024optimal}, on small areas with area-specific frequentist
+coverage, and \citet{michal2024model}, which is the closer antecedent and easy
+to miss because its title does not name the method. That paper proposes a
+scaled split-conformal procedure relaxing exchangeability for complex designs,
+and documents that plain split conformal undercovers there. It differs from the
+present setting in what carries the sampling error: its calibration units are
+observations from a designed sample, whereas ours are \emph{estimated curves},
+each with a design variance of its own, and it is that error in the calibration
+objects rather than in the target that the correction studied here attempts to
+remove.
+
+The coverage-guarantee tradition this belongs to in this journal begins earlier,
+with \citet{burris2020exact}, whose adaptive intervals attain exact area-level
+coverage for every parameter value and are robust to misspecification of the
+linking model. The competing line, second-order-correct empirical Bayes
+intervals, culminating in \citet{yoshimori2014second}, is provably shorter than
+direct intervals and is the benchmark any latent-target proposal must eventually
+meet; we make no width claim against it, for the reason given in
+Section~\ref{sec:discussion}.
+
+On the estimand, complex-survey estimation of a distribution function is
+well developed \citep{pasquazzi2016comparison,harms2006calibration}, but
+simultaneous bands for one are not. The only \emph{Survey Methodology}
+construction of simultaneous bands for a design-based estimated curve is
+\citet{cardot2013confidence}, and its curve is a functional mean rather than a
+distribution function. \citet{koffman2025function} is the closest existing
+machinery to ours---a Rao--Wu--Yue--Beaumont bootstrap supporting joint bands
+under a complex design---with a different estimand and no conformal component.
+
+\paragraph{The resampling scheme, and a caution about it.} We use the
+Rao--Wu--Yue rescaled bootstrap \citep{rao1992recent}, which
+\citet{bessonneau2021with} treat for stratified multistage household surveys and
+\citet{scarpa2026inference} report as outperforming alternatives in this journal
+for such designs. One objection has to be met. \citet{saigo2007mean} recommends
+an unrescaled, mean-adjusted scheme precisely \emph{because} no rescaling is
+performed, on the grounds that rescaling sits awkwardly with estimating
+distribution functions and quantiles. Our estimands are distribution functions,
+so the objection applies. We answer it empirically rather than by assertion:
+Section~\ref{sec:applications} reports every diagnostic under both schemes, and
+the choice is consequential---the reliability gate opens in \VerMofmOpen{} of
+\VerMofmN{} arms under the unrescaled scheme and \VerRwyOpen{} of \VerRwyN{}
+under rescaling. We report the rescaled results as primary because the
+unrescaled scheme understates between-unit variance in a stratified design, and
+we report the difference rather than absorbing it.

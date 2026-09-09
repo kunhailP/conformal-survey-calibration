@@ -279,3 +279,50 @@ correction rather than quietly using the better decomposition.
 Both of this project's disagreements with the inherited archive have now turned
 out to be the reimplementation's fault, caught by the gate the first failure
 prompted. That is the gate working, and it is worth keeping.
+
+## 2026-09-09 — the literature check returns; the contingency applies
+
+The adversarial search found prior art, as the contingency entry anticipated.
+
+**The coupling algebra is classical.** It is the familiar imprecision of a
+variance component estimated by subtraction, in small-area models and in
+random-effects meta-analysis. \citet{partlett2017random}, *Statistics in
+Medicine* 36(2), document the coupled condition empirically in the
+meta-analytic setting: intervals behave only when the number of studies is
+large and the heterogeneity is not small relative to within-study error, which
+is the trade-off the boundary describes. The manuscript now says so in the
+abstract, the introduction and Section 4.1, and locates what is added: the
+transfer to a calibration criterion that decides whether a procedure may be used
+at all, the closed form as a planning quantity, and the reinterpretation of the
+fixed floor.
+
+**The floor being reinterpreted is our own.** The manuscript says that too. It
+is self-correction, not a criticism of a third party, and presenting it
+otherwise would be dishonest.
+
+**Venue positioning is better than expected.** *Survey Methodology* contains one
+conformal paper, this journal two, both from 2024. There is no *Survey
+Methodology* paper constructing simultaneous bands for an estimated
+distribution function; the only design-based simultaneous-band paper there is
+for a functional mean. The gap is real and now stated with evidence.
+
+**Three papers that had to be found and were not in hand.**
+`michal2024model`, in the same issue as Bersson-Hoff, proposes a scaled split
+conformal procedure relaxing exchangeability for complex designs. Its title
+does not name the method, and a referee who knows it would have asked why it
+was absent. `burris2020exact` is the in-venue precedent for exact area-level
+coverage and predates Bersson-Hoff by four years. `koffman2025function` uses a
+Rao-Wu-Yue-Beaumont bootstrap for joint bands under a complex design, the
+closest existing machinery.
+
+**An objection to the estimator choice, now answered in the text.**
+`saigo2007mean` recommends an unrescaled scheme *because* no rescaling is
+performed, on the grounds that rescaling sits awkwardly with estimating
+distribution functions and quantiles. Our estimands are distribution functions,
+so it applies. Section 2.1 answers it empirically: every diagnostic is reported
+under both schemes, the difference is consequential and is reported rather than
+absorbed.
+
+**Unresolved.** The `K >= 94` figure has no source outside our own working
+paper. That is consistent with it being ours, and the manuscript now attributes
+it there explicitly.

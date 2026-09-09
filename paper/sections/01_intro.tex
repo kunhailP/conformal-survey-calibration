@@ -35,7 +35,8 @@ from a convolution, or for simultaneous scoring of a curve. The contribution
 is to connect these to survey-estimated distribution curves and to characterise
 when the variance-subtraction route is reachable in practice.
 
-The characterisation turns on a result we did not anticipate. An adaptive
+The characterisation turns on a coupling that is not new as algebra but that
+appears not to have been drawn out for a calibration procedure. An adaptive
 implementation of this correction gates on two quantities: whether there is
 enough design noise to be worth removing, and whether the remaining scale is
 determined precisely enough to trust. These read as independent requirements,
@@ -49,8 +50,8 @@ worth removing is, by that very magnitude, large enough to leave the remainder
 poorly determined.} The feasible region is a narrow diagonal band, not a corner.
 
 This displaces the account the implementation carried. Its documented obstacle
-was a population-count floor of ninety-four, derived from the diagnostic's
-sampling term. In our regional applications that floor is cleared in
+was a population-count floor of ninety-four \citep{park2026wrongunit}, derived
+from the diagnostic's sampling term. In our regional applications that floor is cleared in
 \RegFloorCleared{} of \RegConfigs{} configurations, at population counts up to
 \RegKmax, and the correction still activates in only \RegActivations. The
 floor is not what binds.
