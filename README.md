@@ -27,18 +27,34 @@ src/dac/     bands, generators, diagnostics
 experiments/ numbered, each with a protocol written before execution
 results/     generated outputs; results/archived/ holds inherited tables
 tests/       contract tests binding each claim to executable behaviour
-paper/       manuscript sources
+paper/       manuscript sources; main.tex is blinded, titlepage.tex is not
 ```
 
 ## Reproduce
 
-`exp01` needs no microdata and no network.
-
 ```
 pip install numpy scipy pandas matplotlib pytest
-python experiments/exp01_shape_audit.py     # ~2 min, 180 cells
-python -m pytest tests/ -q                  # ~3 min, 11 contract tests
+make            # exp01, the contract tests, and the manuscript numbers
+make paper      # build the PDF (needs a TeX distribution)
 ```
+
+| experiment | what it settles | licensed data |
+|---|---|---|
+| `exp01_shape_audit` | cost of violating the shape assumption, by design share and coordinate count | no |
+| `exp05_information` | the inflation is an information bound, and REML attains it | no |
+| `exp02_design_audit` | do sampling units nest inside regions? | **yes** |
+| `exp03_regional` | regional gates and activation under correct resampling | **yes** |
+| `exp03b_verification` | seed, replicate count, and which choice drives the result | **yes** |
+| `exp04_national` | national design shares, recomputed | **yes** |
+| `exp06_claims` | what simultaneity costs a repeated-survey reading | **yes** |
+| `exp07_widths` | correction against the anchor, and whether the anchor holds | **yes** |
+
+The two experiments needing no microdata run in about three minutes together.
+The rest need European Social Survey rounds 9--11; see `docs/DATA.md` for the
+retrieval route and `docs/CLAIMS.md` for which reported numbers depend on them.
+
+Each experiment writes to `results/` and is paired with a protocol in `docs/`
+written before it was executed.
 
 Cell seeds derive from cell labels by SHA-256, so any cell reproduces on its
 own and no cell can be selected after its outcome is known.
