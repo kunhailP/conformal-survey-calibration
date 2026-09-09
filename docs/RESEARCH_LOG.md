@@ -173,3 +173,49 @@ significance. Every reported number is a macro emitted by
 its artefact. Macro, cross-reference and citation resolution verified
 programmatically; the document has not been compiled, since no TeX distribution
 is available in this environment.
+
+## 2026-09-09 — novelty contingency for the coupling result
+
+A literature check is running. Independently of it, the identity should be
+assessed honestly, because it is short.
+
+Strip the conformal setting away and it reads: let `T` estimate a total
+variance and let a noise component `N` be subtracted to leave `S = T - N`.
+With `N` known exactly, `SE(S_hat) = SE(T_hat)`, so
+
+    RSE(S_hat) = SE(T_hat) / S = RSE(T_hat) x (T / S) = RSE(T_hat) / (1 - rho^2).
+
+Subtracting a component does not reduce the standard error but does reduce what
+that error is divided by, so relative precision degrades by exactly the
+shrinkage factor. Under normality `RSE(T_hat) = sqrt(2/(K-1))`, and requiring
+`RSE <= tau` gives `K >= 1 + 2/[tau^2 (1-rho^2)^2]`; the square is algebra from
+squaring both sides, not a second mechanism.
+
+**This is one line, and the phenomenon is adjacent to well-trodden ground:**
+negative variance-component estimates in random-effects models, the precision
+of estimated intraclass correlation and heritability when the between-group
+component is small, and attenuation by a reliability ratio in measurement-error
+models. It would be surprising if no one had written the relative-precision
+version down. The manuscript should not be built on the assumption that nobody
+has.
+
+**What survives if it has been.** The identity becomes a stated elementary fact
+with a citation, and the contribution is its consequence, which is specific and
+was in fact overlooked: a published feasibility criterion for this correction is
+a fixed population floor of 94, and that floor is the boundary evaluated at zero
+design share — the regime where the correction is unnecessary. The empirical
+demonstration stands on its own: the boundary predicts the gate in 30 of 30
+survey configurations while the floor admits 27 of which 6 open. So do the
+design-file audit, the variance-estimator sensitivity (the gate opens in 8 of 8
+m-of-m arms and 2 of 8 Rao-Wu-Yue arms), and the directional argument about
+correlated sampling error in cumulative distribution functions.
+
+**What would have to change.** Section 4 would lead with the consequence rather
+than the proposition, the proposition would be demoted to a lemma with prior
+attribution, and the introduction would not describe the coupling as unexpected.
+The paper would be a characterisation paper, which is what JSSAM publishes, and
+a smaller claim honestly placed is worth more at review than a large one a
+referee can puncture.
+
+Prepared before the literature result arrives so that the framing is not chosen
+to protect a conclusion.
