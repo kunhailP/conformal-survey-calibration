@@ -1,0 +1,15 @@
+{
+  "protocol": "docs/PROTOCOL_exp06_claims.md",
+  "alpha": 0.1,
+  "B": 2000,
+  "outcome": "trstprl",
+  "rounds": "9-11",
+  "bootstrap": "Rao-Wu-Yue rescaled",
+  "core_thresholds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "critical_value": "one-sided studentised supremum over the supplied contrasts"
+}

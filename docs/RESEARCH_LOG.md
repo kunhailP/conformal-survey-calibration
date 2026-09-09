@@ -253,3 +253,29 @@ than waiting to be told. The claim is the consequence: a published feasibility
 criterion for this correction is a fixed count of 94 populations, and that count
 is the boundary at zero design share, the regime where the correction is
 unnecessary.
+
+## 2026-09-09 — exp06: the reproduction gate earns its place
+
+The claim family was restored to give the manuscript a companion to its scope
+results. The reproduction gate added after the exp03 failure caught a second
+implementation divergence immediately, before anything was claimed.
+
+The first attempt returned 15 / 7 / 4 / 1 against the archive's 20 / 12 / 6 / 1.
+Three candidate explanations were tested and rejected: the bootstrap scheme, the
+scope of the band over ordered pairs, and the definition of the marginal
+comparator. Reading the archive's certification code settled it. Its critical
+value is **one-sided** and the reimplementation used a two-sided supremum; and
+its "plug-in" column is not a bootstrap at all but the sign of the point
+estimate. With both corrected the archive reproduces exactly, counts and named
+set.
+
+That second finding matters for presentation. The predecessor's headline
+compared the point-estimate column with the simultaneous column and described
+the former as a "marginal reading". It is not a statistical reading. Reported
+honestly the sequence is 20 by sign, 15 pointwise with design-based uncertainty,
+11 simultaneous, and the effect is still large. The manuscript states the
+correction rather than quietly using the better decomposition.
+
+Both of this project's disagreements with the inherited archive have now turned
+out to be the reimplementation's fault, caught by the gate the first failure
+prompted. That is the gate working, and it is worth keeping.

@@ -197,6 +197,38 @@ the model-variance estimator in this model. What the manuscript claims is
 overlooked is its consequence for feasibility criteria, and the empirical
 demonstration in exp03.
 
+## From exp06 (verified, `results/exp06_claims.csv`)
+
+Trust in parliament, ESS rounds 9-11, 30 countries, low-trust core, `alpha = 0.10`,
+B = 2000, one-sided studentised sup-t over the contrast surface.
+
+**Reproduction gate cleared.** Under the archive's m-of-m bootstrap this
+implementation returns 20 / 12 / 6 / 1 and the net set {AT, BE, EE, GB, GR, NL},
+exactly as the archive reports.
+
+| claim | point estimate | pointwise | simultaneous |
+|---|---|---|---|
+| some adjacent pair declines | **20** | **15** | **11** |
+| the span declines | 10 | 7 | **6** |
+| every adjacent pair declines | 4 | 2 | **1** |
+
+Net certified: AT, BE, EE, GB, GR, NL.
+
+**Reading.** Two reductions compound and answer different questions. Design-based
+uncertainty applied one contrast at a time removes 5 of 20; simultaneity over the
+whole surface removes a further 4. The claim rung compounds again, 11 to 6 to 1.
+
+**Correction to the predecessor's presentation.** It reported the first and third
+entries of the first row as a contrast between a "marginal reading" and a
+simultaneous band. The first column is not a marginal statistical reading: it is
+the sign of the point estimate, with no uncertainty attached. The three-column
+decomposition is the honest form of the same comparison and remains a large
+effect. Reported in the manuscript as such.
+
+**Not claimed.** Nothing here is a statement about political change. The window
+contains a pandemic round and a mode transition in several countries, and
+measurement comparability across rounds is assumed rather than shown.
+
 ## Claims deliberately not made
 
 - No universal width-optimality for any latent-target band.

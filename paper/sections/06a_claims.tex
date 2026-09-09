@@ -1,0 +1,59 @@
+\subsection{What the framework delivers: one band, a family of claims}
+\label{sec:claims}
+
+The results so far are about scope: when a correction may be used, and when it
+may not. A scope result needs a companion showing what the framework yields
+when applied, and the available one is a survey-inference finding rather than a
+substantive one.
+
+For a country with observed rounds, take the contrast surface
+$\theta_{a,b}(t)=F_b(t)-F_a(t)$ over ordered round pairs and core thresholds.
+Rounds are independent cross-sections, so each round's sampling units are
+resampled within its own strata. One studentised one-sided sup-$t$ critical
+value covers the whole surface, so a family of claims of increasing
+strength---some adjacent pair declines across the core, the span declines,
+every adjacent pair declines---is read off one coverage event, with no
+multiplicity spent per claim. Certified claims hold jointly with probability at
+least $1-\alpha$, by set inclusion in the band, and the count of claims does not
+enter.
+
+Table~\ref{tab:claims} applies this to trust in parliament over European Social
+Survey rounds 9--11 at $\alpha=0.10$, in \ClmN{} countries.
+
+\begin{table}[htbp]\centering
+\caption{Countries certified, by claim and by how uncertainty is handled. The
+first column is the sign of the point estimate and carries no inference; the
+second adds design-based uncertainty pointwise; the third adds simultaneity over
+the whole contrast surface. Trust in parliament, rounds 9--11,
+$\alpha=0.10$.}\label{tab:claims}
+\begin{tabular}{lrrr}\toprule
+claim & point estimate & pointwise & simultaneous\\\midrule
+some adjacent pair declines & \ClmAnyPoint & \ClmAnyPointwise & \ClmAnySim\\
+the span declines & \ClmNetPoint & \ClmNetPointwise & \ClmNetSim\\
+every adjacent pair declines & \ClmPerPoint & \ClmPerPointwise & \ClmPerSim\\
+\bottomrule\end{tabular}
+\end{table}
+
+Two reductions compound, and they are worth separating because they answer
+different questions. Of the \ClmAnyPoint{} countries whose point estimates fall
+in some adjacent pair, \ClmAnyPointwise{} survive design-based uncertainty
+applied one contrast at a time, and \ClmAnySim{} survive a band covering the
+whole surface at once. Roughly a quarter of the apparent movement is within
+sampling error, and a further fifth of the original is within the multiplicity
+of looking at every pair and threshold. The claim rung then compounds again:
+\ClmAnySim{} countries certify some adjacent decline, \ClmNetSim{} certify the
+span (\ClmNetSet), and \ClmPerSim{} certifies decline at every adjacent pair.
+
+We record that the predecessor manuscript reported the first and third columns
+of the first row as a contrast between a ``marginal reading'' and a
+simultaneous band. The first column is not a marginal statistical reading; it is
+the sign of an estimate with no uncertainty attached. The decomposition above is
+the honest form of the same comparison, and it remains a large effect.
+
+\paragraph{What this does not establish.} Nothing here is a claim about
+political change. The window contains a pandemic round and a mode transition in
+several countries, either of which produces the shifts these bands certify, and
+measurement comparability across rounds is assumed rather than shown. The
+statement is about response distributions under those assumptions. Its purpose
+here is to size what simultaneity and design-based uncertainty cost a repeated
+cross-national reading, which is a survey-methodological quantity.

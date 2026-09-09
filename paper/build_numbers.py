@@ -22,6 +22,8 @@ def main() -> None:
     ver = pd.read_csv(R / "exp03b_verification.csv")
     shp = pd.read_csv(R / "exp01_shape_audit.csv")
     inf = pd.read_csv(R / "exp05_information.csv")
+    clm = pd.read_csv(R / "exp06_claims.csv")
+    ref = pd.read_csv(R / "exp06_claims_mofm.csv")
     aud = pd.read_csv(R / "exp02_design_audit.csv")
 
     reg = reg.assign(ratio=reg.D / reg.K_floor,
@@ -117,6 +119,20 @@ def main() -> None:
         "ZeroHiRhoLoK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 30)].share_at_zero.iloc[0]) * 100, 1),
         "ZeroHiRhoMidK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 100)].share_at_zero.iloc[0]) * 100, 1),
         "ZeroHiRhoHiK": fmt(float(inf[(~inf.dispersed) & (inf.rho == 0.9) & (inf.K == 500)].share_at_zero.iloc[0]) * 100, 1),
+        "ClmN": len(clm),
+        "ClmAnyPoint": int(clm.any_point.sum()),
+        "ClmAnyPointwise": int(clm.any_pointwise.sum()),
+        "ClmAnySim": int(clm.any_simultaneous.sum()),
+        "ClmNetPoint": int(clm.net_point.sum()),
+        "ClmNetPointwise": int(clm.net_pointwise.sum()),
+        "ClmNetSim": int(clm.net_simultaneous.sum()),
+        "ClmPerPoint": int(clm.persist_point.sum()),
+        "ClmPerPointwise": int(clm.persist_pointwise.sum()),
+        "ClmPerSim": int(clm.persist_simultaneous.sum()),
+        "ClmNetSet": ", ".join(sorted(clm.loc[clm.net_simultaneous, "cntry"])),
+        "ClmGateAny": int(ref.any_simultaneous.sum()),
+        "ClmGateNet": int(ref.net_simultaneous.sum()),
+        "ClmGatePer": int(ref.persist_simultaneous.sum()),
         "ZeroLoRho": fmt(float(inf[(~inf.dispersed) & (inf.rho <= 0.5)].share_at_zero.max()) * 100, 1),
     }
     out = "\n".join(rf"\newcommand{{\{k}}}{{{val}}}" for k, val in v.items()) + "\n"
