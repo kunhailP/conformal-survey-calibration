@@ -60,6 +60,38 @@ The common-coding-level row is a fact about the archive that the predecessor
 manuscript stated in prose but never tabulated. It belongs in a table: the
 correction has never activated on a homogeneous unit definition.
 
+## From exp02 (verified, `results/exp02_design_audit.csv`)
+
+ESS rounds 9-11, 90 country-rounds, 159,320 respondents. Protocol:
+`docs/PROTOCOL_exp02_design_audit.md`. This closes the outstanding design-file
+condition recorded in `docs/DATA.md`; it had never been checked.
+
+| finding | value |
+|---|---|
+| Country-rounds where the PSU identifier is degenerate (equals respondent, or constant) | **25 of 90** |
+| Countries affected | AT, CH, CY, DK, EE, FI, IL, LV, NL, NO, RS, SE |
+| Country-rounds with informative PSUs | 65 |
+| Of those, country-rounds where a PSU spans more than one region | **15** |
+| Respondents in a region-splitting PSU | **822, 0.52% of all** |
+| Worst country-rounds | FR r11 15.0%, BE r10 8.7%, HR r11 6.3%, SK r9 5.5% |
+| Country-rounds with a region carried by fewer than three PSUs | 8 |
+| Country-rounds where a stratum spans more than one region | **63 of 90** |
+
+**Reading.** Nesting holds for the overwhelming majority of the sample, so the
+inherited regional design variances are not built on a wholly false structure.
+But the violation is not empty, it concentrates in identifiable country-rounds,
+and strata almost never nest in regions. Two consequences follow.
+
+1. The regional analysis must either exclude the fifteen country-rounds with
+   region-splitting PSUs or resample their affected regions jointly, and the
+   activation result must be shown to survive that change rather than assumed
+   to. The activation is the only place the correction fires on real data.
+2. For the twelve countries with degenerate PSUs the design variance carries no
+   clustering component at all. This is a property of those samples, several of
+   which are individual-level register samples, not a data defect. It must be
+   stated, because a design share estimated without a clustering component is
+   not comparable to one estimated with it, and the regional pool mixes both.
+
 ## Claims deliberately not made
 
 - No universal width-optimality for any latent-target band.

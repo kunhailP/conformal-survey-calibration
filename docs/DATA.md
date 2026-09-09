@@ -21,9 +21,16 @@ providers, then follow the predecessor repository's instructions at
 re-executed here. Reproducing a saved number and justifying its assumptions are
 separate tasks, and the manuscript distinguishes them.
 
-## Open verification item
+## Design-file verification: closed 2026-09-09
 
 The regional analysis groups by stratum, primary sampling unit, and region. If
 a primary sampling unit spans more than one region, resampling must treat those
-regions jointly. This has not been confirmed against the ESS design files and
-is the first check to perform on obtaining the data.
+regions jointly. `experiments/exp02_design_audit.py` checked this against the
+licensed files. Result in `docs/CLAIMS.md`: nesting holds for 99.48% of
+respondents, fails in fifteen country-rounds, and strata do not nest in regions
+in 63 of 90 country-rounds. Twelve countries carry degenerate PSU identifiers.
+The consequences for the regional analysis are recorded with the finding.
+
+Rounds 9-11 carry complete `psu`, `stratum`, `region`, `prob` and weight
+variables for all 33 countries, so no country is lost to missing design
+metadata.

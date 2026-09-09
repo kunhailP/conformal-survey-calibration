@@ -48,3 +48,23 @@ Outcome, in `docs/CLAIMS.md`:
 
 The last point weakens a claim the predecessor draft would have made and is
 recorded here so it is not quietly reinstated.
+
+## 2026-09-09 — licensed data obtained; the design-file condition is closed
+
+ESS rounds 1-11, the WVS trend file and the LAPOP Grand Merge were supplied
+directly. Rounds 9-11 carry complete design metadata for all 33 countries.
+
+`exp02` settled the condition that `docs/DATA.md` had carried as unverified and
+that the predecessor manuscript relied on without checking: whether primary
+sampling units nest inside regions. They mostly do — 99.48% of respondents sit
+in a PSU confined to one region — but fifteen country-rounds violate it, with
+France round 11 at 15% and Belgium round 10 at 9%, and strata fail to nest in
+regions in 63 of 90 country-rounds. Twelve countries carry degenerate PSU
+identifiers, correctly so for register-based individual samples, which means
+the regional pool mixes design variances that do and do not contain a
+clustering component.
+
+This does not overturn the inherited regional result. It does mean the result
+cannot be reported until it is shown to survive correct joint resampling of the
+offending regions, which is the next experiment. Recorded now so that the
+obligation is not lost.
