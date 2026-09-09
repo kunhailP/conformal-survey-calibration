@@ -1,0 +1,33 @@
+{
+  "protocol": "docs/PROTOCOL_exp01_shape_audit.md",
+  "status": "post-development sensitivity analysis, exploratory, not preregistered",
+  "cells": 180,
+  "reps_per_cell": 4000,
+  "alpha": 0.1,
+  "K": [
+    30,
+    100,
+    250
+  ],
+  "rho": [
+    0.29,
+    0.4,
+    0.52,
+    0.8
+  ],
+  "d": [
+    8,
+    24,
+    48
+  ],
+  "structures": [
+    "matched",
+    "noise_more_correlated",
+    "noise_far_more_correlated",
+    "noise_equi_latent_ar1",
+    "latent_more_correlated"
+  ],
+  "code_sha256": "0a0951948646bc96b20bc8d43d45b92a7b49c03444da84fde1ff60f91d821f5b",
+  "numpy": "2.4.6",
+  "pandas": "3.0.5"
+}

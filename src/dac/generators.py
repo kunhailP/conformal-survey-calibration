@@ -1,0 +1,67 @@
+"""Correlation structures and deviation-curve generators.
+
+The generators produce *standardised deviation curves*, not cumulative
+distribution functions and not finite-population sampling designs.  They exist
+to isolate distributional assumptions, and any experiment built on them must
+say so.
+"""
+from __future__ import annotations
+
+import numpy as np
+
+__all__ = ["equicorrelated", "ar1", "banded", "cholesky", "draw_curves", "noise_scale"]
+
+
+def equicorrelated(d: int, r: float) -> np.ndarray:
+    """Exchangeable correlation: every off-diagonal entry equals ``r``."""
+    if not -1.0 / (d - 1) < r < 1.0:
+        raise ValueError(f"equicorrelated({d}, {r}) is not positive definite")
+    R = np.full((d, d), float(r))
+    np.fill_diagonal(R, 1.0)
+    return R
+
+
+def ar1(d: int, r: float) -> np.ndarray:
+    """First-order autoregressive correlation, ``R[i, j] = r ** |i - j|``."""
+    if not -1.0 < r < 1.0:
+        raise ValueError(f"ar1 requires |r| < 1, got {r}")
+    i = np.arange(d)
+    return np.asarray(float(r)) ** np.abs(i[:, None] - i[None, :])
+
+
+def banded(d: int, r: float, bandwidth: int = 1) -> np.ndarray:
+    """Correlation ``r`` within ``bandwidth`` coordinates, zero beyond."""
+    i = np.arange(d)
+    lag = np.abs(i[:, None] - i[None, :])
+    R = np.where(lag <= bandwidth, float(r), 0.0)
+    np.fill_diagonal(R, 1.0)
+    return R
+
+
+def cholesky(R: np.ndarray) -> np.ndarray:
+    """Lower Cholesky factor, with a clear error when ``R`` is not admissible."""
+    try:
+        return np.linalg.cholesky(R)
+    except np.linalg.LinAlgError as exc:  # pragma: no cover - guard
+        raise ValueError("correlation matrix is not positive definite") from exc
+
+
+def draw_curves(rng: np.random.Generator, n: int, k: int, L: np.ndarray) -> np.ndarray:
+    """Draw ``n`` replicates of ``k`` independent Gaussian curves with factor ``L``.
+
+    Returns an array of shape ``(n, k, d)`` with unit coordinate variances when
+    ``L`` is the Cholesky factor of a correlation matrix.
+    """
+    d = L.shape[0]
+    return rng.normal(size=(n, k, d)) @ L.T
+
+
+def noise_scale(rho: float) -> float:
+    """Noise standard deviation giving design share ``rho`` at unit latent scale.
+
+    With latent variance 1 and noise variance ``sigma ** 2``, the design share is
+    ``rho ** 2 = sigma ** 2 / (1 + sigma ** 2)``, so ``sigma = rho / sqrt(1 - rho ** 2)``.
+    """
+    if not 0.0 <= rho < 1.0:
+        raise ValueError(f"design share must lie in [0, 1), got {rho}")
+    return float(rho) / np.sqrt(1.0 - float(rho) ** 2)

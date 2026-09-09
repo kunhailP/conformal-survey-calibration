@@ -1,0 +1,721 @@
+experiment,structure,K,rho,d,method,claims_target,basis,reps,seed,latent_hits,latent_coverage,latent_mcse,observed_coverage,mean_radius
+exp01,matched,30,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,11972596278746370565,3694,0.9235,0.0042026108,0.90625,2.55656912
+exp01,matched,30,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11972596278746370565,3995,0.99875,0.0005586675,0.99825,3.93336664
+exp01,matched,30,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11972596278746370565,3598,0.8995,0.00475393916,0.881,2.44670477
+exp01,matched,30,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11972596278746370565,3616,0.904,0.00465789652,0.87925,2.4463977
+exp01,matched,30,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,3675762174727800639,3759,0.93975,0.00376231104,0.90725,2.67290652
+exp01,matched,30,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3675762174727800639,3999,0.99975,0.000249968748,0.998,4.4311537
+exp01,matched,30,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3675762174727800639,3596,0.899,0.00476442546,0.84975,2.44975929
+exp01,matched,30,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3675762174727800639,3588,0.897,0.00480601186,0.84375,2.44642245
+exp01,matched,30,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,1657199646897776247,3856,0.964,0.00294550505,0.90525,2.86495744
+exp01,matched,30,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1657199646897776247,4000,1,0,0.99925,5.15964302
+exp01,matched,30,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1657199646897776247,3646,0.9115,0.00449076135,0.7915,2.44714999
+exp01,matched,30,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1657199646897776247,3629,0.90725,0.00458659562,0.7865,2.44723945
+exp01,matched,30,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,339267486346615823,3995,0.99875,0.0005586675,0.89975,4.08132118
+exp01,matched,30,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,339267486346615823,4000,1,0,1,8.59082307
+exp01,matched,30,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,339267486346615823,3620,0.905,0.00463613524,0.43175,2.44879271
+exp01,matched,30,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,339267486346615823,3644,0.911,0.00450219391,0.43025,2.44993694
+exp01,matched,100,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,1629715468767987213,3703,0.92575,0.00414538712,0.90775,2.50892011
+exp01,matched,100,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1629715468767987213,3988,0.997,0.00086472539,0.99575,3.63437774
+exp01,matched,100,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1629715468767987213,3618,0.9045,0.00464703535,0.879,2.4011034
+exp01,matched,100,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1629715468767987213,3629,0.90725,0.00458659562,0.881,2.40385481
+exp01,matched,100,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,18056192213648880258,3778,0.9445,0.00362007424,0.89975,2.61977218
+exp01,matched,100,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,18056192213648880258,3999,0.99975,0.000249968748,0.99825,4.12417392
+exp01,matched,100,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,18056192213648880258,3602,0.9005,0.00473285722,0.848,2.40106087
+exp01,matched,100,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,18056192213648880258,3603,0.90075,0.00472756379,0.844,2.40107495
+exp01,matched,100,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,10143247741360072227,3881,0.97025,0.00268630497,0.90275,2.81223076
+exp01,matched,100,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,10143247741360072227,3999,0.99975,0.000249968748,0.9995,4.81521356
+exp01,matched,100,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,10143247741360072227,3636,0.909,0.00454749931,0.793,2.40211263
+exp01,matched,100,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,10143247741360072227,3613,0.90325,0.00467411589,0.7925,2.4000297
+exp01,matched,100,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,13915836027619724907,3997,0.99925,0.000432850292,0.90275,4.00078544
+exp01,matched,100,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,13915836027619724907,4000,1,0,1,8.11794522
+exp01,matched,100,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,13915836027619724907,3597,0.89925,0.00475918684,0.41425,2.40047127
+exp01,matched,100,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,13915836027619724907,3612,0.903,0.00467950318,0.41825,2.40332122
+exp01,matched,250,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,9543175201399538483,3717,0.92925,0.00405414718,0.901,2.49745027
+exp01,matched,250,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9543175201399538483,3994,0.9985,0.000611912984,0.9965,3.62988398
+exp01,matched,250,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9543175201399538483,3626,0.9065,0.00460319862,0.876,2.39012645
+exp01,matched,250,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9543175201399538483,3618,0.9045,0.00464703535,0.876,2.38944218
+exp01,matched,250,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,6648429013263570279,3774,0.9435,0.00365060783,0.9015,2.60558079
+exp01,matched,250,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6648429013263570279,3998,0.9995,0.000353464991,0.9985,4.11754201
+exp01,matched,250,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6648429013263570279,3620,0.905,0.00463613524,0.849,2.38805424
+exp01,matched,250,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6648429013263570279,3624,0.906,0.00461421716,0.84875,2.38885775
+exp01,matched,250,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,2494476545354682689,3862,0.9655,0.00288572998,0.89675,2.79801094
+exp01,matched,250,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2494476545354682689,4000,1,0,0.99975,4.80300448
+exp01,matched,250,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2494476545354682689,3587,0.89675,0.00481117027,0.7765,2.38996654
+exp01,matched,250,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2494476545354682689,3591,0.89775,0.00479048373,0.779,2.38958978
+exp01,matched,250,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,1050874256903665464,3998,0.9995,0.000353464991,0.90075,3.98134264
+exp01,matched,250,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1050874256903665464,4000,1,0,1,8.11810666
+exp01,matched,250,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1050874256903665464,3621,0.90525,0.00463067051,0.40575,2.38880558
+exp01,matched,250,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1050874256903665464,3620,0.905,0.00463613524,0.404,2.38944123
+exp01,noise_more_correlated,30,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,12726893465088744897,3731,0.93275,0.00396003275,0.90775,2.65597093
+exp01,noise_more_correlated,30,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,12726893465088744897,3997,0.99925,0.000432850292,0.999,3.99355882
+exp01,noise_more_correlated,30,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,12726893465088744897,3625,0.90625,0.00460871288,0.876,2.54183495
+exp01,noise_more_correlated,30,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,12726893465088744897,3637,0.90925,0.00454187289,0.877,2.54626687
+exp01,noise_more_correlated,30,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,16867004055598861962,3802,0.9505,0.00342964102,0.905,2.7694499
+exp01,noise_more_correlated,30,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16867004055598861962,3999,0.99975,0.000249968748,0.99875,4.4798221
+exp01,noise_more_correlated,30,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16867004055598861962,3629,0.90725,0.00458659562,0.83975,2.53824276
+exp01,noise_more_correlated,30,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16867004055598861962,3641,0.91025,0.00451926259,0.83975,2.54016212
+exp01,noise_more_correlated,30,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,8379427676025208429,3873,0.96825,0.00277227062,0.89625,2.95822752
+exp01,noise_more_correlated,30,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8379427676025208429,4000,1,0,0.99975,5.19808012
+exp01,noise_more_correlated,30,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8379427676025208429,3587,0.89675,0.00481117027,0.776,2.52681814
+exp01,noise_more_correlated,30,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8379427676025208429,3613,0.90325,0.00467411589,0.7855,2.54501974
+exp01,noise_more_correlated,30,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,2876015946507721622,3997,0.99925,0.000432850292,0.907,4.06388348
+exp01,noise_more_correlated,30,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2876015946507721622,4000,1,0,1,8.61050315
+exp01,noise_more_correlated,30,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2876015946507721622,3503,0.87575,0.00521564803,0.43775,2.43833009
+exp01,noise_more_correlated,30,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2876015946507721622,3653,0.91325,0.00445040553,0.47975,2.5436613
+exp01,noise_more_correlated,100,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,5571351932227647232,3701,0.92525,0.00415819785,0.90025,2.6122765
+exp01,noise_more_correlated,100,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5571351932227647232,3995,0.99875,0.0005586675,0.99775,3.7117508
+exp01,noise_more_correlated,100,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5571351932227647232,3598,0.8995,0.00475393916,0.86625,2.50001822
+exp01,noise_more_correlated,100,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5571351932227647232,3595,0.89875,0.00476965506,0.864,2.5011602
+exp01,noise_more_correlated,100,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,11570712264005248585,3785,0.94625,0.00356584273,0.90575,2.72005811
+exp01,noise_more_correlated,100,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11570712264005248585,4000,1,0,0.9975,4.19884765
+exp01,noise_more_correlated,100,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11570712264005248585,3606,0.9015,0.0047116279,0.8345,2.49297444
+exp01,noise_more_correlated,100,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11570712264005248585,3602,0.9005,0.00473285722,0.8385,2.49966893
+exp01,noise_more_correlated,100,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,16888149630710458716,3862,0.9655,0.00288572998,0.907,2.90277253
+exp01,noise_more_correlated,100,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16888149630710458716,4000,1,0,0.99975,4.87688882
+exp01,noise_more_correlated,100,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16888149630710458716,3585,0.89625,0.00482146081,0.77675,2.47945035
+exp01,noise_more_correlated,100,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16888149630710458716,3591,0.89775,0.00479048373,0.77775,2.49811942
+exp01,noise_more_correlated,100,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,7899413267386102807,3996,0.999,0.000499749937,0.89175,3.99055662
+exp01,noise_more_correlated,100,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7899413267386102807,4000,1,0,1,8.11574239
+exp01,noise_more_correlated,100,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7899413267386102807,3474,0.8685,0.0053434013,0.40375,2.39433397
+exp01,noise_more_correlated,100,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7899413267386102807,3603,0.90075,0.00472756379,0.45275,2.49702327
+exp01,noise_more_correlated,250,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,8512570789060705611,3713,0.92825,0.00408050051,0.89425,2.59766879
+exp01,noise_more_correlated,250,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8512570789060705611,3995,0.99875,0.0005586675,0.997,3.70812183
+exp01,noise_more_correlated,250,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8512570789060705611,3600,0.9,0.00474341649,0.8655,2.48603825
+exp01,noise_more_correlated,250,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8512570789060705611,3604,0.901,0.00472226111,0.86625,2.48860657
+exp01,noise_more_correlated,250,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,5014366371104057713,3799,0.94975,0.00345416189,0.9075,2.70770211
+exp01,noise_more_correlated,250,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5014366371104057713,4000,1,0,0.99925,4.19416903
+exp01,noise_more_correlated,250,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5014366371104057713,3605,0.90125,0.00471694916,0.8325,2.48164998
+exp01,noise_more_correlated,250,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5014366371104057713,3612,0.903,0.00467950318,0.83475,2.48773007
+exp01,noise_more_correlated,250,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,16721847319213825235,3867,0.96675,0.00283480323,0.9025,2.89305743
+exp01,noise_more_correlated,250,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16721847319213825235,4000,1,0,0.99975,4.87617916
+exp01,noise_more_correlated,250,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16721847319213825235,3586,0.8965,0.00481631991,0.7835,2.47115205
+exp01,noise_more_correlated,250,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16721847319213825235,3600,0.9,0.00474341649,0.78975,2.4889205
+exp01,noise_more_correlated,250,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,2739263592826981175,3998,0.9995,0.000353464991,0.896,3.97268948
+exp01,noise_more_correlated,250,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2739263592826981175,4000,1,0,1,8.10505966
+exp01,noise_more_correlated,250,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2739263592826981175,3442,0.8605,0.00547813267,0.41625,2.38361369
+exp01,noise_more_correlated,250,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2739263592826981175,3566,0.8915,0.00491751335,0.4605,2.48845961
+exp01,noise_far_more_correlated,30,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,9451604696333641955,3713,0.92825,0.00408050051,0.90225,2.65331215
+exp01,noise_far_more_correlated,30,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9451604696333641955,3997,0.99925,0.000432850292,0.99875,3.98955762
+exp01,noise_far_more_correlated,30,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9451604696333641955,3615,0.90375,0.0046633126,0.869,2.53929043
+exp01,noise_far_more_correlated,30,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9451604696333641955,3625,0.90625,0.00460871288,0.87,2.54207161
+exp01,noise_far_more_correlated,30,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,1620002100967839284,3784,0.946,0.00357365359,0.90525,2.76104267
+exp01,noise_far_more_correlated,30,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1620002100967839284,3999,0.99975,0.000249968748,0.999,4.48825766
+exp01,noise_far_more_correlated,30,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1620002100967839284,3584,0.896,0.004826593,0.838,2.53053741
+exp01,noise_far_more_correlated,30,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1620002100967839284,3594,0.8985,0.00477487565,0.84575,2.54103668
+exp01,noise_far_more_correlated,30,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,16259812316535359406,3852,0.963,0.0029845854,0.89425,2.94744746
+exp01,noise_far_more_correlated,30,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16259812316535359406,4000,1,0,0.99975,5.1933337
+exp01,noise_far_more_correlated,30,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16259812316535359406,3545,0.88625,0.0050202325,0.7695,2.51761017
+exp01,noise_far_more_correlated,30,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16259812316535359406,3570,0.8925,0.00489754403,0.7785,2.54054993
+exp01,noise_far_more_correlated,30,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,9782118522573385793,3995,0.99875,0.0005586675,0.903,3.99373048
+exp01,noise_far_more_correlated,30,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9782118522573385793,4000,1,0,1,8.52485136
+exp01,noise_far_more_correlated,30,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9782118522573385793,3408,0.852,0.00561462376,0.476,2.39623829
+exp01,noise_far_more_correlated,30,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9782118522573385793,3623,0.90575,0.0046197115,0.5345,2.5402627
+exp01,noise_far_more_correlated,100,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,13325320620871537265,3705,0.92625,0.00413252155,0.89825,2.60998087
+exp01,noise_far_more_correlated,100,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,13325320620871537265,3997,0.99925,0.000432850292,0.99825,3.70692267
+exp01,noise_far_more_correlated,100,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,13325320620871537265,3594,0.8985,0.00477487565,0.869,2.49782124
+exp01,noise_far_more_correlated,100,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,13325320620871537265,3613,0.90325,0.00467411589,0.86975,2.49987498
+exp01,noise_far_more_correlated,100,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,17728154813562045522,3792,0.948,0.00351055551,0.90725,2.71535444
+exp01,noise_far_more_correlated,100,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,17728154813562045522,4000,1,0,0.99925,4.19250212
+exp01,noise_far_more_correlated,100,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,17728154813562045522,3617,0.90425,0.00465247078,0.85175,2.48866346
+exp01,noise_far_more_correlated,100,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,17728154813562045522,3634,0.9085,0.00455872104,0.8525,2.49677079
+exp01,noise_far_more_correlated,100,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,596666508418908307,3866,0.9665,0.00284507249,0.90575,2.90086941
+exp01,noise_far_more_correlated,100,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,596666508418908307,4000,1,0,0.9995,4.87951323
+exp01,noise_far_more_correlated,100,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,596666508418908307,3599,0.89975,0.00474868238,0.7735,2.47782478
+exp01,noise_far_more_correlated,100,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,596666508418908307,3613,0.90325,0.00467411589,0.78375,2.49975358
+exp01,noise_far_more_correlated,100,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,6550436490781170548,3992,0.998,0.00070639932,0.9015,3.91264593
+exp01,noise_far_more_correlated,100,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6550436490781170548,4000,1,0,1,8.04947314
+exp01,noise_far_more_correlated,100,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6550436490781170548,3386,0.8465,0.00569951204,0.4565,2.34758756
+exp01,noise_far_more_correlated,100,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6550436490781170548,3574,0.8935,0.0048774417,0.51525,2.49728806
+exp01,noise_far_more_correlated,250,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,9555405962190696087,3677,0.91925,0.00430782536,0.89875,2.59618195
+exp01,noise_far_more_correlated,250,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9555405962190696087,3988,0.997,0.00086472539,0.997,3.70267681
+exp01,noise_far_more_correlated,250,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9555405962190696087,3571,0.89275,0.00489253098,0.86825,2.4846153
+exp01,noise_far_more_correlated,250,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9555405962190696087,3577,0.89425,0.00486227667,0.86775,2.48864199
+exp01,noise_far_more_correlated,250,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,11969945683694911181,3784,0.946,0.00357365359,0.90675,2.7069585
+exp01,noise_far_more_correlated,250,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11969945683694911181,3999,0.99975,0.000249968748,0.99875,4.19386552
+exp01,noise_far_more_correlated,250,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11969945683694911181,3590,0.8975,0.00479566862,0.84075,2.48096844
+exp01,noise_far_more_correlated,250,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11969945683694911181,3597,0.89925,0.00475918684,0.84375,2.48907196
+exp01,noise_far_more_correlated,250,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,13309866208636479341,3871,0.96775,0.00279329275,0.9015,2.88364377
+exp01,noise_far_more_correlated,250,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,13309866208636479341,4000,1,0,0.99975,4.86942455
+exp01,noise_far_more_correlated,250,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,13309866208636479341,3581,0.89525,0.00484193756,0.77675,2.46311122
+exp01,noise_far_more_correlated,250,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,13309866208636479341,3605,0.90125,0.00471694916,0.78525,2.48867064
+exp01,noise_far_more_correlated,250,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,6347630148941673726,3997,0.99925,0.000432850292,0.89725,3.89238828
+exp01,noise_far_more_correlated,250,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6347630148941673726,4000,1,0,1,8.04211091
+exp01,noise_far_more_correlated,250,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6347630148941673726,3437,0.85925,0.00549862341,0.45975,2.33543297
+exp01,noise_far_more_correlated,250,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6347630148941673726,3618,0.9045,0.00464703535,0.5195,2.48862386
+exp01,noise_equi_latent_ar1,30,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,11620612272048289039,3724,0.931,0.00400746179,0.90325,2.63897965
+exp01,noise_equi_latent_ar1,30,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11620612272048289039,3995,0.99875,0.0005586675,0.99675,3.98785542
+exp01,noise_equi_latent_ar1,30,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11620612272048289039,3615,0.90375,0.0046633126,0.876,2.52557384
+exp01,noise_equi_latent_ar1,30,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11620612272048289039,3616,0.904,0.00465789652,0.88,2.52908443
+exp01,noise_equi_latent_ar1,30,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,16431629251864112673,3781,0.94525,0.00359695835,0.906,2.74891432
+exp01,noise_equi_latent_ar1,30,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16431629251864112673,3999,0.99975,0.000249968748,0.99975,4.48426287
+exp01,noise_equi_latent_ar1,30,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16431629251864112673,3597,0.89925,0.00475918684,0.8485,2.51942159
+exp01,noise_equi_latent_ar1,30,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16431629251864112673,3617,0.90425,0.00465247078,0.848,2.53069691
+exp01,noise_equi_latent_ar1,30,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,16841043194758315837,3879,0.96975,0.00270808685,0.9035,2.92608972
+exp01,noise_equi_latent_ar1,30,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16841043194758315837,4000,1,0,1,5.17608365
+exp01,noise_equi_latent_ar1,30,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16841043194758315837,3569,0.89225,0.00490254876,0.783,2.49936711
+exp01,noise_equi_latent_ar1,30,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16841043194758315837,3627,0.90675,0.00459767434,0.798,2.52869546
+exp01,noise_equi_latent_ar1,30,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,9833685627293833079,3994,0.9985,0.000611912984,0.89325,3.98606642
+exp01,noise_equi_latent_ar1,30,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9833685627293833079,4000,1,0,1,8.52658718
+exp01,noise_equi_latent_ar1,30,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9833685627293833079,3421,0.85525,0.00556321484,0.467,2.39163985
+exp01,noise_equi_latent_ar1,30,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9833685627293833079,3600,0.9,0.00474341649,0.525,2.52674113
+exp01,noise_equi_latent_ar1,100,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,9614320508606369927,3721,0.93025,0.00402755936,0.90625,2.59529921
+exp01,noise_equi_latent_ar1,100,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9614320508606369927,3995,0.99875,0.0005586675,0.996,3.70038583
+exp01,noise_equi_latent_ar1,100,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9614320508606369927,3612,0.903,0.00467950318,0.87325,2.48377049
+exp01,noise_equi_latent_ar1,100,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9614320508606369927,3621,0.90525,0.00463067051,0.87625,2.48927305
+exp01,noise_equi_latent_ar1,100,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,4675374150857880108,3778,0.9445,0.00362007424,0.90625,2.69680028
+exp01,noise_equi_latent_ar1,100,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4675374150857880108,4000,1,0,0.99925,4.18617576
+exp01,noise_equi_latent_ar1,100,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4675374150857880108,3586,0.8965,0.00481631991,0.84375,2.47165829
+exp01,noise_equi_latent_ar1,100,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4675374150857880108,3612,0.903,0.00467950318,0.85275,2.48998411
+exp01,noise_equi_latent_ar1,100,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,9076218658030509637,3868,0.967,0.0028244911,0.90225,2.87526339
+exp01,noise_equi_latent_ar1,100,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9076218658030509637,4000,1,0,0.99975,4.86100357
+exp01,noise_equi_latent_ar1,100,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9076218658030509637,3545,0.88625,0.0050202325,0.78075,2.45595298
+exp01,noise_equi_latent_ar1,100,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9076218658030509637,3592,0.898,0.00478528996,0.793,2.48887546
+exp01,noise_equi_latent_ar1,100,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,12332548020252631811,3996,0.999,0.000499749937,0.90975,3.90281976
+exp01,noise_equi_latent_ar1,100,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,12332548020252631811,4000,1,0,1,8.04765507
+exp01,noise_equi_latent_ar1,100,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,12332548020252631811,3416,0.854,0.0055830995,0.4715,2.34169185
+exp01,noise_equi_latent_ar1,100,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,12332548020252631811,3594,0.8985,0.00477487565,0.53425,2.48936834
+exp01,noise_equi_latent_ar1,250,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,1700995217165113482,3690,0.9225,0.00422769884,0.8955,2.58430255
+exp01,noise_equi_latent_ar1,250,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1700995217165113482,3992,0.998,0.00070639932,0.99625,3.69540772
+exp01,noise_equi_latent_ar1,250,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1700995217165113482,3584,0.896,0.004826593,0.86425,2.4732464
+exp01,noise_equi_latent_ar1,250,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1700995217165113482,3590,0.8975,0.00479566862,0.8645,2.47824468
+exp01,noise_equi_latent_ar1,250,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,3059789713995623780,3782,0.9455,0.00358921126,0.9025,2.6869505
+exp01,noise_equi_latent_ar1,250,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3059789713995623780,4000,1,0,0.99925,4.18007919
+exp01,noise_equi_latent_ar1,250,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3059789713995623780,3584,0.896,0.004826593,0.843,2.46263081
+exp01,noise_equi_latent_ar1,250,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3059789713995623780,3611,0.90275,0.00468488093,0.84325,2.4788715
+exp01,noise_equi_latent_ar1,250,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,18168571481734497115,3866,0.9665,0.00284507249,0.89725,2.86277743
+exp01,noise_equi_latent_ar1,250,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,18168571481734497115,4000,1,0,0.99925,4.85253082
+exp01,noise_equi_latent_ar1,250,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,18168571481734497115,3571,0.89275,0.00489253098,0.76475,2.4452879
+exp01,noise_equi_latent_ar1,250,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,18168571481734497115,3604,0.901,0.00472226111,0.78125,2.47849388
+exp01,noise_equi_latent_ar1,250,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,6750880170902165184,3999,0.99975,0.000249968748,0.91075,3.88207128
+exp01,noise_equi_latent_ar1,250,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6750880170902165184,4000,1,0,1,8.03022362
+exp01,noise_equi_latent_ar1,250,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6750880170902165184,3396,0.849,0.00566124986,0.45375,2.32924277
+exp01,noise_equi_latent_ar1,250,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6750880170902165184,3589,0.89725,0.00480084465,0.5185,2.48029201
+exp01,latent_more_correlated,30,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,14310186295895552581,3771,0.94275,0.0036732968,0.91,2.30454373
+exp01,latent_more_correlated,30,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14310186295895552581,3995,0.99875,0.0005586675,0.998,3.7333503
+exp01,latent_more_correlated,30,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14310186295895552581,3721,0.93025,0.00402755936,0.89125,2.20550976
+exp01,latent_more_correlated,30,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14310186295895552581,3646,0.9115,0.00449076135,0.8685,2.11603875
+exp01,latent_more_correlated,30,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,6534715113404024969,3835,0.95875,0.00314437742,0.89575,2.47591205
+exp01,latent_more_correlated,30,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6534715113404024969,4000,1,0,0.9985,4.28028706
+exp01,latent_more_correlated,30,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6534715113404024969,3730,0.9325,0.00396685486,0.84925,2.26921088
+exp01,latent_more_correlated,30,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6534715113404024969,3614,0.9035,0.00466871904,0.798,2.11517955
+exp01,latent_more_correlated,30,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,1622470949198329355,3919,0.97975,0.00222710224,0.91475,2.75057488
+exp01,latent_more_correlated,30,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1622470949198329355,4000,1,0,0.99975,5.04741739
+exp01,latent_more_correlated,30,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1622470949198329355,3778,0.9445,0.00362007424,0.821,2.34944826
+exp01,latent_more_correlated,30,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1622470949198329355,3647,0.91175,0.00448502892,0.7395,2.12155599
+exp01,latent_more_correlated,30,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,1848633598308040993,3998,0.9995,0.000353464991,0.90375,4.14494694
+exp01,latent_more_correlated,30,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1848633598308040993,4000,1,0,1,8.63097693
+exp01,latent_more_correlated,30,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1848633598308040993,3845,0.96125,0.0030515749,0.4105,2.48696816
+exp01,latent_more_correlated,30,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1848633598308040993,3619,0.90475,0.00464159018,0.2555,2.11795029
+exp01,latent_more_correlated,100,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,1818577400593641544,3728,0.932,0.00398045224,0.90175,2.25666412
+exp01,latent_more_correlated,100,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1818577400593641544,3994,0.9985,0.000611912984,0.9965,3.41670775
+exp01,latent_more_correlated,100,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1818577400593641544,3676,0.919,0.00431390195,0.879,2.15968769
+exp01,latent_more_correlated,100,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1818577400593641544,3610,0.9025,0.00469024919,0.85925,2.06460351
+exp01,latent_more_correlated,100,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,5373780609840546306,3833,0.95825,0.00316255188,0.909,2.42894436
+exp01,latent_more_correlated,100,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5373780609840546306,4000,1,0,0.9995,3.96143772
+exp01,latent_more_correlated,100,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5373780609840546306,3735,0.93375,0.00393258622,0.86225,2.22616428
+exp01,latent_more_correlated,100,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5373780609840546306,3629,0.90725,0.00458659562,0.81225,2.06766294
+exp01,latent_more_correlated,100,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,4898373762715538609,3909,0.97725,0.00235756429,0.89825,2.68840699
+exp01,latent_more_correlated,100,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4898373762715538609,4000,1,0,0.99975,4.70547114
+exp01,latent_more_correlated,100,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4898373762715538609,3757,0.93925,0.00377688488,0.80175,2.29634654
+exp01,latent_more_correlated,100,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4898373762715538609,3597,0.89925,0.00475918684,0.7155,2.06405396
+exp01,latent_more_correlated,100,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,96726311565124520,4000,1,0,0.90425,4.06026501
+exp01,latent_more_correlated,100,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,96726311565124520,4000,1,0,1,8.1741286
+exp01,latent_more_correlated,100,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,96726311565124520,3834,0.9585,0.00315348022,0.39575,2.43615901
+exp01,latent_more_correlated,100,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,96726311565124520,3598,0.8995,0.00475393916,0.23075,2.06351964
+exp01,latent_more_correlated,250,0.29,8,observed_anchor,T1,exchangeability of observed curves,4000,2765973989729244953,3734,0.9335,0.00393947173,0.90475,2.24344688
+exp01,latent_more_correlated,250,0.29,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2765973989729244953,3993,0.99825,0.000660858816,0.9955,3.40656292
+exp01,latent_more_correlated,250,0.29,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2765973989729244953,3676,0.919,0.00431390195,0.881,2.14703844
+exp01,latent_more_correlated,250,0.29,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2765973989729244953,3596,0.899,0.00476442546,0.855,2.04908214
+exp01,latent_more_correlated,250,0.4,8,observed_anchor,T1,exchangeability of observed curves,4000,8100000437721417415,3818,0.9545,0.00329506259,0.90075,2.4105928
+exp01,latent_more_correlated,250,0.4,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8100000437721417415,3998,0.9995,0.000353464991,0.9985,3.94987342
+exp01,latent_more_correlated,250,0.4,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8100000437721417415,3714,0.9285,0.00407393391,0.85325,2.2093448
+exp01,latent_more_correlated,250,0.4,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8100000437721417415,3613,0.90325,0.00467411589,0.80125,2.04861183
+exp01,latent_more_correlated,250,0.52,8,observed_anchor,T1,exchangeability of observed curves,4000,8563439468007849404,3925,0.98125,0.00214466999,0.905,2.6742864
+exp01,latent_more_correlated,250,0.52,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8563439468007849404,4000,1,0,0.99975,4.69844857
+exp01,latent_more_correlated,250,0.52,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8563439468007849404,3787,0.94675,0.00355015625,0.80125,2.28428522
+exp01,latent_more_correlated,250,0.52,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8563439468007849404,3635,0.90875,0.00455311535,0.71525,2.05125103
+exp01,latent_more_correlated,250,0.8,8,observed_anchor,T1,exchangeability of observed curves,4000,17556442801097280660,3998,0.9995,0.000353464991,0.90475,4.04048799
+exp01,latent_more_correlated,250,0.8,8,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,17556442801097280660,4000,1,0,1,8.15842414
+exp01,latent_more_correlated,250,0.8,8,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,17556442801097280660,3836,0.959,0.00313524321,0.39,2.4242928
+exp01,latent_more_correlated,250,0.8,8,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,17556442801097280660,3616,0.904,0.00465789652,0.2265,2.05282502
+exp01,matched,30,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,571351252132577017,3687,0.92175,0.00424637897,0.8955,2.88230974
+exp01,matched,30,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,571351252132577017,3997,0.99925,0.000432850292,0.99775,4.32953275
+exp01,matched,30,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,571351252132577017,3580,0.895,0.00484703518,0.867,2.75844722
+exp01,matched,30,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,571351252132577017,3577,0.89425,0.00486227667,0.86425,2.75720403
+exp01,matched,30,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,499132608691221200,3804,0.951,0.00341317301,0.90425,3.00333329
+exp01,matched,30,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,499132608691221200,3999,0.99975,0.000249968748,0.99975,4.89562989
+exp01,matched,30,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,499132608691221200,3646,0.9115,0.00449076135,0.845,2.75260043
+exp01,matched,30,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,499132608691221200,3623,0.90575,0.0046197115,0.84,2.75863146
+exp01,matched,30,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,16557296548114129268,3882,0.9705,0.00267533876,0.9035,3.22610728
+exp01,matched,30,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16557296548114129268,4000,1,0,1,5.68095033
+exp01,matched,30,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16557296548114129268,3611,0.90275,0.00468488093,0.77,2.75563199
+exp01,matched,30,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16557296548114129268,3610,0.9025,0.00469024919,0.76975,2.75778773
+exp01,matched,30,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,1887635488974670949,4000,1,0,0.90925,4.59702814
+exp01,matched,30,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1887635488974670949,4000,1,0,1,9.52367873
+exp01,matched,30,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1887635488974670949,3560,0.89,0.00494722144,0.3085,2.75821688
+exp01,matched,30,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1887635488974670949,3568,0.892,0.00490754521,0.308,2.75465578
+exp01,matched,100,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,5593557067751537758,3704,0.926,0.00413896122,0.8945,2.83443079
+exp01,matched,100,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5593557067751537758,3994,0.9985,0.000611912984,0.99575,4.04984514
+exp01,matched,100,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5593557067751537758,3588,0.897,0.00480601186,0.86625,2.71262579
+exp01,matched,100,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5593557067751537758,3575,0.89375,0.00487239514,0.8645,2.71223211
+exp01,matched,100,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,3710187083130072906,3793,0.94825,0.00350256825,0.906,2.95897439
+exp01,matched,100,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3710187083130072906,4000,1,0,0.999,4.59945745
+exp01,matched,100,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3710187083130072906,3606,0.9015,0.0047116279,0.83525,2.71194483
+exp01,matched,100,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3710187083130072906,3622,0.9055,0.00462519594,0.83875,2.71411594
+exp01,matched,100,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,15036714379758116914,3897,0.97425,0.0025043431,0.89975,3.17708475
+exp01,matched,100,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15036714379758116914,4000,1,0,1,5.36821678
+exp01,matched,100,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15036714379758116914,3609,0.90225,0.00469560799,0.76075,2.7137586
+exp01,matched,100,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15036714379758116914,3619,0.90475,0.00464159018,0.75525,2.71204605
+exp01,matched,100,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,15917013383307683264,3998,0.9995,0.000353464991,0.89525,4.52071392
+exp01,matched,100,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15917013383307683264,4000,1,0,1,9.08244998
+exp01,matched,100,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15917013383307683264,3598,0.8995,0.00475393916,0.2765,2.71242835
+exp01,matched,100,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15917013383307683264,3591,0.89775,0.00479048373,0.2785,2.7103816
+exp01,matched,250,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,12581690442560123908,3743,0.93575,0.00387691686,0.91025,2.82089387
+exp01,matched,250,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,12581690442560123908,3994,0.9985,0.000611912984,0.99775,4.04364539
+exp01,matched,250,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,12581690442560123908,3642,0.9105,0.00451358366,0.88275,2.6996706
+exp01,matched,250,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,12581690442560123908,3639,0.90975,0.00453058874,0.882,2.69706799
+exp01,matched,250,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,11212352471609399894,3795,0.94875,0.0034865254,0.8985,2.94942742
+exp01,matched,250,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11212352471609399894,4000,1,0,0.99925,4.59838155
+exp01,matched,250,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11212352471609399894,3594,0.8985,0.00477487565,0.82925,2.70319489
+exp01,matched,250,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11212352471609399894,3594,0.8985,0.00477487565,0.827,2.70166861
+exp01,matched,250,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,16165216255217064993,3897,0.97425,0.0025043431,0.89975,3.16540883
+exp01,matched,250,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16165216255217064993,4000,1,0,1,5.36680523
+exp01,matched,250,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16165216255217064993,3617,0.90425,0.00465247078,0.755,2.70378543
+exp01,matched,250,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16165216255217064993,3618,0.9045,0.00464703535,0.757,2.70235219
+exp01,matched,250,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,15836554061722186878,3998,0.9995,0.000353464991,0.90275,4.50183443
+exp01,matched,250,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15836554061722186878,4000,1,0,1,9.06928608
+exp01,matched,250,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15836554061722186878,3621,0.90525,0.00463067051,0.2765,2.70110066
+exp01,matched,250,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15836554061722186878,3619,0.90475,0.00464159018,0.27725,2.70256505
+exp01,noise_more_correlated,30,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,8236783363888993580,3729,0.93225,0.00397366133,0.905,3.03583097
+exp01,noise_more_correlated,30,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8236783363888993580,3997,0.99925,0.000432850292,0.99875,4.42440827
+exp01,noise_more_correlated,30,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8236783363888993580,3602,0.9005,0.00473285722,0.866,2.90537113
+exp01,noise_more_correlated,30,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8236783363888993580,3615,0.90375,0.0046633126,0.867,2.90816668
+exp01,noise_more_correlated,30,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,6026534207231029462,3826,0.9565,0.00322520348,0.90175,3.15576327
+exp01,noise_more_correlated,30,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6026534207231029462,4000,1,0,0.99975,4.98725909
+exp01,noise_more_correlated,30,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6026534207231029462,3613,0.90325,0.00467411589,0.8225,2.89230482
+exp01,noise_more_correlated,30,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6026534207231029462,3624,0.906,0.00461421716,0.82975,2.90141098
+exp01,noise_more_correlated,30,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,948273887873708599,3912,0.978,0.00231926713,0.89925,3.36646343
+exp01,noise_more_correlated,30,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,948273887873708599,4000,1,0,1,5.77283767
+exp01,noise_more_correlated,30,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,948273887873708599,3576,0.894,0.00486734014,0.733,2.87551948
+exp01,noise_more_correlated,30,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,948273887873708599,3608,0.902,0.00470095735,0.745,2.90372537
+exp01,noise_more_correlated,30,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,9803245226621523035,3997,0.99925,0.000432850292,0.903,4.58113286
+exp01,noise_more_correlated,30,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9803245226621523035,4000,1,0,1,9.51899441
+exp01,noise_more_correlated,30,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9803245226621523035,3392,0.848,0.00567661871,0.3,2.74867972
+exp01,noise_more_correlated,30,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9803245226621523035,3592,0.898,0.00478528996,0.37325,2.9044365
+exp01,noise_more_correlated,100,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,11323255631936916090,3732,0.933,0.00395319491,0.89325,2.99043301
+exp01,noise_more_correlated,100,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11323255631936916090,3995,0.99875,0.0005586675,0.999,4.16963209
+exp01,noise_more_correlated,100,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11323255631936916090,3600,0.9,0.00474341649,0.8485,2.86192407
+exp01,noise_more_correlated,100,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11323255631936916090,3598,0.8995,0.00475393916,0.851,2.86572902
+exp01,noise_more_correlated,100,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,7147646519280835544,3817,0.95425,0.00330366983,0.894,3.11325144
+exp01,noise_more_correlated,100,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7147646519280835544,4000,1,0,1,4.72094645
+exp01,noise_more_correlated,100,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7147646519280835544,3594,0.8985,0.00477487565,0.8075,2.85334208
+exp01,noise_more_correlated,100,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7147646519280835544,3601,0.90025,0.00473814145,0.8115,2.86410216
+exp01,noise_more_correlated,100,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,11510410604585974466,3912,0.978,0.00231926713,0.905,3.32195416
+exp01,noise_more_correlated,100,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11510410604585974466,4000,1,0,1,5.48271923
+exp01,noise_more_correlated,100,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11510410604585974466,3598,0.8995,0.00475393916,0.72225,2.83750116
+exp01,noise_more_correlated,100,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11510410604585974466,3627,0.90675,0.00459767434,0.73475,2.86577617
+exp01,noise_more_correlated,100,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,4404333945638163272,3999,0.99975,0.000249968748,0.90175,4.50550299
+exp01,noise_more_correlated,100,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4404333945638163272,4000,1,0,1,9.06384324
+exp01,noise_more_correlated,100,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4404333945638163272,3377,0.84425,0.0057334967,0.2925,2.70330179
+exp01,noise_more_correlated,100,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4404333945638163272,3625,0.90625,0.00460871288,0.36875,2.86448924
+exp01,noise_more_correlated,250,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,2107328849732061291,3708,0.927,0.00411311925,0.89375,2.98166797
+exp01,noise_more_correlated,250,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2107328849732061291,3995,0.99875,0.0005586675,0.99875,4.16580958
+exp01,noise_more_correlated,250,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2107328849732061291,3573,0.89325,0.00488247984,0.84975,2.8535357
+exp01,noise_more_correlated,250,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2107328849732061291,3589,0.89725,0.00480084465,0.851,2.85759014
+exp01,noise_more_correlated,250,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,3487978185185686047,3810,0.9525,0.00336317372,0.897,3.1054334
+exp01,noise_more_correlated,250,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3487978185185686047,4000,1,0,0.99975,4.71297766
+exp01,noise_more_correlated,250,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3487978185185686047,3591,0.89775,0.00479048373,0.811,2.84617673
+exp01,noise_more_correlated,250,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3487978185185686047,3600,0.9,0.00474341649,0.8135,2.85632481
+exp01,noise_more_correlated,250,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,15892173461611619984,3917,0.97925,0.00225385434,0.90175,3.31338673
+exp01,noise_more_correlated,250,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15892173461611619984,3999,0.99975,0.000249968748,0.99975,5.47952098
+exp01,noise_more_correlated,250,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15892173461611619984,3594,0.8985,0.00477487565,0.715,2.83018315
+exp01,noise_more_correlated,250,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15892173461611619984,3627,0.90675,0.00459767434,0.7295,2.85666245
+exp01,noise_more_correlated,250,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,12386699084305213922,4000,1,0,0.90725,4.49072681
+exp01,noise_more_correlated,250,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,12386699084305213922,4000,1,0,1,9.06282995
+exp01,noise_more_correlated,250,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,12386699084305213922,3323,0.83075,0.0059288371,0.303,2.69443609
+exp01,noise_more_correlated,250,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,12386699084305213922,3569,0.89225,0.00490254876,0.379,2.85663749
+exp01,noise_far_more_correlated,30,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,4484701792082554514,3725,0.93125,0.00400073235,0.90225,3.03305476
+exp01,noise_far_more_correlated,30,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4484701792082554514,4000,1,0,0.9995,4.43177509
+exp01,noise_far_more_correlated,30,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4484701792082554514,3592,0.898,0.00478528996,0.86575,2.90271422
+exp01,noise_far_more_correlated,30,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4484701792082554514,3597,0.89925,0.00475918684,0.863,2.90719427
+exp01,noise_far_more_correlated,30,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,4626229645556461985,3803,0.95075,0.0034214192,0.9,3.1518922
+exp01,noise_far_more_correlated,30,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4626229645556461985,4000,1,0,0.9995,4.98659347
+exp01,noise_far_more_correlated,30,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4626229645556461985,3590,0.8975,0.00479566862,0.8105,2.88875692
+exp01,noise_far_more_correlated,30,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4626229645556461985,3594,0.8985,0.00477487565,0.821,2.9045664
+exp01,noise_far_more_correlated,30,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,17658992640272808777,3890,0.9725,0.00258571799,0.90275,3.35529466
+exp01,noise_far_more_correlated,30,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,17658992640272808777,4000,1,0,1,5.77227782
+exp01,noise_far_more_correlated,30,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,17658992640272808777,3535,0.88375,0.0050679369,0.73,2.86597949
+exp01,noise_far_more_correlated,30,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,17658992640272808777,3571,0.89275,0.00489253098,0.7485,2.90279137
+exp01,noise_far_more_correlated,30,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,639300533980747474,3998,0.9995,0.000353464991,0.90125,4.4679773
+exp01,noise_far_more_correlated,30,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,639300533980747474,4000,1,0,1,9.43981555
+exp01,noise_far_more_correlated,30,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,639300533980747474,3242,0.8105,0.00619656659,0.36975,2.68078638
+exp01,noise_far_more_correlated,30,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,639300533980747474,3629,0.90725,0.00458659562,0.47225,2.90376008
+exp01,noise_far_more_correlated,100,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,3880191550426755387,3721,0.93025,0.00402755936,0.89725,2.98745374
+exp01,noise_far_more_correlated,100,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3880191550426755387,3997,0.99925,0.000432850292,0.99725,4.16825052
+exp01,noise_far_more_correlated,100,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3880191550426755387,3596,0.899,0.00476442546,0.863,2.85907283
+exp01,noise_far_more_correlated,100,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3880191550426755387,3600,0.9,0.00474341649,0.864,2.86285131
+exp01,noise_far_more_correlated,100,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,6987265950548115230,3832,0.958,0.00317159266,0.9045,3.11296306
+exp01,noise_far_more_correlated,100,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6987265950548115230,4000,1,0,0.999,4.71378606
+exp01,noise_far_more_correlated,100,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6987265950548115230,3624,0.906,0.00461421716,0.81725,2.85307777
+exp01,noise_far_more_correlated,100,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6987265950548115230,3638,0.9095,0.00453623605,0.8215,2.86638298
+exp01,noise_far_more_correlated,100,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,8832073500981232426,3907,0.97675,0.002382721,0.9045,3.30998886
+exp01,noise_far_more_correlated,100,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8832073500981232426,4000,1,0,1,5.47553832
+exp01,noise_far_more_correlated,100,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8832073500981232426,3579,0.89475,0.00485212421,0.72825,2.8272808
+exp01,noise_far_more_correlated,100,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8832073500981232426,3612,0.903,0.00467950318,0.751,2.86497731
+exp01,noise_far_more_correlated,100,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,11062865282521003753,3996,0.999,0.000499749937,0.906,4.38664701
+exp01,noise_far_more_correlated,100,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11062865282521003753,4000,1,0,1,8.97137985
+exp01,noise_far_more_correlated,100,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11062865282521003753,3259,0.81475,0.00614272817,0.3415,2.63198821
+exp01,noise_far_more_correlated,100,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11062865282521003753,3630,0.9075,0.00458104109,0.4575,2.86461615
+exp01,noise_far_more_correlated,250,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,7946527814370197299,3713,0.92825,0.00408050051,0.8945,2.98074355
+exp01,noise_far_more_correlated,250,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7946527814370197299,3994,0.9985,0.000611912984,0.99725,4.16455589
+exp01,noise_far_more_correlated,250,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7946527814370197299,3571,0.89275,0.00489253098,0.84925,2.852651
+exp01,noise_far_more_correlated,250,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7946527814370197299,3573,0.89325,0.00488247984,0.8495,2.85564274
+exp01,noise_far_more_correlated,250,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,1127829194924086375,3803,0.95075,0.0034214192,0.902,3.10103436
+exp01,noise_far_more_correlated,250,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1127829194924086375,4000,1,0,0.99975,4.7111879
+exp01,noise_far_more_correlated,250,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1127829194924086375,3567,0.89175,0.0049125334,0.814,2.84214493
+exp01,noise_far_more_correlated,250,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1127829194924086375,3584,0.896,0.004826593,0.82275,2.85607444
+exp01,noise_far_more_correlated,250,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,10905681664270375360,3912,0.978,0.00231926713,0.899,3.29488777
+exp01,noise_far_more_correlated,250,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,10905681664270375360,3999,0.99975,0.000249968748,0.99975,5.46399866
+exp01,noise_far_more_correlated,250,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,10905681664270375360,3547,0.88675,0.0050105997,0.71925,2.81438197
+exp01,noise_far_more_correlated,250,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,10905681664270375360,3599,0.89975,0.00474868238,0.73925,2.85517969
+exp01,noise_far_more_correlated,250,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,10322892031396567983,4000,1,0,0.89525,4.36688009
+exp01,noise_far_more_correlated,250,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,10322892031396567983,4000,1,0,1,8.95477414
+exp01,noise_far_more_correlated,250,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,10322892031396567983,3231,0.80775,0.00623076916,0.33625,2.62012805
+exp01,noise_far_more_correlated,250,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,10322892031396567983,3605,0.90125,0.00471694916,0.44625,2.8557146
+exp01,noise_equi_latent_ar1,30,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,17847958154386208154,3717,0.92925,0.00405414718,0.89775,3.02153034
+exp01,noise_equi_latent_ar1,30,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,17847958154386208154,3998,0.9995,0.000353464991,0.9985,4.41805456
+exp01,noise_equi_latent_ar1,30,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,17847958154386208154,3580,0.895,0.00484703518,0.863,2.89168504
+exp01,noise_equi_latent_ar1,30,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,17847958154386208154,3611,0.90275,0.00468488093,0.86825,2.90030228
+exp01,noise_equi_latent_ar1,30,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,18401336538492482123,3837,0.95925,0.00312607731,0.902,3.14789849
+exp01,noise_equi_latent_ar1,30,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,18401336538492482123,4000,1,0,1,4.9825661
+exp01,noise_equi_latent_ar1,30,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,18401336538492482123,3612,0.903,0.00467950318,0.81325,2.88509662
+exp01,noise_equi_latent_ar1,30,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,18401336538492482123,3613,0.90325,0.00467411589,0.82625,2.89933109
+exp01,noise_equi_latent_ar1,30,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,7142818689856725451,3895,0.97375,0.00252789129,0.90325,3.35465158
+exp01,noise_equi_latent_ar1,30,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7142818689856725451,4000,1,0,1,5.7684007
+exp01,noise_equi_latent_ar1,30,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7142818689856725451,3579,0.89475,0.00485212421,0.7455,2.86543019
+exp01,noise_equi_latent_ar1,30,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7142818689856725451,3613,0.90325,0.00467411589,0.76475,2.90426026
+exp01,noise_equi_latent_ar1,30,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,17038143717879739646,4000,1,0,0.91075,4.49241772
+exp01,noise_equi_latent_ar1,30,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,17038143717879739646,4000,1,0,1,9.44856963
+exp01,noise_equi_latent_ar1,30,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,17038143717879739646,3299,0.82475,0.00601118619,0.34675,2.69545063
+exp01,noise_equi_latent_ar1,30,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,17038143717879739646,3632,0.908,0.00456990153,0.44275,2.89776466
+exp01,noise_equi_latent_ar1,100,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,1843667863017676712,3730,0.9325,0.00396685486,0.90575,2.98303255
+exp01,noise_equi_latent_ar1,100,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1843667863017676712,3998,0.9995,0.000353464991,0.9985,4.16454327
+exp01,noise_equi_latent_ar1,100,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1843667863017676712,3592,0.898,0.00478528996,0.86375,2.85484164
+exp01,noise_equi_latent_ar1,100,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1843667863017676712,3618,0.9045,0.00464703535,0.8645,2.85984704
+exp01,noise_equi_latent_ar1,100,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,12990032662897430322,3811,0.95275,0.00335475176,0.904,3.10033333
+exp01,noise_equi_latent_ar1,100,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,12990032662897430322,4000,1,0,0.9995,4.70620233
+exp01,noise_equi_latent_ar1,100,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,12990032662897430322,3585,0.89625,0.00482146081,0.82125,2.84150244
+exp01,noise_equi_latent_ar1,100,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,12990032662897430322,3602,0.9005,0.00473285722,0.82925,2.86058041
+exp01,noise_equi_latent_ar1,100,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,6246005347242381141,3906,0.9765,0.00239519049,0.8965,3.2934556
+exp01,noise_equi_latent_ar1,100,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6246005347242381141,4000,1,0,0.99975,5.45915705
+exp01,noise_equi_latent_ar1,100,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6246005347242381141,3519,0.87975,0.00514271177,0.73125,2.81315865
+exp01,noise_equi_latent_ar1,100,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6246005347242381141,3592,0.898,0.00478528996,0.75275,2.85900279
+exp01,noise_equi_latent_ar1,100,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,3319083817544461519,4000,1,0,0.9005,4.40471985
+exp01,noise_equi_latent_ar1,100,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3319083817544461519,4000,1,0,1,8.98647297
+exp01,noise_equi_latent_ar1,100,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3319083817544461519,3317,0.82925,0.00594967305,0.33275,2.64283191
+exp01,noise_equi_latent_ar1,100,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3319083817544461519,3646,0.9115,0.00449076135,0.43425,2.86309321
+exp01,noise_equi_latent_ar1,250,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,2310782425791099345,3732,0.933,0.00395319491,0.898,2.97126616
+exp01,noise_equi_latent_ar1,250,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2310782425791099345,3994,0.9985,0.000611912984,0.99775,4.16000381
+exp01,noise_equi_latent_ar1,250,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2310782425791099345,3597,0.89925,0.00475918684,0.85875,2.84358088
+exp01,noise_equi_latent_ar1,250,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2310782425791099345,3599,0.89975,0.00474868238,0.85875,2.84934024
+exp01,noise_equi_latent_ar1,250,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,4489255758403669898,3815,0.95375,0.00332080327,0.8965,3.09001285
+exp01,noise_equi_latent_ar1,250,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4489255758403669898,3999,0.99975,0.000249968748,0.999,4.7044257
+exp01,noise_equi_latent_ar1,250,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4489255758403669898,3596,0.899,0.00476442546,0.8085,2.83204356
+exp01,noise_equi_latent_ar1,250,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4489255758403669898,3611,0.90275,0.00468488093,0.81475,2.85046841
+exp01,noise_equi_latent_ar1,250,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,1956463345243597755,3892,0.973,0.00256276218,0.888,3.28813302
+exp01,noise_equi_latent_ar1,250,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1956463345243597755,4000,1,0,0.99975,5.45942754
+exp01,noise_equi_latent_ar1,250,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1956463345243597755,3518,0.8795,0.00514732333,0.71625,2.80861229
+exp01,noise_equi_latent_ar1,250,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1956463345243597755,3569,0.89225,0.00490254876,0.7395,2.85011996
+exp01,noise_equi_latent_ar1,250,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,6234141057778925652,4000,1,0,0.9065,4.3872986
+exp01,noise_equi_latent_ar1,250,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6234141057778925652,4000,1,0,1,8.97168806
+exp01,noise_equi_latent_ar1,250,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6234141057778925652,3284,0.821,0.00606133236,0.33975,2.63237916
+exp01,noise_equi_latent_ar1,250,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6234141057778925652,3629,0.90725,0.00458659562,0.44725,2.84937973
+exp01,latent_more_correlated,30,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,11806693332629158673,3777,0.94425,0.00362773819,0.90575,2.52587699
+exp01,latent_more_correlated,30,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11806693332629158673,3998,0.9995,0.000353464991,0.99825,4.04779428
+exp01,latent_more_correlated,30,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11806693332629158673,3723,0.93075,0.00401417605,0.88875,2.41733158
+exp01,latent_more_correlated,30,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11806693332629158673,3625,0.90625,0.00460871288,0.84675,2.27478827
+exp01,latent_more_correlated,30,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,5721259758032979785,3862,0.9655,0.00288572998,0.8965,2.74243536
+exp01,latent_more_correlated,30,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5721259758032979785,4000,1,0,0.99925,4.69040499
+exp01,latent_more_correlated,30,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5721259758032979785,3770,0.9425,0.00368082022,0.84725,2.51348353
+exp01,latent_more_correlated,30,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5721259758032979785,3604,0.901,0.00472226111,0.77,2.2712268
+exp01,latent_more_correlated,30,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,16175322747686195130,3938,0.9845,0.0019531865,0.8935,3.06354449
+exp01,latent_more_correlated,30,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16175322747686195130,4000,1,0,0.99975,5.55967617
+exp01,latent_more_correlated,30,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16175322747686195130,3810,0.9525,0.00336317372,0.78275,2.61677634
+exp01,latent_more_correlated,30,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16175322747686195130,3605,0.90125,0.00471694916,0.636,2.26509009
+exp01,latent_more_correlated,30,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,678439365833923221,4000,1,0,0.902,4.71690042
+exp01,latent_more_correlated,30,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,678439365833923221,4000,1,0,1,9.60717352
+exp01,latent_more_correlated,30,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,678439365833923221,3897,0.97425,0.0025043431,0.2315,2.83014025
+exp01,latent_more_correlated,30,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,678439365833923221,3650,0.9125,0.0044677665,0.066,2.277279
+exp01,latent_more_correlated,100,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,158817622060782137,3793,0.94825,0.00350256825,0.9075,2.4757986
+exp01,latent_more_correlated,100,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,158817622060782137,3991,0.99775,0.000749155775,0.9965,3.73534115
+exp01,latent_more_correlated,100,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,158817622060782137,3724,0.931,0.00400746179,0.88425,2.36940523
+exp01,latent_more_correlated,100,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,158817622060782137,3622,0.9055,0.00462519594,0.8465,2.22308389
+exp01,latent_more_correlated,100,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,5832679321146280118,3849,0.96225,0.00301350865,0.89975,2.68876852
+exp01,latent_more_correlated,100,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5832679321146280118,3999,0.99975,0.000249968748,0.99825,4.36523529
+exp01,latent_more_correlated,100,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5832679321146280118,3759,0.93975,0.00376231104,0.84475,2.46429705
+exp01,latent_more_correlated,100,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5832679321146280118,3579,0.89475,0.00485212421,0.76275,2.21779908
+exp01,latent_more_correlated,100,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,10576233128552625375,3933,0.98325,0.00202912774,0.90025,3.01464176
+exp01,latent_more_correlated,100,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,10576233128552625375,4000,1,0,0.99975,5.22956183
+exp01,latent_more_correlated,100,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,10576233128552625375,3828,0.957,0.00320745226,0.77975,2.57500528
+exp01,latent_more_correlated,100,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,10576233128552625375,3592,0.898,0.00478528996,0.62975,2.22063864
+exp01,latent_more_correlated,100,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,5541041268241657712,4000,1,0,0.90325,4.64720278
+exp01,latent_more_correlated,100,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5541041268241657712,4000,1,0,1,9.18241156
+exp01,latent_more_correlated,100,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5541041268241657712,3898,0.9745,0.00249247618,0.207,2.78832167
+exp01,latent_more_correlated,100,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5541041268241657712,3597,0.89925,0.00475918684,0.046,2.22446278
+exp01,latent_more_correlated,250,0.29,24,observed_anchor,T1,exchangeability of observed curves,4000,10948516970056794526,3766,0.9415,0.00371071927,0.90225,2.45950338
+exp01,latent_more_correlated,250,0.29,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,10948516970056794526,3996,0.999,0.000499749937,0.997,3.72446473
+exp01,latent_more_correlated,250,0.29,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,10948516970056794526,3718,0.9295,0.00404752239,0.8805,2.35381027
+exp01,latent_more_correlated,250,0.29,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,10948516970056794526,3596,0.899,0.00476442546,0.84475,2.20763334
+exp01,latent_more_correlated,250,0.4,24,observed_anchor,T1,exchangeability of observed curves,4000,16160063999510080046,3880,0.97,0.00269722079,0.90325,2.67786168
+exp01,latent_more_correlated,250,0.4,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16160063999510080046,3999,0.99975,0.000249968748,0.9995,4.35757616
+exp01,latent_more_correlated,250,0.4,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16160063999510080046,3780,0.945,0.00360468445,0.85375,2.45430077
+exp01,latent_more_correlated,250,0.4,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16160063999510080046,3617,0.90425,0.00465247078,0.7705,2.21049474
+exp01,latent_more_correlated,250,0.52,24,observed_anchor,T1,exchangeability of observed curves,4000,16439726674782211891,3938,0.9845,0.0019531865,0.8985,2.99985612
+exp01,latent_more_correlated,250,0.52,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16439726674782211891,4000,1,0,0.9995,5.22332621
+exp01,latent_more_correlated,250,0.52,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16439726674782211891,3804,0.951,0.00341317301,0.768,2.56237588
+exp01,latent_more_correlated,250,0.52,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16439726674782211891,3582,0.8955,0.00483683135,0.60375,2.20608628
+exp01,latent_more_correlated,250,0.8,24,observed_anchor,T1,exchangeability of observed curves,4000,13728227289005754957,3999,0.99975,0.000249968748,0.91125,4.63064384
+exp01,latent_more_correlated,250,0.8,24,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,13728227289005754957,4000,1,0,1,9.1734257
+exp01,latent_more_correlated,250,0.8,24,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,13728227289005754957,3918,0.9795,0.0022405217,0.203,2.77838631
+exp01,latent_more_correlated,250,0.8,24,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,13728227289005754957,3648,0.912,0.00447928566,0.03425,2.20649827
+exp01,matched,30,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,3854550865274515615,3704,0.926,0.00413896122,0.89375,3.06230996
+exp01,matched,30,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3854550865274515615,3996,0.999,0.000499749937,0.99875,4.57121727
+exp01,matched,30,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3854550865274515615,3589,0.89725,0.00480084465,0.8605,2.93071223
+exp01,matched,30,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3854550865274515615,3588,0.897,0.00480601186,0.8595,2.93644101
+exp01,matched,30,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,4475004654152099525,3791,0.94775,0.0035185202,0.90375,3.19668961
+exp01,matched,30,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4475004654152099525,4000,1,0,0.99975,5.1618495
+exp01,matched,30,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4475004654152099525,3588,0.897,0.00480601186,0.829,2.92981442
+exp01,matched,30,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4475004654152099525,3594,0.8985,0.00477487565,0.834,2.93223899
+exp01,matched,30,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,16668747238820239817,3899,0.97475,0.00248054618,0.904,3.43203449
+exp01,matched,30,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16668747238820239817,4000,1,0,1,6.00560069
+exp01,matched,30,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16668747238820239817,3634,0.9085,0.00455872104,0.7525,2.93152807
+exp01,matched,30,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16668747238820239817,3620,0.905,0.00463613524,0.75525,2.93080775
+exp01,matched,30,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,1670458914912142177,4000,1,0,0.90375,4.88772867
+exp01,matched,30,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1670458914912142177,4000,1,0,1,10.0771547
+exp01,matched,30,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1670458914912142177,3618,0.9045,0.00464703535,0.21225,2.9326372
+exp01,matched,30,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1670458914912142177,3629,0.90725,0.00458659562,0.217,2.93369576
+exp01,matched,100,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,14207861137953083987,3699,0.92475,0.00417095425,0.8945,3.01855969
+exp01,matched,100,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14207861137953083987,3997,0.99925,0.000432850292,0.99775,4.29081522
+exp01,matched,100,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14207861137953083987,3574,0.8935,0.0048774417,0.8515,2.88884205
+exp01,matched,100,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14207861137953083987,3579,0.89475,0.00485212421,0.85275,2.89106397
+exp01,matched,100,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,7372329236712382745,3805,0.95125,0.00340490226,0.90325,3.15451509
+exp01,matched,100,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7372329236712382745,4000,1,0,0.9995,4.87903141
+exp01,matched,100,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7372329236712382745,3617,0.90425,0.00465247078,0.828,2.89116084
+exp01,matched,100,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7372329236712382745,3620,0.905,0.00463613524,0.8225,2.88717159
+exp01,matched,100,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,4342889470662639506,3898,0.9745,0.00249247618,0.89875,3.38385805
+exp01,matched,100,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4342889470662639506,4000,1,0,1,5.69118178
+exp01,matched,100,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4342889470662639506,3598,0.8995,0.00475393916,0.7335,2.89037738
+exp01,matched,100,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4342889470662639506,3602,0.9005,0.00473285722,0.7315,2.8876242
+exp01,matched,100,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,449234314871440702,3999,0.99975,0.000249968748,0.8995,4.81966095
+exp01,matched,100,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,449234314871440702,4000,1,0,1,9.64018917
+exp01,matched,100,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,449234314871440702,3576,0.894,0.00486734014,0.20275,2.89179657
+exp01,matched,100,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,449234314871440702,3574,0.8935,0.0048774417,0.19275,2.88879229
+exp01,matched,250,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,6674344894418945384,3696,0.924,0.00418998807,0.898,3.00945002
+exp01,matched,250,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6674344894418945384,3997,0.99925,0.000432850292,0.99825,4.28980282
+exp01,matched,250,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6674344894418945384,3592,0.898,0.00478528996,0.86225,2.88012386
+exp01,matched,250,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6674344894418945384,3590,0.8975,0.00479566862,0.863,2.88034312
+exp01,matched,250,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,1918767765908440355,3835,0.95875,0.00314437742,0.90375,3.14212081
+exp01,matched,250,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1918767765908440355,4000,1,0,1,4.8711343
+exp01,matched,250,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1918767765908440355,3599,0.89975,0.00474868238,0.825,2.87980129
+exp01,matched,250,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1918767765908440355,3599,0.89975,0.00474868238,0.82425,2.87847567
+exp01,matched,250,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,16353853555754297665,3907,0.97675,0.002382721,0.9015,3.37120092
+exp01,matched,250,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16353853555754297665,4000,1,0,1,5.6869815
+exp01,matched,250,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16353853555754297665,3606,0.9015,0.0047116279,0.74225,2.87956609
+exp01,matched,250,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16353853555754297665,3612,0.903,0.00467950318,0.744,2.8780244
+exp01,matched,250,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,6726081922234500118,3999,0.99975,0.000249968748,0.89875,4.79517409
+exp01,matched,250,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6726081922234500118,4000,1,0,1,9.62165464
+exp01,matched,250,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6726081922234500118,3601,0.90025,0.00473814145,0.19925,2.87710445
+exp01,matched,250,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6726081922234500118,3598,0.8995,0.00475393916,0.20425,2.87820526
+exp01,noise_more_correlated,30,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,8915395275530137426,3754,0.9385,0.00379860994,0.908,3.25332599
+exp01,noise_more_correlated,30,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8915395275530137426,3999,0.99975,0.000249968748,0.99925,4.67757127
+exp01,noise_more_correlated,30,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8915395275530137426,3624,0.906,0.00461421716,0.85475,3.11351966
+exp01,noise_more_correlated,30,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8915395275530137426,3613,0.90325,0.00467411589,0.859,3.11539119
+exp01,noise_more_correlated,30,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,2589170131829936349,3839,0.95975,0.00310764933,0.90325,3.38511727
+exp01,noise_more_correlated,30,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2589170131829936349,3999,0.99975,0.000249968748,0.99975,5.27439596
+exp01,noise_more_correlated,30,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2589170131829936349,3601,0.90025,0.00473814145,0.80375,3.10251123
+exp01,noise_more_correlated,30,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2589170131829936349,3603,0.90075,0.00472756379,0.8105,3.11275167
+exp01,noise_more_correlated,30,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,3545227313614461407,3918,0.9795,0.0022405217,0.89975,3.60515139
+exp01,noise_more_correlated,30,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3545227313614461407,4000,1,0,1,6.11426445
+exp01,noise_more_correlated,30,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3545227313614461407,3548,0.887,0.00500577167,0.69925,3.07939868
+exp01,noise_more_correlated,30,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3545227313614461407,3592,0.898,0.00478528996,0.71125,3.10933054
+exp01,noise_more_correlated,30,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,6490076896409988844,3999,0.99975,0.000249968748,0.90525,4.8682981
+exp01,noise_more_correlated,30,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6490076896409988844,4000,1,0,1,10.0580638
+exp01,noise_more_correlated,30,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6490076896409988844,3230,0.8075,0.00623385414,0.24525,2.92097886
+exp01,noise_more_correlated,30,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6490076896409988844,3589,0.89725,0.00480084465,0.33075,3.11511766
+exp01,noise_more_correlated,100,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,17892418952707129080,3730,0.9325,0.00396685486,0.89825,3.21330188
+exp01,noise_more_correlated,100,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,17892418952707129080,4000,1,0,0.9995,4.43864032
+exp01,noise_more_correlated,100,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,17892418952707129080,3613,0.90325,0.00467411589,0.85575,3.07521552
+exp01,noise_more_correlated,100,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,17892418952707129080,3616,0.904,0.00465789652,0.8565,3.07797972
+exp01,noise_more_correlated,100,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,14268206884823363595,3827,0.95675,0.00321634255,0.896,3.34278838
+exp01,noise_more_correlated,100,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14268206884823363595,4000,1,0,0.9995,5.02164573
+exp01,noise_more_correlated,100,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14268206884823363595,3581,0.89525,0.00484193756,0.7925,3.06371616
+exp01,noise_more_correlated,100,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14268206884823363595,3592,0.898,0.00478528996,0.79725,3.07781546
+exp01,noise_more_correlated,100,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,2565774508201309087,3919,0.97975,0.00222710224,0.895,3.5619816
+exp01,noise_more_correlated,100,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,2565774508201309087,4000,1,0,1,5.83178029
+exp01,noise_more_correlated,100,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,2565774508201309087,3542,0.8855,0.00503462387,0.67275,3.04252451
+exp01,noise_more_correlated,100,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,2565774508201309087,3596,0.899,0.00476442546,0.68625,3.07691156
+exp01,noise_more_correlated,100,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,3692816193513800245,3999,0.99975,0.000249968748,0.903,4.80293727
+exp01,noise_more_correlated,100,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3692816193513800245,4000,1,0,1,9.62402361
+exp01,noise_more_correlated,100,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3692816193513800245,3291,0.82275,0.0060380551,0.215,2.88176236
+exp01,noise_more_correlated,100,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3692816193513800245,3595,0.89875,0.00476965506,0.31225,3.07645392
+exp01,noise_more_correlated,250,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,476218003127188710,3764,0.941,0.00372555365,0.90725,3.20293309
+exp01,noise_more_correlated,250,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,476218003127188710,3997,0.99925,0.000432850292,0.99875,4.43527423
+exp01,noise_more_correlated,250,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,476218003127188710,3614,0.9035,0.00466871904,0.86475,3.06529231
+exp01,noise_more_correlated,250,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,476218003127188710,3627,0.90675,0.00459767434,0.86625,3.0684853
+exp01,noise_more_correlated,250,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,7301275482759643225,3850,0.9625,0.00300390371,0.89975,3.33476866
+exp01,noise_more_correlated,250,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7301275482759643225,4000,1,0,1,5.01840771
+exp01,noise_more_correlated,250,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7301275482759643225,3590,0.8975,0.00479566862,0.7895,3.05636596
+exp01,noise_more_correlated,250,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7301275482759643225,3614,0.9035,0.00466871904,0.79525,3.07012386
+exp01,noise_more_correlated,250,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,5392288163984776051,3921,0.98025,0.00219999645,0.902,3.55071761
+exp01,noise_more_correlated,250,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5392288163984776051,4000,1,0,1,5.82770834
+exp01,noise_more_correlated,250,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5392288163984776051,3553,0.88825,0.00498151427,0.691,3.03290318
+exp01,noise_more_correlated,250,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5392288163984776051,3593,0.89825,0.00478008728,0.71,3.06935489
+exp01,noise_more_correlated,250,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,7756340379317657644,3998,0.9995,0.000353464991,0.8905,4.78317033
+exp01,noise_more_correlated,250,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7756340379317657644,4000,1,0,1,9.61167823
+exp01,noise_more_correlated,250,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7756340379317657644,3283,0.82075,0.00606464009,0.19975,2.8699022
+exp01,noise_more_correlated,250,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7756340379317657644,3611,0.90275,0.00468488093,0.29225,3.06878965
+exp01,noise_far_more_correlated,30,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,9121297221976045894,3725,0.93125,0.00400073235,0.90025,3.2529681
+exp01,noise_far_more_correlated,30,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9121297221976045894,3999,0.99975,0.000249968748,0.99925,4.68636617
+exp01,noise_far_more_correlated,30,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9121297221976045894,3584,0.896,0.004826593,0.856,3.11317714
+exp01,noise_far_more_correlated,30,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9121297221976045894,3577,0.89425,0.00486227667,0.857,3.11774897
+exp01,noise_far_more_correlated,30,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,11069120353681853452,3814,0.9535,0.00332932989,0.90725,3.38446133
+exp01,noise_far_more_correlated,30,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11069120353681853452,4000,1,0,0.99975,5.27924467
+exp01,noise_far_more_correlated,30,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11069120353681853452,3569,0.89225,0.00490254876,0.79575,3.10191005
+exp01,noise_far_more_correlated,30,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11069120353681853452,3609,0.90225,0.00469560799,0.8105,3.11911749
+exp01,noise_far_more_correlated,30,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,5543505489407921222,3909,0.97725,0.00235756429,0.903,3.58698296
+exp01,noise_far_more_correlated,30,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5543505489407921222,4000,1,0,1,6.09264386
+exp01,noise_far_more_correlated,30,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5543505489407921222,3563,0.89075,0.00493240402,0.7165,3.06387982
+exp01,noise_far_more_correlated,30,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5543505489407921222,3628,0.907,0.00459214002,0.73825,3.11095022
+exp01,noise_far_more_correlated,30,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,7997003063621748905,3997,0.99925,0.000432850292,0.90725,4.73057097
+exp01,noise_far_more_correlated,30,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7997003063621748905,4000,1,0,1,9.96675438
+exp01,noise_far_more_correlated,30,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7997003063621748905,3106,0.7765,0.00658687616,0.313,2.83834258
+exp01,noise_far_more_correlated,30,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7997003063621748905,3604,0.901,0.00472226111,0.44075,3.11420778
+exp01,noise_far_more_correlated,100,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,7356847122452271484,3729,0.93225,0.00397366133,0.90025,3.21092175
+exp01,noise_far_more_correlated,100,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,7356847122452271484,3996,0.999,0.000499749937,0.99825,4.43840356
+exp01,noise_far_more_correlated,100,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,7356847122452271484,3604,0.901,0.00472226111,0.8495,3.07293767
+exp01,noise_far_more_correlated,100,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,7356847122452271484,3615,0.90375,0.0046633126,0.85375,3.0788178
+exp01,noise_far_more_correlated,100,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,9747504110131156134,3848,0.962,0.0030230779,0.90325,3.33917276
+exp01,noise_far_more_correlated,100,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9747504110131156134,4000,1,0,1,5.018604
+exp01,noise_far_more_correlated,100,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9747504110131156134,3622,0.9055,0.00462519594,0.79525,3.06040239
+exp01,noise_far_more_correlated,100,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9747504110131156134,3649,0.91225,0.00447353153,0.8075,3.07931219
+exp01,noise_far_more_correlated,100,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,14959213618284459109,3927,0.98175,0.00211642018,0.90525,3.54490415
+exp01,noise_far_more_correlated,100,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14959213618284459109,4000,1,0,1,5.8194979
+exp01,noise_far_more_correlated,100,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14959213618284459109,3556,0.889,0.00496686521,0.7045,3.02793752
+exp01,noise_far_more_correlated,100,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14959213618284459109,3619,0.90475,0.00464159018,0.72975,3.07887869
+exp01,noise_far_more_correlated,100,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,15681580711390199780,4000,1,0,0.89725,4.65376082
+exp01,noise_far_more_correlated,100,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15681580711390199780,4000,1,0,1,9.49658349
+exp01,noise_far_more_correlated,100,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15681580711390199780,3129,0.78225,0.00652562138,0.283,2.79225649
+exp01,noise_far_more_correlated,100,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15681580711390199780,3631,0.90775,0.00457547641,0.42725,3.07735811
+exp01,noise_far_more_correlated,250,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,1778312499392318684,3765,0.94125,0.00371814596,0.909,3.20189261
+exp01,noise_far_more_correlated,250,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,1778312499392318684,3998,0.9995,0.000353464991,0.99925,4.43549331
+exp01,noise_far_more_correlated,250,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,1778312499392318684,3611,0.90275,0.00468488093,0.85475,3.06429654
+exp01,noise_far_more_correlated,250,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,1778312499392318684,3619,0.90475,0.00464159018,0.86,3.06991247
+exp01,noise_far_more_correlated,250,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,9705039378870963980,3833,0.95825,0.00316255188,0.897,3.32955355
+exp01,noise_far_more_correlated,250,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9705039378870963980,4000,1,0,0.99975,5.01560965
+exp01,noise_far_more_correlated,250,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9705039378870963980,3582,0.8955,0.00483683135,0.8005,3.05158623
+exp01,noise_far_more_correlated,250,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9705039378870963980,3610,0.9025,0.00469024919,0.8105,3.0699844
+exp01,noise_far_more_correlated,250,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,4630359143835803358,3932,0.983,0.0020439545,0.90425,3.53593507
+exp01,noise_far_more_correlated,250,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4630359143835803358,4000,1,0,0.99975,5.81653473
+exp01,noise_far_more_correlated,250,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4630359143835803358,3541,0.88525,0.00503940566,0.69575,3.02027644
+exp01,noise_far_more_correlated,250,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4630359143835803358,3606,0.9015,0.0047116279,0.722,3.06800227
+exp01,noise_far_more_correlated,250,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,13997648108308822272,4000,1,0,0.89925,4.63323173
+exp01,noise_far_more_correlated,250,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,13997648108308822272,4000,1,0,1,9.48731983
+exp01,noise_far_more_correlated,250,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,13997648108308822272,3019,0.75475,0.00680261783,0.267,2.77993904
+exp01,noise_far_more_correlated,250,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,13997648108308822272,3606,0.9015,0.0047116279,0.40725,3.07003982
+exp01,noise_equi_latent_ar1,30,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,11273296628644796379,3738,0.9345,0.00391183301,0.9005,3.25021833
+exp01,noise_equi_latent_ar1,30,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11273296628644796379,3998,0.9995,0.000353464991,0.99875,4.68806105
+exp01,noise_equi_latent_ar1,30,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11273296628644796379,3606,0.9015,0.0047116279,0.8565,3.11054555
+exp01,noise_equi_latent_ar1,30,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11273296628644796379,3591,0.89775,0.00479048373,0.8595,3.11338116
+exp01,noise_equi_latent_ar1,30,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,13961497694942224549,3798,0.9495,0.0034622879,0.8865,3.37298522
+exp01,noise_equi_latent_ar1,30,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,13961497694942224549,4000,1,0,0.9995,5.2704755
+exp01,noise_equi_latent_ar1,30,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,13961497694942224549,3532,0.883,0.00508210094,0.79575,3.09139202
+exp01,noise_equi_latent_ar1,30,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,13961497694942224549,3578,0.8945,0.0048572047,0.80875,3.11574754
+exp01,noise_equi_latent_ar1,30,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,11656767802222181770,3921,0.98025,0.00219999645,0.9035,3.58199978
+exp01,noise_equi_latent_ar1,30,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,11656767802222181770,4000,1,0,1,6.10364942
+exp01,noise_equi_latent_ar1,30,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,11656767802222181770,3550,0.8875,0.00499609222,0.7165,3.05962336
+exp01,noise_equi_latent_ar1,30,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,11656767802222181770,3611,0.90275,0.00468488093,0.74275,3.10758082
+exp01,noise_equi_latent_ar1,30,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,8205374871174308280,3999,0.99975,0.000249968748,0.8995,4.77359848
+exp01,noise_equi_latent_ar1,30,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8205374871174308280,4000,1,0,1,9.98445678
+exp01,noise_equi_latent_ar1,30,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8205374871174308280,3146,0.7865,0.00647915407,0.29275,2.86415909
+exp01,noise_equi_latent_ar1,30,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8205374871174308280,3615,0.90375,0.0046633126,0.406,3.10919934
+exp01,noise_equi_latent_ar1,100,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,4596044039077799932,3752,0.938,0.00381300407,0.906,3.20494906
+exp01,noise_equi_latent_ar1,100,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,4596044039077799932,3999,0.99975,0.000249968748,0.99975,4.43604266
+exp01,noise_equi_latent_ar1,100,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,4596044039077799932,3624,0.906,0.00461421716,0.86175,3.06722165
+exp01,noise_equi_latent_ar1,100,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,4596044039077799932,3607,0.90175,0.00470629731,0.86075,3.07352705
+exp01,noise_equi_latent_ar1,100,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,16980698876799094472,3834,0.9585,0.00315348022,0.90125,3.33329383
+exp01,noise_equi_latent_ar1,100,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16980698876799094472,4000,1,0,0.99925,5.01584772
+exp01,noise_equi_latent_ar1,100,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16980698876799094472,3596,0.899,0.00476442546,0.7985,3.05501426
+exp01,noise_equi_latent_ar1,100,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16980698876799094472,3597,0.89925,0.00475918684,0.8115,3.07428853
+exp01,noise_equi_latent_ar1,100,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,14614939462918784177,3929,0.98225,0.00208775822,0.901,3.5418508
+exp01,noise_equi_latent_ar1,100,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14614939462918784177,4000,1,0,1,5.81603128
+exp01,noise_equi_latent_ar1,100,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14614939462918784177,3511,0.87775,0.00517940483,0.706,3.02532945
+exp01,noise_equi_latent_ar1,100,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14614939462918784177,3581,0.89525,0.00484193756,0.73225,3.07470053
+exp01,noise_equi_latent_ar1,100,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,8068390028607659732,4000,1,0,0.89725,4.68827443
+exp01,noise_equi_latent_ar1,100,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,8068390028607659732,4000,1,0,1,9.52440937
+exp01,noise_equi_latent_ar1,100,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,8068390028607659732,3108,0.777,0.00658162214,0.253,2.81296466
+exp01,noise_equi_latent_ar1,100,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,8068390028607659732,3598,0.8995,0.00475393916,0.37275,3.07182594
+exp01,noise_equi_latent_ar1,250,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,3799568244400871534,3746,0.9365,0.00385576678,0.90625,3.19596402
+exp01,noise_equi_latent_ar1,250,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3799568244400871534,3994,0.9985,0.000611912984,0.99825,4.43114144
+exp01,noise_equi_latent_ar1,250,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3799568244400871534,3615,0.90375,0.0046633126,0.85825,3.05862272
+exp01,noise_equi_latent_ar1,250,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3799568244400871534,3606,0.9015,0.0047116279,0.8595,3.06440685
+exp01,noise_equi_latent_ar1,250,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,5542281713884070066,3835,0.95875,0.00314437742,0.9035,3.32343363
+exp01,noise_equi_latent_ar1,250,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5542281713884070066,4000,1,0,1,5.01021597
+exp01,noise_equi_latent_ar1,250,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5542281713884070066,3566,0.8915,0.00491751335,0.78925,3.04597724
+exp01,noise_equi_latent_ar1,250,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5542281713884070066,3577,0.89425,0.00486227667,0.803,3.06471632
+exp01,noise_equi_latent_ar1,250,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,40280807935927584,3934,0.9835,0.00201418408,0.896,3.52767479
+exp01,noise_equi_latent_ar1,250,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,40280807935927584,4000,1,0,1,5.8104791
+exp01,noise_equi_latent_ar1,250,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,40280807935927584,3531,0.88275,0.00508680739,0.6875,3.01322078
+exp01,noise_equi_latent_ar1,250,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,40280807935927584,3619,0.90475,0.00464159018,0.714,3.06538055
+exp01,noise_equi_latent_ar1,250,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,10163915703505849112,4000,1,0,0.89175,4.67291853
+exp01,noise_equi_latent_ar1,250,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,10163915703505849112,4000,1,0,1,9.51757706
+exp01,noise_equi_latent_ar1,250,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,10163915703505849112,3186,0.7965,0.00636568437,0.257,2.80375112
+exp01,noise_equi_latent_ar1,250,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,10163915703505849112,3612,0.903,0.00467950318,0.38975,3.06448271
+exp01,latent_more_correlated,30,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,9437497690634749912,3776,0.944,0.00363538169,0.899,2.64771605
+exp01,latent_more_correlated,30,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,9437497690634749912,3998,0.9995,0.000353464991,0.99825,4.23064277
+exp01,latent_more_correlated,30,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,9437497690634749912,3721,0.93025,0.00402755936,0.877,2.53393481
+exp01,latent_more_correlated,30,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,9437497690634749912,3589,0.89725,0.00480084465,0.82425,2.35725449
+exp01,latent_more_correlated,30,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,14740014469087288145,3893,0.97325,0.00255119764,0.909,2.88714348
+exp01,latent_more_correlated,30,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14740014469087288145,4000,1,0,0.999,4.9186175
+exp01,latent_more_correlated,30,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14740014469087288145,3806,0.9515,0.00339660676,0.84925,2.64611071
+exp01,latent_more_correlated,30,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14740014469087288145,3635,0.90875,0.00455311535,0.74325,2.35638765
+exp01,latent_more_correlated,30,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,15754948616108980258,3957,0.98925,0.00163052426,0.90625,3.25428101
+exp01,latent_more_correlated,30,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15754948616108980258,4000,1,0,1,5.8606335
+exp01,latent_more_correlated,30,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15754948616108980258,3862,0.9655,0.00288572998,0.792,2.77969704
+exp01,latent_more_correlated,30,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15754948616108980258,3627,0.90675,0.00459767434,0.59925,2.36061681
+exp01,latent_more_correlated,30,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,14190828604537258896,4000,1,0,0.897,5.04911771
+exp01,latent_more_correlated,30,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,14190828604537258896,4000,1,0,1,10.1948412
+exp01,latent_more_correlated,30,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,14190828604537258896,3926,0.9815,0.00213059557,0.136,3.02947062
+exp01,latent_more_correlated,30,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,14190828604537258896,3597,0.89925,0.00475918684,0.011,2.35952726
+exp01,latent_more_correlated,100,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,12393335570801772203,3798,0.9495,0.0034622879,0.8955,2.59505062
+exp01,latent_more_correlated,100,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,12393335570801772203,3997,0.99925,0.000432850292,0.99725,3.90992319
+exp01,latent_more_correlated,100,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,12393335570801772203,3734,0.9335,0.00393947173,0.87,2.48353259
+exp01,latent_more_correlated,100,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,12393335570801772203,3592,0.898,0.00478528996,0.82025,2.30873562
+exp01,latent_more_correlated,100,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,6710158979012648068,3887,0.97175,0.00261972983,0.902,2.8344926
+exp01,latent_more_correlated,100,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,6710158979012648068,4000,1,0,0.9995,4.59219181
+exp01,latent_more_correlated,100,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,6710158979012648068,3797,0.94925,0.00347039038,0.84575,2.59785538
+exp01,latent_more_correlated,100,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,6710158979012648068,3613,0.90325,0.00467411589,0.74025,2.30223494
+exp01,latent_more_correlated,100,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,3487655766498197527,3958,0.9895,0.00161165676,0.9045,3.19742306
+exp01,latent_more_correlated,100,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3487655766498197527,4000,1,0,1,5.53030108
+exp01,latent_more_correlated,100,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3487655766498197527,3863,0.96575,0.00287562765,0.7795,2.7311309
+exp01,latent_more_correlated,100,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3487655766498197527,3607,0.90175,0.00470629731,0.577,2.30737757
+exp01,latent_more_correlated,100,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,5107881874082628084,4000,1,0,0.90725,4.98872748
+exp01,latent_more_correlated,100,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,5107881874082628084,4000,1,0,1,9.77098347
+exp01,latent_more_correlated,100,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,5107881874082628084,3930,0.9825,0.00207326735,0.12475,2.99323649
+exp01,latent_more_correlated,100,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,5107881874082628084,3598,0.8995,0.00475393916,0.0085,2.3074863
+exp01,latent_more_correlated,250,0.29,48,observed_anchor,T1,exchangeability of observed curves,4000,16052484232080792562,3791,0.94775,0.0035185202,0.8995,2.57959692
+exp01,latent_more_correlated,250,0.29,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,16052484232080792562,3994,0.9985,0.000611912984,0.99575,3.90196006
+exp01,latent_more_correlated,250,0.29,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,16052484232080792562,3734,0.9335,0.00393947173,0.872,2.46874299
+exp01,latent_more_correlated,250,0.29,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,16052484232080792562,3594,0.8985,0.00477487565,0.828,2.29504769
+exp01,latent_more_correlated,250,0.4,48,observed_anchor,T1,exchangeability of observed curves,4000,3311748773945064929,3898,0.9745,0.00249247618,0.90375,2.82290341
+exp01,latent_more_correlated,250,0.4,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,3311748773945064929,4000,1,0,0.99975,4.59168299
+exp01,latent_more_correlated,250,0.4,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,3311748773945064929,3807,0.95175,0.00338828635,0.8515,2.58723371
+exp01,latent_more_correlated,250,0.4,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,3311748773945064929,3619,0.90475,0.00464159018,0.74525,2.29599268
+exp01,latent_more_correlated,250,0.52,48,observed_anchor,T1,exchangeability of observed curves,4000,15296417503807610600,3949,0.98725,0.00177393894,0.9,3.18249317
+exp01,latent_more_correlated,250,0.52,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,15296417503807610600,4000,1,0,1,5.52421241
+exp01,latent_more_correlated,250,0.52,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,15296417503807610600,3846,0.9615,0.0030421107,0.76775,2.71837829
+exp01,latent_more_correlated,250,0.52,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,15296417503807610600,3610,0.9025,0.00469024919,0.553,2.29479442
+exp01,latent_more_correlated,250,0.8,48,observed_anchor,T1,exchangeability of observed curves,4000,217689459579465630,4000,1,0,0.90275,4.96704636
+exp01,latent_more_correlated,250,0.8,48,noise_enlargement,T2,observed anchor + sampling-error tail bound,4000,217689459579465630,4000,1,0,1,9.76146671
+exp01,latent_more_correlated,250,0.8,48,oracle_rescaled,T2,common standardised-shape assumption (S) + known scales,4000,217689459579465630,3931,0.98275,0.00205866689,0.1175,2.98022782
+exp01,latent_more_correlated,250,0.8,48,latent_oracle,T2,infeasible reference: calibrated on latent curves,4000,217689459579465630,3625,0.90625,0.00460871288,0.00525,2.29406435
