@@ -91,3 +91,57 @@ $K$ & bound & REML & bound & REML & at zero\\\midrule
 500 & 0.084 & 0.085 & 0.333 & 0.334 & \ZeroHiRhoHiK\%\\
 \bottomrule\end{tabular}
 \end{table}
+
+\subsection{What this costs a small-area analyst}\label{sec:shrinkage}
+
+The requirement above is stated in terms of a relative-precision tolerance
+$\tau$, which a gated procedure supplies explicitly. Most small-area analysis
+supplies none, and the natural question is what the coupling costs someone who
+never states one. It has a direct answer, because the estimated model variance
+is not the quantity of interest: it is an input to the shrinkage weight
+\begin{equation}\label{eq:gamma}
+\gamma=\frac{A}{A+D},\qquad
+\frac{\partial\gamma/\gamma}{\partial A/A}=\frac{D}{A+D}=\rho^2 ,
+\end{equation}
+which decides how far each direct estimate is pulled toward the model. Combining
+the elasticity in~\eqref{eq:gamma} with the bound~\eqref{eq:crlb},
+\begin{equation}\label{eq:gammarse}
+\mathrm{RSE}(\widehat\gamma)\;=\;\rho^2\,\mathrm{RSE}(\widehat A)
+\;=\;\frac{\rho^2}{1-\rho^2}\sqrt{\frac{2}{K}}
+\;=\;\frac{D}{A}\sqrt{\frac{2}{K}},
+\end{equation}
+the relative instability of the shrinkage weight is the noise-to-signal ratio
+times $\sqrt{2/K}$. Inverting it gives a planning quantity that needs no
+tolerance to be invented for it: to hold the weight stable to within a relative
+$x$,
+\begin{equation}\label{eq:areas}
+K\ \ge\ \frac{2}{x^2}\left(\frac{D}{A}\right)^{\!2}.
+\end{equation}
+
+Simulation confirms~\eqref{eq:gammarse} where the linearisation applies: over
+conditions with $K\ge100$ and $\rho\le0.7$ the realised instability of the REML
+weight is \GamRatioMed{} times the predicted value at the median, range
+\GamRatioLo--\GamRatioHi. At $K=30$ it runs about a tenth high, and at
+$\rho=0.9$ the delta-method step fails as $\gamma$ approaches its boundary.
+
+\begin{table}[htbp]\centering
+\caption{Areas required by~\eqref{eq:areas} to hold the Fay--Herriot shrinkage
+weight stable to within a stated relative tolerance, by noise-to-signal ratio.
+$D/A=1$ is a between-area variance equal to the sampling variance of a direct
+estimate.}\label{tab:areas}
+\begin{tabular}{lrrrr}\toprule
+& \multicolumn{4}{c}{noise-to-signal $D/A$}\\\cmidrule(lr){2-5}
+tolerance on $\gamma$ & $0.5$ & $1$ & $2$ & $4$\\\midrule
+$20\%$ & 13 & 50 & 200 & 800\\
+$10\%$ & 50 & 200 & 800 & 3{,}200\\
+$5\%$ & 200 & 800 & 3{,}200 & 12{,}800\\
+\bottomrule\end{tabular}
+\end{table}
+
+Table~\ref{tab:areas} is the practical content of the coupling, and it is
+independent of conformal prediction. It says that an area-level model whose
+direct estimates are as noisy as the between-area signal needs two hundred areas
+before its shrinkage weights are stable to a tenth, and eight hundred before
+they are stable to a twentieth; at four times the noise those figures are
+$3{,}200$ and $12{,}800$. The same quantity that makes shrinkage worth doing
+makes the amount of shrinkage hard to determine.

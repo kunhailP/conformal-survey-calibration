@@ -101,6 +101,9 @@ def main() -> None:
         "ShapeHighDeight": fmt(cov("noise_far_more_correlated", 0.80, 8)),
         "ShapeHighDfortyeight": fmt(cov("noise_far_more_correlated", 0.80, 48)),
         "ShapeReverse": fmt(cov("latent_more_correlated", 0.80, 48)),
+        "ShapeRealNatSurvey": fmt(cov("survey_realistic", 0.29, 48)),
+        "ShapeRealRegSurvey": fmt(cov("survey_realistic", 0.52, 48)),
+        "ShapeHighSurvey": fmt(cov("survey_realistic", 0.80, 48)),
         "ShapeKthirty": fmt(cov("noise_far_more_correlated", 0.80, 48, 30)),
         "ShapeKtwofifty": fmt(cov("noise_far_more_correlated", 0.80, 48, 250)),
         # exp02 audit
@@ -113,6 +116,9 @@ def main() -> None:
                              / aud.n.sum() * 100, 2),
         "AudStratumSplit": int((aud.stratum_split_across_regions > 0).sum()),
         # exp05 information bound
+        "GamRatioMed": fmt(inf[(inf.K >= 100) & (inf.rho <= 0.7)].gamma_ratio.median()),
+        "GamRatioLo": fmt(inf[(inf.K >= 100) & (inf.rho <= 0.7)].gamma_ratio.min()),
+        "GamRatioHi": fmt(inf[(inf.K >= 100) & (inf.rho <= 0.7)].gamma_ratio.max()),
         "InfCells": len(inf),
         "InfReps": int(inf.reps.iloc[0]),
         "InfRatioMed": fmt(inf[inf.K >= 100].ratio.median()),

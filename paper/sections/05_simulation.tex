@@ -11,8 +11,30 @@ drawn independently with $\sigma=\rho/\sqrt{1-\rho^2}$, so every coordinate
 variance is correct by construction and only $R_G$ versus $R_S$ is manipulated.
 The grid crosses coordinate counts $d\in\{8,24,48\}$, design shares
 $\rho\in\{0.29,0.40,0.52,0.80\}$, calibration counts $K\in\{30,100,250\}$ and
-five correlation pairs, at 4{,}000 replicates and nominal $90\%$: \ShapeCells{}
-cells. The first and third design shares are the maxima observed at the
+the six correlation pairs of Table~\ref{tab:shapespec}, at 4{,}000 replicates
+and nominal $90\%$: \ShapeCells{} cells.
+
+\begin{table}[htbp]\centering
+\caption{The six correlation structures. All keep coordinate variances exactly
+correct; only the dependence across coordinates differs. ``Partial sum'' is
+$R(j,k)=\{p_j(1-p_k)/p_k(1-p_j)\}^{1/2}$ for $p_j\le p_k$, the correlation of
+sampling error in a cumulative distribution function, evaluated at the survey's
+own core threshold values $p=(0.177,0.262,0.370,0.463)$ interpolated onto $d$
+coordinates. Its mean off-diagonal entry is $0.69$.}\label{tab:shapespec}
+\begin{tabular}{llll}\toprule
+condition & latent $R_G$ & sampling $R_S$ & role\\\midrule
+matched & equicorr.\ $0.5$ & equicorr.\ $0.5$ & (S) holds; control\\
+survey-realistic & AR(1) $0.3$ & partial sum & the mechanism, at its own values\\
+noise more corr. & independent & equicorr.\ $0.8$ & stylised, mild\\
+noise far more corr. & independent & equicorr.\ $0.95$ & stylised, severe\\
+noise equi., latent AR & AR(1) $0.3$ & equicorr.\ $0.9$ & shape as well as strength\\
+latent more corr. & equicorr.\ $0.9$ & AR(1) $0.3$ & the reverse direction\\
+\bottomrule\end{tabular}
+\end{table}
+
+The partial-sum structure is the argument of the next paragraph made concrete
+rather than asserted: it is what the sampling error of an estimated distribution
+function actually looks like, at the threshold values this survey actually has. The first and third design shares are the maxima observed at the
 national and regional units in Section~\ref{sec:applications}. These are standardised deviation vectors, not cumulative
 distributions and not a finite-population design, and they supply exact scales:
 the experiment isolates~(S) and cannot bound any procedure's realised coverage.
@@ -23,9 +45,12 @@ adjacent thresholds are partial sums over one sample and are strongly
 positively correlated; differences between populations across thresholds carry
 no such mechanism. The expected configuration is therefore noise more
 correlated than latent, and this was recorded as a falsifiable prediction before
-execution. It held: every structure with noise more correlated than latent
-undercovers, and the reverse overcovers, reaching \ShapeReverse{} at
-$\rho=0.80$, $d=48$. A matched-correlation control sits at \ShapeMatched.
+execution. It held. Every structure with noise more correlated than latent undercovers,
+and the reverse overcovers, reaching \ShapeReverse{} at $\rho=0.80$, $d=48$; a
+matched-correlation control sits at \ShapeMatched. The survey-realistic
+condition, which is not stylised at all, behaves like the mild stylised one:
+\ShapeRealNatSurvey{} at the national design share, \ShapeRealRegSurvey{} at the
+regional one, and \ShapeHighSurvey{} at $\rho=0.80$.
 
 \paragraph{The cost grows with coordinates, not with populations.} At
 $\rho=0.80$ and $d=48$ the worst mismatch gives latent coverage

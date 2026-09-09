@@ -28,9 +28,22 @@ RHO_GRID = (0.29, 0.40, 0.52, 0.80)
 D_GRID = (8, 24, 48)
 
 # (label, R_G builder, R_S builder).  All keep coordinate variances correct.
+#: Mean weighted CDF of the survey item at the four core thresholds, from the
+#: European Social Survey rounds 9-11; used to give the partial-sum structure
+#: realistic values rather than a stylised one.
+CORE_P = np.array([0.177, 0.262, 0.370, 0.463])
+
+
+def _cdf_grid(d: int) -> np.ndarray:
+    """Interpolate the observed core CDF values onto d thresholds."""
+    return np.interp(np.linspace(0, 1, d), np.linspace(0, 1, len(CORE_P)), CORE_P)
+
+
 STRUCTURES = (
     ("matched", lambda d: generators.equicorrelated(d, 0.5),
      lambda d: generators.equicorrelated(d, 0.5)),
+    ("survey_realistic", lambda d: generators.ar1(d, 0.3),
+     lambda d: generators.cdf_partial_sum(_cdf_grid(d))),
     ("noise_more_correlated", lambda d: generators.equicorrelated(d, 0.0),
      lambda d: generators.equicorrelated(d, 0.8)),
     ("noise_far_more_correlated", lambda d: generators.equicorrelated(d, 0.0),

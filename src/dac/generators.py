@@ -9,7 +9,8 @@ from __future__ import annotations
 
 import numpy as np
 
-__all__ = ["equicorrelated", "ar1", "banded", "cholesky", "draw_curves", "noise_scale"]
+__all__ = ["equicorrelated", "ar1", "banded", "cdf_partial_sum", "cholesky",
+           "draw_curves", "noise_scale"]
 
 
 def equicorrelated(d: int, r: float) -> np.ndarray:
@@ -36,6 +37,26 @@ def banded(d: int, r: float, bandwidth: int = 1) -> np.ndarray:
     R = np.where(lag <= bandwidth, float(r), 0.0)
     np.fill_diagonal(R, 1.0)
     return R
+
+
+def cdf_partial_sum(p: np.ndarray) -> np.ndarray:
+    """Correlation of sampling error in a cumulative distribution function.
+
+    For a multinomial sample the estimated CDF values at thresholds are partial
+    sums over one sample, so for ``j <= k`` the errors correlate as
+
+        R(j, k) = sqrt( p_j (1 - p_k) / ( p_k (1 - p_j) ) ),
+
+    the standardised Brownian-bridge covariance.  Correlation is high and decays
+    only with the distance between the CDF values, which is the mechanism that
+    makes sampling error more correlated across thresholds than differences
+    between populations are.  ``p`` must be strictly increasing in (0, 1).
+    """
+    p = np.asarray(p, dtype=float)
+    if not (np.all(np.diff(p) > 0) and p[0] > 0 and p[-1] < 1):
+        raise ValueError("p must be strictly increasing inside (0, 1)")
+    lo, hi = np.minimum.outer(p, p), np.maximum.outer(p, p)
+    return np.sqrt(lo * (1 - hi) / (hi * (1 - lo)))
 
 
 def cholesky(R: np.ndarray) -> np.ndarray:

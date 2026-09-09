@@ -299,6 +299,43 @@ zero departure from its own national curve by construction. It was removed and
 the sweep re-run; the national reference is `exp04`, which uses deviations from
 a cross-country centre instead.
 
+## From exp05, shrinkage-weight corollary (verified)
+
+| finding | value |
+|---|---|
+| Elasticity of the shrinkage weight to the model variance | `rho^2` |
+| Closed form | `RSE(gamma) = (D/A) sqrt(2/K)` |
+| REML realised / predicted, `K >= 100`, `rho <= 0.7` | median **1.015**, range 0.847-1.064 |
+| Areas for a 10% tolerance at `D/A = 1` | **200** |
+| Areas for a 10% tolerance at `D/A = 4` | **3,200** |
+| Areas for a 5% tolerance at `D/A = 1` | **800** |
+
+Breaks down at `rho = 0.9`, where the delta-method step fails as the weight
+approaches its boundary, and runs about a tenth high at `K = 30`. Reported.
+
+**Why this matters for placement.** The boundary as first stated needs a
+relative-precision tolerance, which a gated procedure supplies and ordinary
+small-area analysis does not. Through the shrinkage weight it needs none: the
+tolerance is on a quantity the analyst already reports. The result is therefore
+about area-level modelling generally, not about one conformal selector.
+
+## From exp01, survey-realistic correlation structure (verified)
+
+The manuscript argues that sampling error in an estimated distribution function
+is more correlated across thresholds than differences between populations are,
+because the former are partial sums over one sample. That argument is now
+instantiated rather than asserted: `R(j,k) = sqrt(p_j(1-p_k)/p_k(1-p_j))`
+evaluated at the survey's own core threshold values `(0.177, 0.262, 0.370,
+0.463)`, whose mean off-diagonal entry is **0.688** and which decays with the
+distance between CDF values.
+
+| condition | rho = 0.29 | rho = 0.52 | rho = 0.80 |
+|---|---|---|---|
+| survey-realistic, d = 48 | 0.898 | 0.883 | **0.797** |
+
+It behaves like the mild stylised condition, which is the reassuring outcome:
+the stylised grid was not carrying the result.
+
 ## Claims deliberately not made
 
 - No universal width-optimality for any latent-target band.

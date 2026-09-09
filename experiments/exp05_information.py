@@ -61,6 +61,11 @@ def run(K: int, rho: float, dispersed: bool) -> dict:
         y = 5.0 + u + rng.normal(0, np.sqrt(D))
         est[b] = reml_A(y, D)
     realised = est.std(ddof=1) / A_TRUE
+    # the shrinkage weight the estimate feeds: gamma = A / (A + D)
+    Dbar_ = float(D.mean())
+    gam = est / (est + Dbar_)
+    gam_rse = float(gam.std(ddof=1) / (A_TRUE / (A_TRUE + Dbar_)))
+    gam_pred = float((Dbar_ / A_TRUE) * np.sqrt(2.0 / K))
     return dict(K=K, rho=rho, dispersed=dispersed, reps=REPS,
                 mean_D=float(D.mean()), sd_D=float(D.std()),
                 A_hat_mean=float(est.mean()),
@@ -68,7 +73,9 @@ def run(K: int, rho: float, dispersed: bool) -> dict:
                 rse_realised=realised,
                 rse_bound=fisher_rse(A_TRUE, D),
                 rse_closed_form=float(np.sqrt(2 / K) / (1 - rho ** 2)),
-                ratio=realised / fisher_rse(A_TRUE, D))
+                ratio=realised / fisher_rse(A_TRUE, D),
+                gamma_rse=gam_rse, gamma_rse_pred=gam_pred,
+                gamma_ratio=gam_rse / gam_pred if gam_pred > 0 else float("nan"))
 
 
 def main() -> None:
@@ -94,6 +101,14 @@ def main() -> None:
     print("\nDISPERSED sampling variances (lognormal, same mean)")
     print(dp[["K", "rho", "rse_realised", "rse_bound", "rse_closed_form",
               "ratio", "share_at_zero"]].round(4).to_string(index=False))
+    print("\nSHRINKAGE WEIGHT gamma = A/(A+D): realised vs (D/A) sqrt(2/K)")
+    gg = df[(~df.dispersed)][["K", "rho", "gamma_rse", "gamma_rse_pred", "gamma_ratio"]]
+    print(gg.round(4).to_string(index=False))
+    gok = df[(df.K >= 100) & (df.rho <= 0.7)]
+    print(f"\ngamma realised / predicted, K >= 100 and rho <= 0.7: "
+          f"median {gok.gamma_ratio.median():.3f}, "
+          f"range {gok.gamma_ratio.min():.3f}-{gok.gamma_ratio.max():.3f}")
+
     big = df[df.K >= 100]
     print(f"\nrealised / bound, K >= 100: median {big.ratio.median():.3f}, "
           f"range {big.ratio.min():.3f}-{big.ratio.max():.3f}")

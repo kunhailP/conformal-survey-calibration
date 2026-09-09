@@ -137,3 +137,30 @@ def test_rwy_bootstrap_recovers_a_clustered_standard_error():
     boot = ((W * y[:, None]).sum(0) / W.sum(0)).std()
     analytic = y.reshape(-1, per).mean(1).std(ddof=1) / np.sqrt(n_psu)
     assert abs(boot - analytic) / analytic < 0.10
+
+
+def test_cdf_partial_sum_is_a_valid_correlation_matrix():
+    """The Brownian-bridge structure must be a correlation matrix, and strongly
+    correlated: that is the mechanism the manuscript argues from."""
+    from dac.generators import cdf_partial_sum
+    p = np.array([0.177, 0.262, 0.370, 0.463])   # the survey's own core values
+    R = cdf_partial_sum(p)
+    assert np.allclose(np.diag(R), 1.0)
+    assert np.allclose(R, R.T)
+    assert np.all(np.linalg.eigvalsh(R) > 0)
+    off = R[np.triu_indices(len(p), 1)]
+    assert off.min() > 0.4 and off.mean() > 0.6
+    # correlation decays with distance between the CDF values
+    assert R[0, 1] > R[0, 2] > R[0, 3]
+
+
+def test_shrinkage_weight_instability_matches_its_closed_form():
+    """RSE(gamma) = (D/A) sqrt(2/K), the manuscript's planning quantity."""
+    for A, D, K in ((1.0, 1.0, 200), (1.0, 4.0, 200), (4.0, 1.0, 500)):
+        rho2 = D / (A + D)
+        closed = (D / A) * np.sqrt(2 / K)
+        via_rho = rho2 / (1 - rho2) * np.sqrt(2 / K)
+        assert closed == pytest.approx(via_rho)
+        # the planning inversion round-trips
+        x = closed
+        assert 2 / x ** 2 * (D / A) ** 2 == pytest.approx(K)
