@@ -1,0 +1,28 @@
+{
+  "experiment": "exp27_ess_scalar",
+  "t0": 4,
+  "items": [
+    "trstprl",
+    "stflife",
+    "happy"
+  ],
+  "rounds": [
+    9,
+    10,
+    11
+  ],
+  "min_n": [
+    40,
+    60,
+    80,
+    100,
+    150
+  ],
+  "alpha0": 0.05,
+  "eta_gamma": 0.025,
+  "eta_t": 0.025,
+  "structure_variable": "x = number of sampled PSUs in the region",
+  "configs": 45,
+  "latent_coverage_claimed": false,
+  "centre": "estimated (country-round weighted share); theory assumes it known"
+}

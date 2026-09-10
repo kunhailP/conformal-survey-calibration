@@ -1,14 +1,24 @@
 __pycache__/
 *.pyc
-.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Licensed microdata must never enter this repository (see docs/DATA.md).
+# The ESS cache lives outside the working tree; these patterns are a second line
+# of defence, not the mechanism.
+*.sav
+*.dta
+*.por
+ess_cache/
 data/
-*.pdf
-!paper/*.pdf
-!paper/figures/*.pdf
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.bbl
-paper/*.blg
-paper/*.fls
-paper/*.fdb_latexmk
+*.pkl
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz

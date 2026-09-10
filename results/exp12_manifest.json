@@ -1,0 +1,15 @@
+{
+  "experiment": "exp12_closing_scalar",
+  "reps": 20000,
+  "cells": 27,
+  "alpha0": 0.05,
+  "eta": 0.05,
+  "nu_per_population": 10.0,
+  "s1_oracle_a_max_dev": 0.004691935483871035,
+  "s2_oracle_b_max_dev": 0.02053388704318937,
+  "s3_min_containment_b": 0.83485,
+  "s3_min_containment_a": 0.94355,
+  "s4_min_eff_unweighted": 0.2156461409172711,
+  "s4_min_eff_w_oracle": 0.8746408389795666,
+  "s5_model_valid_narrower": 0.0
+}

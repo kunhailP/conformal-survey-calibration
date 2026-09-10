@@ -1,0 +1,18 @@
+{
+  "experiment": "exp13_weights_and_containment",
+  "reps": 20000,
+  "cells": 12,
+  "alpha0": 0.05,
+  "eta": 0.05,
+  "eta1": 0.025,
+  "eta2": 0.025,
+  "nu": 10.0,
+  "t3_split_beats_matched": 1.0,
+  "t4_split_beats_full": 0.5,
+  "t6_min_contain_guard": 0.99975,
+  "t6_min_contain_exp12": 0.93965,
+  "guard_width_range": [
+    1.2783272111217892,
+    1.8928011671673768
+  ]
+}

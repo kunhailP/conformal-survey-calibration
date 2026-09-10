@@ -1,0 +1,25 @@
+{
+  "experiment": "exp24_survey_structure",
+  "reps": 2000,
+  "cells": 16,
+  "alpha0": 0.05,
+  "eta_gamma": 0.025,
+  "eta_t": 0.025,
+  "structure_variable": "x_c = sampled PSU count m_c, fixed before running",
+  "s1_struct_R2": [
+    0.17208145585226187,
+    0.7867188698587972
+  ],
+  "s2_cov": [
+    0.943,
+    0.963
+  ],
+  "s3_contain": [
+    0.3655,
+    0.9885
+  ],
+  "s4_over_sepbonf": [
+    0.9588482028758774,
+    0.9979310244489122
+  ]
+}

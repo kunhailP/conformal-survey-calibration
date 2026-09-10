@@ -1,0 +1,143 @@
+\section{Target, information, and what has to be estimated}\label{sec:target}
+
+\subsection{The two objects}
+
+Write $\theta_c$ for population $c$'s latent summary and $Y_c$ for its survey
+estimate, taken as a deviation from a fixed centre. The observed and the latent
+object are not interchangeable, and the paper keeps them apart throughout:
+\begin{equation}\label{eq:decomp}
+Y_c=\theta_c+e_c,\qquad \operatorname{Var}(\theta_c)=A,\qquad
+\operatorname{Var}(e_c)=D_c ,
+\end{equation}
+with $D_c$ the design variance of the survey estimate. The \emph{design share}
+\begin{equation}\label{eq:rho}
+\rho_c^2=\frac{D_c}{A+D_c}\in[0,1)
+\end{equation}
+is the fraction of the observed dispersion that is sampling error. An interval
+calibrated on the $Y_c$ covers a further \emph{survey estimate}; covering a
+further \emph{latent summary} requires removing that fraction.
+
+\subsection{The interval}
+
+Fix an integer $m\le K$, write $\operatorname{ord}_m$ for the $m$th smallest of
+$K$ numbers, and let $t=D/A$ be the scale ratio, taken common across populations
+for this section. Standardising $Z_c(t)=Y_c/\sqrt{1+t}$, the interval is
+\begin{equation}\label{eq:band}
+B(t)=[-R(t),\,R(t)],\qquad
+R(t)=\operatorname{ord}_m\{|Z_c(t)|\}_{c=1}^K=q\,\kappa,
+\end{equation}
+where $q=\operatorname{ord}_m\{|Y_c|\}$ and
+$\kappa=(1+t)^{-1/2}=\sqrt{A/(A+D)}=\sqrt{1-\rho^2}$. Here $q$ is a
+statistic---the radius the observed spread itself supplies---and $\kappa$ is the
+factor carrying it to the latent scale.
+
+\begin{lemma}[Base validity]\label{lem:rank}
+If $\theta_{K+1},Z_1(t),\dots,Z_K(t)$ are exchangeable with a continuous
+distribution, then $\Pr\{\theta_{K+1}\in B(t)\}=m/(K+1)$. Under
+\eqref{eq:decomp} with equal design variances this holds exactly at the true $t$,
+because $Z_c(t)$ and $\theta_{K+1}$ are then i.i.d.\ $N(0,A)$. Write
+$\alpha_0=1-m/(K+1)$.
+\end{lemma}
+
+Everything that follows concerns one difficulty: $t$ is unknown, so the interval
+is evaluated at a bound for it rather than at its value.
+
+\subsection{What has to be known precisely, and it is not $A$}
+
+\textbf{The band depends on the two scales only through their ratio $\kappa$},
+and not on $A$ separately. Since $\widehat A$ and $\widehat{A+D}$ are built from
+the same observed spread, their errors partly cancel, and to first order
+\begin{equation}\label{eq:elasticity_kappa}
+\frac{\operatorname{RSE}(\widehat\kappa)}{\operatorname{RSE}(\widehat{\sqrt A})}
+=\sqrt{\frac{\rho^4\sigma_T^2+\sigma_D^2}{\sigma_T^2+\sigma_D^2}}
+\ \longrightarrow\ \rho^2
+\end{equation}
+as the design variances become well determined, where $\sigma_T^2$ and
+$\sigma_D^2$ are the variances of the estimated total and design scales. A
+requirement stated on $\widehat A$ therefore overstates what the band needs by a
+factor $\rho^{-4}$ in the number of populations. Simulation puts the realised
+gain at 14 to 24 times at $\rho^2=0.2$ and 2.0 to 3.8 times at $\rho^2=0.5$,
+against the predicted $\rho^{-4}$ of 25 and 4.
+
+\subsection{Two axes, not one}
+
+Writing $\sigma_D^2=2D^2/\nu_{\mathrm{tot}}$ for a design-variance estimate on
+$\nu_{\mathrm{tot}}$ degrees of freedom, the requirement
+$\operatorname{RSE}(\widehat\kappa)\le\varepsilon$ becomes
+\begin{equation}\label{eq:twoaxis}
+\boxed{\ \frac{1}{K-1}+\frac{1}{\nu_{\mathrm{tot}}}\ \le\
+\frac{2\varepsilon^2(1-\rho^2)^2}{\rho^4}\ }
+\end{equation}
+Populations and design degrees of freedom enter \emph{harmonically}: neither
+substitutes for the other, and $\nu_{\mathrm{tot}}$ imposes a floor no number of
+populations clears. Replicate count does not help---with design degrees of
+freedom $\nu^{\mathrm{des}}=20$, raising a resampling count from 100 to 10{,}000
+buys 3.6 effective degrees of freedom and no more.
+
+\paragraph{The boundary is not an artefact of this estimator.} Condition
+\eqref{eq:twoaxis} is sufficient, and it was derived from one estimator's
+relative standard error. A matching necessary condition holds. Restrict to equal
+design variances and take two parameter points separated so that their
+$\varepsilon$-balls in $\kappa$ are disjoint. The scaled-$\chi^2$ and normal
+Hellinger affinities are available in closed form, so Le Cam's two-point bound \citep{lecam1986}
+gives, exactly and in finite samples, that \emph{no} procedure can certify
+$\kappa$ to tolerance $\varepsilon$ with failure probability $\eta<1/2$ unless
+\begin{equation}\label{eq:necessary}
+\nu_{\mathrm{tot}}\ \ge\ L(\eta)\,\frac{\rho^4}{\varepsilon^2(1-\rho^2)^2},
+\qquad L(\eta)=-\log\big\{2\sqrt{\eta(1-\eta)}\big\},
+\end{equation}
+and the same bound with $K$ in place of $\nu_{\mathrm{tot}}$. The dependence on
+$\rho$ and on $\varepsilon$ is the same as in \eqref{eq:twoaxis}; the constants
+differ by a factor $2.4$ to $2.9$ over the range we checked ($\rho^2\ge0.4$,
+$\varepsilon\le0.05$, $\eta=0.05$), one side being exact and the other a normal
+approximation. At small design share the perturbation approaches the edge of the
+parameter space and the bound loosens, to a factor $14$ at $\rho^2=0.2$,
+$\varepsilon=0.05$.
+
+The two axes carry the \emph{same} constant, and not by coincidence. Writing
+$\tau$ for the ratio of the two $\kappa$ values, the $\nu$-axis perturbation
+multiplies $D$ by $(1-\tau^2\kappa^2)/(1-\kappa^2)$ while the $K$-axis
+perturbation multiplies $A+D$ by exactly its reciprocal, and the affinity
+$\{2\sqrt r/(1+r)\}^{n/2}$ is invariant under $r\mapsto 1/r$. That is why the two
+enter harmonically rather than in some other combination.
+
+\emph{Neither the technique nor, in this submodel, the problem is new.} With
+equal design variances the model is the balanced one-way random-effects model,
+$\kappa$ is a monotone function of the intraclass correlation, exact intervals
+for that coefficient are classical, and trading the number of groups against the
+number of observations per group to control interval length is an established
+design literature \citep{donner1986,zou2012icc,shoukri2024review}. The
+minimax theory for signal-to-noise ratios in high-dimensional regression
+\citep{verzelen2018snr} concerns a different observation structure: there is no
+separate channel carrying the error scale on a known number of degrees of
+freedom, which is what produces the second axis here. We state
+\eqref{eq:necessary} to establish that \eqref{eq:twoaxis} reflects the problem
+rather than our estimator, and we claim nothing further for it.
+
+\subsection{Estimating the design variances costs little; the estimator costs a lot}
+
+Treating $D_1,\dots,D_K$ as unknown nuisance parameters observed through
+$\nu_c\Dhat_c/D_c\sim\chi^2_{\nu_c}$, the effective information for $A$ is
+\begin{equation}\label{eq:ieff}
+I_{\mathrm{eff}}(A)=\tfrac12\sum_c\big\{(A+D_c)^2+D_c^2/\nu_c\big\}^{-1},
+\end{equation}
+so the standard error for $A$ inflates, relative to known design variances, by at
+most $\sqrt{1+\rho^4/\nu_{\min}}$: 3.2\% at $\nu=10$ and $\rho^2=0.8$, 7.7\% at
+$\nu=4$, 14.9\% at $\nu=2$. \textbf{At the degrees of freedom we examine, not
+knowing the design variances is a second-order cost.} The bound is attained
+exactly, in finite samples, by a moment estimator with weights
+$w_c\propto\{(A+D_c)^2+D_c^2/\nu_c\}^{-1}$.
+
+The first-order cost is the estimator. Under dispersed design variances the
+unweighted subtraction $\widehat A=K^{-1}\sum_c(Y_c^2-\Dhat_c)$ has relative
+efficiency 23\% against \eqref{eq:ieff}, where oracle weighting reaches 99\%. And
+substituting $\Dhat_c$ into a known-variance likelihood biases $\widehat A$
+\emph{upward} by approximately $4\rho^4/\{\nu(1-\rho^2)\}$ relative to $A$, a
+bias of order $1/\nu$ that does not average away as populations accumulate. The
+second-order mean-squared-error corrections of \citet{prasad1990} and
+\citet{datta2000} address the same estimated-variance effect for an in-sample
+predictor, where the target makes the correction additive rather than a
+multiplicative distortion of a band.
+
+These are properties of the estimation problem. What matters for the interval is
+the next section.

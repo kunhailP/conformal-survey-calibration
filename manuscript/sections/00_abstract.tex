@@ -1,0 +1,30 @@
+\begin{abstract}
+Repeated probability surveys estimate a summary for each of many populations, and
+those estimates are used to predict the corresponding summary for a population
+that was not surveyed. The prediction must separate between-population variation
+from sampling error, and the sampling error is itself estimated, from designs
+with limited degrees of freedom. We ask what that costs.
+
+The answer turns on a quantity this literature does not usually separate out:
+the \emph{scale elasticity} of the interval, $\partial\log R/\partial\log\theta$,
+where $R$ is the half-width and $\theta$ the latent scale nobody knows. What
+separates competing constructions is not how well they estimate $\theta$---they
+can be given the same estimate---but how hard the interval reacts to being wrong
+about it. A band that deconvolves has elasticity $\rho^2/2$, damped by the design
+share $\rho^2$; any band proportional to $\sqrt\theta$ has elasticity exactly
+$1/2$. We give an exact exchange identity between the two, three consequences
+that resolve otherwise puzzling reversals in which construction is narrower, and
+a closed-form prediction of the width ratio that we register in advance and test
+on a fresh grid, where it reproduces the dependence on the error budget to six
+decimal places and its constant requires a located $1+1.9/K$ correction.
+
+We then give a procedure that exploits the damping: an exact confidence set for a
+relative design-variance structure, an exact pivot for the correction ratio, and
+a conservative computational bound making the resulting interval an algorithm
+rather than an optimisation. Under a restricted normal model it has a stated
+guarantee. In finite-population complex-sample simulation we report both the
+regimes where it delivers and those where it loses its intermediate guarantee.
+On three pre-specified items from European Social Survey rounds 9--11 we report
+what each construction needs as input and how far the intervals differ, under
+stated approximations and with no coverage claim.
+\end{abstract}

@@ -1,0 +1,98 @@
+\section{Simulation: what holds, and where it stops}\label{sec:simulation}
+
+Three questions, and the third is the one that decides whether the procedure is
+worth using.
+
+\subsection{Against a comparator sharing the target, information and level}
+
+The direct comparator is a normal-theory prediction interval for the \emph{same}
+new population's latent value, built from the \emph{same} structure confidence
+set and the \emph{same} certified scale bound, spending the identical budget
+$\alpha_0+\eta_\gamma+\eta_t=0.10$: $A_U=\bar S/\chi^2_{K,\alpha_2}$, the exact
+chi-square limit rather than a Satterthwaite or \citet{graybill1980}
+approximation \citep{satterthwaite1946}, and
+$\pm z_{1-\alpha_1/2}\sqrt{A_U}$ with $\alpha_1+\alpha_2=\alpha_0$. The two arms
+differ in exactly one place.
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+$K$ & proposed cov. & comparator cov. & \textbf{proposed narrower by} & split\\
+\midrule
+60 & 0.957--0.978 & 0.982--0.996 & 22.2\% & scanned in its own favour\\
+60 & --- & --- & \textbf{25.9\%} & fixed in advance\\
+200 & 0.957--0.970 & 0.983--0.988 & 13.9\% & scanned in its own favour\\
+200 & --- & --- & \textbf{20.4\%} & fixed in advance\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All against a guaranteed 0.90. The pre-registered split is the primary
+comparison; the scanned one gives the comparator its best budget allocation and
+is the smaller number, so \textbf{we quote 13.9 to 22.2\% throughout}. Two
+readings follow. Both arms over-cover, but the proposal is \emph{both} narrower
+and closer to the nominal level, at 0.957--0.978 against 0.982--0.996: the width
+difference is not bought by spending coverage. And the comparator is one valid
+construction, not a class and not the best possible---the registered prediction
+before this experiment was that it would win, and it did not.
+
+\paragraph{The two arms change places, and where they do is computable.} On a
+\emph{tight} scale limit the normal-theory band is the narrower of the two, by
+2 to 22\% over the same eight cells; on the \emph{loose} pivot limit the
+ordering reverses. When we first met these two readings we treated the second as
+an error and retracted it. It was not an error. Consequence~2 of
+Section~\ref{sec:sensitivity} predicts a crossing at
+$\lambda^\star=r_0^{-1/(e_2-e_1)}$, and a limit tight enough puts the setting on
+one side of it and a loose limit on the other.
+
+\subsection{The regimes where it stops}
+
+Under finite-population stratified cluster sampling with a pre-specified
+sample-size structure variable, the picture divides not by design share but by
+what else changes with it.
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+& degrees of freedom 12--28 & degrees of freedom 4--8\\
+\midrule
+structure $R^2$ & 0.59--0.85 & 0.05--0.71\\
+zero variance estimates & none & up to 17\%\\
+\textbf{containment} & \textbf{0.955--0.992} & \textbf{0.681--0.987}\\
+latent coverage & 0.958--0.971 & 0.944--0.975\\
+band vs.\ structure-free & 0.883--0.937 & 0.836--0.928\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At matched $\bar D/A\in\{0.55,0.75\}$ the two columns differ in degrees of
+freedom, in the rate of exactly-zero variance estimates and in the fit of the
+structure model---\textbf{the same noise ratio is not the same inference
+problem}. In the first column the procedure holds its containment requirement and
+is 6.3 to 11.7\% narrower than a structure-free construction, capturing 0.56--0.74
+of the available narrowing against 0.23--0.30. In the second it loses containment
+at a tail quantile and its width figures are not usable.
+
+Supplying the \emph{true} structure raises containment there from 0.68 to 0.82
+and from 0.77 to 0.89 and does not reach 0.95. Two conclusions and only two:
+approximating the variance structure affects the outcome, and improving that step
+alone would not repair the procedure. We do not apportion the residue among
+normality, the $\chi^2$ law and independence; this design breaks all three at
+once and the experiment does not separate them.
+
+\paragraph{We report the verified scenario range, not a usage threshold.} Writing
+``degrees of freedom above 12 and structure $R^2$ above 0.6'' as an operating rule
+would be wrong three times: those numbers co-occurred in these scenarios rather
+than being derived as thresholds; the structure $R^2$ is computed from the
+\emph{true} design variances and is unavailable in real data; and nothing here
+proves normality or the $\chi^2$ law under any complex design.
+
+\subsection{Honest accounting of the gain}
+
+At the regional design share the \emph{valid} interval is 0.9 to 6.6\% narrower
+than not correcting at all, capturing 6 to 31\% of what the oracle achieves. The
+reason is the guarantee itself: the argument needs $A$ bounded above and each
+$D_c$ bounded below, and both drive the correction toward zero. Measuring where
+the width goes shows the simultaneity correction is only 6 to 22\% of that loss,
+so replacing it alone would not repair matters---which is why the construction
+bounds the ratio rather than the components.

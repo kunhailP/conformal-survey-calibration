@@ -1,0 +1,25 @@
+{
+  "experiment": "exp26_same_target",
+  "reps": 10000,
+  "cells": 16,
+  "alpha0": 0.05,
+  "eta_gamma": 0.025,
+  "eta_t": 0.025,
+  "guarantee": 0.8999999999999999,
+  "g1_cov": [
+    0.957,
+    0.9826
+  ],
+  "g2_gauss_over_conformal": [
+    1.1572928229221877,
+    1.2854000697935208
+  ],
+  "splits_chosen": [
+    0.04,
+    0.045
+  ],
+  "plugin_cov": [
+    0.9226,
+    0.9476
+  ]
+}

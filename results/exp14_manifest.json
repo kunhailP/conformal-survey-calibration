@@ -1,0 +1,19 @@
+{
+  "experiment": "exp14_chain",
+  "reps": 20000,
+  "boot_reps": 1000,
+  "B": 200,
+  "nu": 10.0,
+  "alpha0": 0.05,
+  "eta1": 0.025,
+  "eta2": 0.025,
+  "u1_chi2_AU_cov_min": 0.99975,
+  "u2_normal_unw_AU_cov_min": 0.9619,
+  "u3_normal_gvf_AU_cov_min": 0.8998,
+  "u4_chi2_contain_min": 1.0,
+  "u5_bias_slope_in_logK": -0.9662267991046312,
+  "u6_bias_heavy_vs_normal": [
+    0.03299183118199678,
+    0.018324738625201897
+  ]
+}

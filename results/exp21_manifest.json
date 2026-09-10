@@ -1,0 +1,32 @@
+{
+  "experiment": "exp21_estimated_structure",
+  "reps": 10000,
+  "cells": 16,
+  "alpha0": 0.05,
+  "eta": 0.05,
+  "eta_gamma": 0.025,
+  "eta_t": 0.025,
+  "grid": 31,
+  "grid_fine": 61,
+  "u1_Cgamma_set_cov": [
+    0.9716,
+    0.9777
+  ],
+  "u3_ratio_over_sepstruct": [
+    0.9583241740873529,
+    0.9869746171504684
+  ],
+  "u4_Cgamma_contain": [
+    0.983,
+    0.986
+  ],
+  "u5_plugin_contain": [
+    0.9436,
+    0.9492
+  ],
+  "u6_mis_Cgamma_contain": [
+    0.899,
+    0.9637
+  ],
+  "grid_sensitivity_max": 2.0416723636174083e-05
+}

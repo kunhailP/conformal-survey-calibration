@@ -1,0 +1,14 @@
+{
+  "experiment": "exp29_scale_law",
+  "reps": 10000,
+  "cells": 42,
+  "pA_max_abs_err_pct": 7.07190980524337,
+  "pB_within_K_spread": {
+    "40": 0.01998563333555603,
+    "120": 0.010989931226301874,
+    "400": 0.008893859003187954
+  },
+  "pC_monotone": true,
+  "pC_max_abs_err_pct": 1.2773810614218561,
+  "predictions_locked_in_protocol": true
+}

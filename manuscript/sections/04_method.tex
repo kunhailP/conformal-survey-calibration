@@ -1,0 +1,116 @@
+\section{A procedure that exploits the damping}\label{sec:method}
+
+Section~\ref{sec:sensitivity} says the interval should depend on the unknown
+scale as weakly as it can while still covering. This section builds one that
+does, and makes it an algorithm.
+
+\subsection{Model}
+
+\begin{assumption}[Model R]\label{as:R}
+Independently across $c=1,\dots,K$, with $\mu$ known,
+\[
+Y_c\sim N(0,\,A+d\,a_c),\qquad
+\frac{\nu_c\Dhat_c}{d\,a_c}\sim\chi^2_{\nu_c},\qquad Y\perp\Dhat,
+\]
+where $a_c>0$ is a \emph{relative} design-variance structure, $d>0$ an unknown
+common scale, and $A>0$ the between-population variance. Write $t=d/A$, so that
+$D_c/A=a_ct$: one unknown ratio parameter.
+\end{assumption}
+
+Assumption~\ref{as:R} is the heteroscedastic model in which reduction to one
+ratio parameter is \emph{true} rather than assumed. A general heteroscedastic
+model does not reduce this way, and substituting $\Dhat_c$ for $D_c$ to force it
+would reintroduce exactly the fault the construction exists to avoid.
+
+\subsection{An exact pivot for the correction ratio}
+
+\begin{proposition}\label{prop:pivot}
+Under Assumption~\ref{as:R}, with $\nu=\sum_c\nu_c$,
+$\widehat d=\nu^{-1}\sum_c\nu_c\Dhat_c/a_c$ and
+$S(t)=\sum_cY_c^2/(1+ta_c)$,
+\[
+T(t)=\frac{K\widehat d}{t\,S(t)}\ \sim\ F_{\nu,K}\quad\text{exactly},
+\]
+and $\partial_t\{tS(t)\}=\sum_cY_c^2/(1+ta_c)^2>0$, so $T$ is strictly decreasing
+and inverts to an exact one-sided lower bound $t_L$, the solution of
+$T(t_L)=f_{\eta_t}$ with $f_{\eta_t}$ the upper $\eta_t$ quantile of
+$F_{\nu,K}$, satisfying $\Pr\{t\ge t_L\}=1-\eta_t$.
+\end{proposition}
+
+The band is \eqref{eq:band} with the heteroscedastic standardisation, so its
+oracle half-width is $R(t)=\operatorname{ord}_m\{|Y_c|/\sqrt{1+a_ct}\}$ and
+Lemma~\ref{lem:rank} applies at the true $t$ with $\alpha_0=1-m/(K+1)$. Since
+$R(t)$ is
+decreasing in $t$, $R(t_L)$ bounds it above on that event. \textbf{One parameter,
+one budget, one bound}---against a construction that spends one budget on an
+upper limit for $A$ and another on $K$ simultaneous lower limits for the $D_c$,
+both of which drive the correction toward zero.
+
+\subsection{An estimated structure, paid for rather than substituted}
+
+With $a_c(\gamma)=x_c^{-\gamma}/\overline{x^{-\gamma}}$ for a design variable
+$x_c$ known before any estimate is seen, write
+$\epsilon_c=\log(\chi^2_{\nu_c}/\nu_c)$, whose law is known. The statistic
+\[
+W(\gamma)=\sum_c(\log x_c-\overline{\log x})\{\log\Dhat_c+\gamma\log x_c\}
+\]
+has, at the true $\gamma$, a null law depending on neither $d$ nor $\gamma$, and
+is linear increasing in $\gamma$. Hence
+\begin{equation}\label{eq:Cgamma}
+C_\gamma=\Big[\ghat-\tfrac{w}{S_{xx}},\ \ghat+\tfrac{w}{S_{xx}}\Big],
+\qquad \ghat=-S_{xD}/S_{xx},
+\end{equation}
+in closed form, with $\Pr\{\gamma_0\in C_\gamma\}\ge1-\eta_\gamma$. The interval
+is then
+\[
+R_U=\sup_{\gamma\in C_\gamma}R\big(t_L(\gamma),\gamma\big),
+\]
+and on $\{\gamma_0\in C_\gamma\}\cap\{t\ge t_L(\gamma_0)\}$ it dominates the
+oracle half-width, so
+\begin{equation}\label{eq:guarantee}
+\Pr\{\theta_{K+1}\notin B_U\}\ \le\ \alpha_0+\eta_\gamma+\eta_t .
+\end{equation}
+No independence between the two confidence events is required.
+
+\subsection{Making the supremum a computation}
+
+A grid maximum is not a supremum, and \textbf{we found by counterexample that the
+minimiser of $t_L(\gamma)$ can be interior}, 16.9\% below the smaller endpoint,
+so an endpoint evaluation is not available. A bound is.
+
+\begin{lemma}\label{lem:concave}
+$\partial_\gamma\log a_c(\gamma)=\bar\ell(\gamma)-\log x_c$ with
+$\bar\ell'(\gamma)=-\operatorname{Var}_w(\log x)\le0$, so $\log a_c$ is concave in
+$\gamma$ and
+$\inf_{\gamma\in[\gamma_L,\gamma_U]}a_c(\gamma)=\min\{a_c(\gamma_L),a_c(\gamma_U)\}$
+exactly.
+\end{lemma}
+
+\begin{proposition}[Certified bound]\label{prop:cert}
+Let $\alo_c$ be that endpoint minimum and
+$\bar\Phi(t)=\sum_ctY_c^2/(1+t\alo_c)\ \ge\ tS(t;\gamma)$ for every
+$\gamma\in C_\gamma$. Since $1/a_c(\gamma)=K^{-1}\sum_j(x_c/x_j)^\gamma$ is a
+positive sum of exponentials, $\widehat d(\gamma)$ is convex, and a bisection on
+its increasing derivative brackets the minimiser, giving a certified $\dlo$.
+Then
+\[
+\tlo=\bar\Phi^{-1}\big(K\dlo/f_{\eta_t}\big)\ \le\ \inf_{\gamma\in C_\gamma}t_L(\gamma),
+\]
+and $\operatorname{ord}_m\{|Y_c|/\sqrt{1+\tlo\alo_c}\}\ \ge\
+R(t_L(\gamma),\gamma)$ for every $\gamma$ in the set.
+\end{proposition}
+
+The bound needs two structure evaluations, one convex minimisation and one
+monotone inversion---cheaper than the grid it replaces. An optimiser's returned
+value is not a lower bound and is not used: the endpoint cases are exact and the
+interior case uses a supporting line at a certified bracket, with every returned
+quantity shrunk by a relative $10^{-9}$ for rounding. Verified: no violations in
+400 stress configurations, tightness median 0.941.
+
+\paragraph{Unknown centre.} With $Y\sim N(X\beta,AI+\operatorname{diag}(\mathbf
+D))$ and $\operatorname{rank}(X)=p$, refitting the weighted regression at each
+candidate gives $Q(A,\mathbf D)=\min_\beta\sum_c(Y_c-x_c'\beta)^2/(A+D_c)\sim
+\chi^2_{K-p}$, and the argument extends. \textbf{This bounds the variance
+component only}: it says nothing about the error from centring the band on an
+estimated mean, or about exchangeability of the scores under an estimated centre.
+Both matter in Section~\ref{sec:ess}.

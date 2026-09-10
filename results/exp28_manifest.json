@@ -1,0 +1,15 @@
+{
+  "experiment": "exp28_centring",
+  "configs": 45,
+  "ratio_dev_over_region": [
+    0.8012064635509059,
+    0.9598567951490236,
+    1.1851969484040856
+  ],
+  "corr_induced": [
+    -0.9999984795759406,
+    -0.051249432939317816,
+    0.09127323788929625
+  ],
+  "note": "degrees of freedom kept at the region level, the conservative choice"
+}

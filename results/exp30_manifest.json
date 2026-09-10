@@ -1,0 +1,13 @@
+{
+  "affinity_max_error": 2.436606472144831e-12,
+  "axes_max_abs_difference": 8.8894012151286e-09,
+  "duality_max_error": 8.08242361927114e-14,
+  "P2_no_violation": true,
+  "ratio_suf_nec_range": [
+    2.3719308802626133,
+    14.517093701668434
+  ],
+  "ratio_at_smallest_eps": 2.4406539556955718,
+  "limiting_constant": 0.8097746128818077,
+  "L_eta_005": 0.8303656034108255
+}

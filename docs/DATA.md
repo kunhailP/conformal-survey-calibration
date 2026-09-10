@@ -14,6 +14,41 @@ Redistribution is prohibited; access is not restricted. Obtain from the
 providers, then follow the predecessor repository's instructions at
 `github.com/kunhailP/design-aware-conformal` (snapshot `ea592e9`).
 
+### ESS retrieval, scripted (added 2026-09-10)
+
+The ESS data portal at `https://ess.sikt.no` exposes a beta REST API with a
+single endpoint, which makes the ESS half of this reproducible without manual
+downloads:
+
+```
+GET https://api.ess.sikt.no/v1/data/dataFile/{doiPrefix}/{doiSuffix}
+      ?userId=<your ESS user id>&fileFormat=csv
+```
+
+`userId` is **not** authentication — the API's own documentation says it is for
+usage statistics — so an ESS End User Licence registration is still required and
+each user supplies their own id, obtained from `https://ess.sikt.no/en/api`
+after logging in. **No user id is stored in this repository.** The endpoint
+returns a 307 redirect to a generated file URL; follow redirects.
+
+Data-file DOIs used, all under prefix `10.21338`:
+
+| round | suffix | respondents |
+|---|---|---|
+| 9 | `ess9e03_2` | 49,519 |
+| 10 | `ess10e03_2` | 37,611 |
+| 11 | `ess11e02_0` | 40,156 |
+
+These integrated files carry `region`, `stratum`, `psu`, `prob`, `domain` and
+the weights `anweight`, `pspwght`, `dweight`, `pweight` with **no missingness**
+in rounds 9--11, so the design-file condition `exp02` checked is met by the API
+files as well. Combined: 127,286 respondents, 75 country-rounds, 31 countries,
+825 region-rounds, median 10 regions per country-round (range 1--28).
+
+`experiments/fetch_ess.py` performs the download and writes a column subset to a
+local cache **outside this repository**. The cache is not committed and the raw
+files are not redistributed.
+
 ## Re-execution status
 
 `exp01` runs from source in this repository. The survey diagnostics quoted in

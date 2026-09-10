@@ -1,0 +1,33 @@
+{
+  "experiment": "exp11_heteroscedastic",
+  "reps": 20000,
+  "cells": 45,
+  "alpha0": 0.05,
+  "eta": 0.05,
+  "eps": 0.1,
+  "nu_per_population": 10.0,
+  "K_grid": [
+    30,
+    100,
+    300
+  ],
+  "Dbar_grid": [
+    0.25,
+    1.0,
+    4.0
+  ],
+  "slog_grid": [
+    0.0,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "max_fail_upper_feasible": 0.0481,
+  "max_fail_upper_oracle": 0.0514,
+  "homoscedastic_control_fail": 0.0475,
+  "min_cov_safe": 0.9504,
+  "safe_over_enlarge_range": [
+    0.29461023534658715,
+    0.8248733532545364
+  ]
+}

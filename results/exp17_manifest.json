@@ -1,0 +1,32 @@
+{
+  "experiment": "exp17_complex_sample",
+  "reps": 2000,
+  "B": 1000,
+  "cells": 8,
+  "design": {
+    "H": 4,
+    "M": 20,
+    "m": 5,
+    "n": 10,
+    "nu_nominal": 16
+  },
+  "eta1": 0.025,
+  "eta2": 0.025,
+  "alpha0": 0.05,
+  "x1_chi2_ratio_mean": [
+    15.98127696617231,
+    Infinity
+  ],
+  "x2_corr_Dhat_Y": [
+    -0.005584000414929357,
+    0.8349799641395279
+  ],
+  "x3_oracle_cov": [
+    0.942,
+    0.959
+  ],
+  "x4_piv_cov": [
+    0.947,
+    0.9645
+  ]
+}

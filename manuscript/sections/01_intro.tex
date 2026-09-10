@@ -1,0 +1,62 @@
+\section{Introduction}
+
+A survey programme covering many countries, regions or domains produces one
+estimate of some summary per population per round. A second analysis then uses
+those estimates to say something about a population the survey did not cover:
+a region added to a sampling frame, a country joining a programme, a domain too
+small to have been sampled. Call the target $\theta_{K+1}$, the latent summary of
+that population, and the observed inputs $Y_1,\dots,Y_K$, the survey estimates
+for the populations that were covered.
+
+The obstacle is that each $Y_c$ carries sampling error. The spread of the $Y_c$
+is larger than the spread of the $\theta_c$, so an interval calibrated on the
+observed spread is too wide for the latent target. Removing the difference means
+subtracting a design variance from a between-population variance, and the design
+variances are themselves estimated---from stratified cluster designs with, in the
+European Social Survey regions we analyse, a median of 22 to 29 degrees of
+freedom per population.
+
+Two literatures meet here and neither answers the question. Small-area
+estimation treats the sampling variances as known and targets areas that were
+sampled \citep{fay1979estimates,rao2015small}; where it treats them as estimated
+it corrects the mean squared error of an \emph{in-sample} predictor
+\citep{wang2003mse,rivest2003mse,you2006hierarchical,maiti2014,sugasawa2017}.
+Recent conformal work reaches valid confidence intervals for in-sample areas
+without estimating the sampling variances at all: \citet{zhang2026conformal}
+target ``the unknown expectations of the in-sample outcomes \dots{} conditional
+on the realised sample'', and their split conformal construction is, in their
+words, ``easier to implement than the direct or EBLUP interval, because there is
+no need at all to estimate the sampling variances'' (their \S3.4). That is an
+argument for their target, not against ours: an interval for a population the
+survey never covered cannot avoid separating the two scales. Conformal
+prediction of a future \emph{unit} within an area \citep{bersson2024optimal} is
+a third target again. Prediction for an out-of-sample area is standard
+through synthetic estimation, and the linear mixed-model literature does supply
+prediction intervals for targets containing a new random effect
+\citep{chatterjee2008}---but with the sampling variances treated as known.
+
+\paragraph{What this paper adds.} Not another way to smooth design variances, and
+not a claim that conformal prediction is robust here; our exact inference rests
+on a normal--$\chi^2$ model and we say so. The contribution is in two parts.
+
+\emph{A result about the problem.} Section~\ref{sec:sensitivity} isolates the
+scale elasticity and shows that it, rather than the quality of the scale
+estimate, decides which construction is narrowest. The consequences are checkable
+and we check them: the number of populations required is smaller by $\rho^{-4}$
+than a criterion on the variance component implies; two constructions cross, at a
+computable point; and for one matched pair the scale bound cancels entirely,
+giving a width ratio that depends only on $K$ and the error budget. That last
+prediction was registered before the experiment that tests it, and one of its
+three registered claims was refuted---the constant, by an amount we locate.
+
+\emph{A procedure that exploits it.} Section~\ref{sec:method} constructs an
+interval whose sensitivity to the unknown scale is the damped one, carries the
+uncertainty of an estimated variance structure rather than substituting a fitted
+value, and is computable by a conservative bound rather than a search.
+
+\paragraph{What we do not claim.} The guarantee is proved in a restricted normal
+model. Under a complex design its conditions fail, measurably, and we report
+where the procedure nonetheless behaves and where it does not. On real survey
+data we report widths, inputs and diagnostics, and no coverage: the latent target
+is unobserved and a held-out population's direct estimate is not a substitute for
+it.

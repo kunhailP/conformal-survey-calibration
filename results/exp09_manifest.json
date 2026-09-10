@@ -1,0 +1,33 @@
+{
+  "experiment": "exp09_estimated_variance",
+  "reps": 2000,
+  "m_grid": [
+    30,
+    100,
+    250,
+    500,
+    1000
+  ],
+  "rho_grid": [
+    0.3,
+    0.5,
+    0.66,
+    0.9
+  ],
+  "nu_grid": [
+    5.0,
+    10.0,
+    25.0,
+    100.0,
+    "inf"
+  ],
+  "cells": 100,
+  "p1_score_var_max_dev": 8.881784197001252e-16,
+  "p2_oracle_var_ratio_range": [
+    0.9229245822715666,
+    1.0686818718735245
+  ],
+  "p6_equal_bias_max_z": 3.250644952094216,
+  "p3_plug_bias_positive_share": 0.9375,
+  "p5_gate_plug_minus_true_max": 1.0
+}

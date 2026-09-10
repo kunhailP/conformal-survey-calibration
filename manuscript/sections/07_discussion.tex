@@ -1,0 +1,101 @@
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Why a reader would use this, and on what evidence}
+
+The question a reader brings is why to use this rather than what they already
+have. The answer is in three parts and each has a different kind of support
+behind it.
+
+\emph{Because the quantity you must pin down is not the one you think.} The
+interval depends on the two scales only through their ratio, and a requirement
+stated on the variance component overstates what the band needs by $\rho^{-4}$ in
+the number of populations. This is algebra, verified numerically, and it applies
+whatever construction is used. It is also, by \eqref{eq:necessary}, a property of
+the problem: the same $\rho^4/\{\varepsilon^2(1-\rho^2)^2\}$ appears in a
+two-point lower bound on \emph{any} procedure that certifies the ratio, within a
+factor of about $2.5$ of what our estimator achieves.
+
+\emph{Because how an interval reacts to scale uncertainty is a property of its
+form, and forms differ.} Proposition~\ref{prop:exchange} is exact, and it says
+the deconvolution form pays $\lambda^{\rho^2/2}$ where every construction
+proportional to a square-root scale bound pays $\lambda^{1/2}$. That covers a
+class---normal-theory intervals, EBLUP prediction intervals for a target with a
+new random effect, parametric bootstrap intervals built on them---rather than one
+comparator. \textbf{It does not rank them absolutely}: the oracle width ratio
+differs between constructions and the elasticity does not supply it. What it
+supplies is the part that reverses, and the reversals are what a practitioner
+would otherwise experience as unpredictability.
+
+\emph{Because the resulting procedure is computable and its cost is measured.}
+Under Assumption~\ref{as:R} it has the guarantee~\eqref{eq:guarantee}, the
+supremum is bounded rather than searched, and against a comparator sharing the
+target, information and level it is 14 to 22\% narrower in simulation and
+narrower in 44 of 45 real survey configurations.
+
+\subsection{What is not established}
+
+\paragraph{The gap between the theorem and the application is the paper's main
+weakness, and naming it does not close it.} Assumption~\ref{as:R} is a normal
+model with a known centre and independent populations. In the European Social
+Survey the centre is estimated, the scores carry a measured dependence of about
+$-1/(n_r-1)$, the standardised deviations are badly non-normal for two of three
+pre-specified items, and the $\chi^2$ law for a design-variance estimator is not
+established for complex designs \citep{mcgovern2026}. We report the ESS analysis
+as an application under those approximations with the guarantee not attached, and
+a reader who needs a guarantee on survey data does not get one here.
+
+\paragraph{Given the same structure information, a component-wise construction is
+close.} Against a component-wise bound that estimates the same structure and
+spends the same budget, the ratio construction is 0.7 to 2.3\% narrower. Most of
+the gain over a structure-free baseline is the use of a variance structure, not
+the ratio formulation. We prefer the ratio form because it has one fewer budget
+piece, a shorter chain of sufficient conditions, and---among the constructions we
+implemented---a conservative computational bound over a continuous structure
+confidence set. That no such bound has been built for the component-wise form is
+not evidence that none exists.
+
+\paragraph{We do not benchmark against the conformal construction that avoids
+the problem.} \citet{zhang2026conformal} obtain conditional validity for
+in-sample area expectations without estimating the sampling variances, and their
+reported half-widths grow with the design share where a direct interval's do not.
+We have not run their construction against ours, because the two cover different
+objects and a width comparison across targets is not informative. A reader whose
+target is in-sample should read that comparison as unmade, not as decided here.
+
+\paragraph{The lower bound is about certifying the ratio, not about width.}
+Equation~\eqref{eq:necessary} says no procedure can pin $\kappa$ down with fewer
+degrees of freedom. It does \emph{not} say no interval can be narrower: an
+interval may be valid without certifying $\kappa$, by being conservative in some
+other way, and we have not proved a width lower bound. Nothing here establishes
+that the proposed interval is optimal. In the equal-variance submodel the
+inferential problem is the classical one for an intraclass correlation, where
+both the exact interval and the design trade-off are known; what the bound adds
+is the assurance that \eqref{eq:twoaxis} is not an artefact of the estimator we
+happened to write down.
+
+\paragraph{The gain is conditional on the structure family.} A confidence set for
+a structure parameter is not protection against the family being wrong. Where the
+family fails, containment fails while the final coverage does not, and the latter
+is downstream slack rather than a guarantee.
+
+\paragraph{And what the registered test refuted.} Equation~\eqref{eq:S4}'s
+invariance in the design share is asymptotic, not exact, and its constant needed
+a $1+1.9/K$ correction whose value we fit rather than derive. The order-statistic
+expansion would supply it; we have not done that.
+
+\subsection{Scope}
+
+The target here is a scalar population summary. We do not place a
+whole-distribution simultaneous band and the scalar result under one guarantee:
+extending Proposition~\ref{prop:cert} to coordinate-varying scales requires a
+simultaneous bound on a vector of correction factors, with a multiplicity cost we
+have not paid.
+
+\subsection{What would settle the open questions}
+
+The dependence induced by an estimated centre is the first. It is measured, its
+form is classical, and a construction restoring exchangeability under it would
+convert the ESS analysis from an approximation into an application of the
+theorem. The second is the structure family: the diagnostic reported in
+Section~\ref{sec:ess} is exploratory and its association with the payoff needs a
+survey system not used to find it.

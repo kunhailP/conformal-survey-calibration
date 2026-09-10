@@ -1,0 +1,46 @@
+{
+  "experiment": "exp10_certification",
+  "reps": 20000,
+  "cells": 54,
+  "eps": 0.1,
+  "eta": 0.05,
+  "tau_frozen": 0.147,
+  "alpha0": 0.05,
+  "K_grid": [
+    30,
+    100,
+    300
+  ],
+  "D_over_A_grid": [
+    0.25,
+    1.0,
+    4.0
+  ],
+  "nu_grid": [
+    4.0,
+    12.0,
+    40.0
+  ],
+  "max_false_rate": {
+    "fixed_K": 0.94775,
+    "plug_frozen": 0.46655,
+    "plug_matched": 0.46655,
+    "ci_union": 0.0027,
+    "ci_gw": 0.0174,
+    "ci_kappa": 0.04905
+  },
+  "mean_cert_rate": {
+    "fixed_K": 0.6666666666666666,
+    "plug_frozen": 0.1470962962962963,
+    "plug_matched": 0.3350185185185185,
+    "ci_union": 0.0013796296296296295,
+    "ci_gw": 0.02596574074074074,
+    "ci_kappa": 0.26055462962962966
+  },
+  "ci_kappa_coverage_range": [
+    0.94715,
+    0.953
+  ],
+  "safe_band_coverage_min": 0.9514,
+  "plug_band_coverage_min": 0.66225
+}
