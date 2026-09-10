@@ -17,10 +17,23 @@
 \newcommand{\dlo}{\underline d}
 \title{Predicting a latent population summary from survey estimates:\\
 what the interval is sensitive to, and what that costs}
-\author{}
-\date{}
+\author{%
+  \textsc{Author One}\thanks{Corresponding author. Affiliation, address,
+  e-mail. \emph{Replace before submission.}}
+  \ \and\ \textsc{Author Two}\thanks{Affiliation. \emph{Replace before
+  submission.}}}
+\date{\today}
 \begin{document}
 \maketitle
+
+\begin{center}
+\begin{minipage}{0.86\textwidth}
+\small
+\textbf{Keywords:} small area estimation; Fay--Herriot model; design variance;
+conformal prediction; variance components; intraclass correlation; European
+Social Survey.
+\end{minipage}
+\end{center}
 \input{sections/00_abstract}
 \input{sections/01_intro}
 \input{sections/02_target}
@@ -29,6 +42,21 @@ what the interval is sensitive to, and what that costs}
 \input{sections/05_simulation}
 \input{sections/06_ess}
 \input{sections/07_discussion}
+\section*{Data availability}
+
+No microdata are redistributed with this work. The European Social Survey
+integrated files for rounds 9--11 are obtained from the ESS data portal under its
+End User Licence; \texttt{experiments/fetch\_ess.py} retrieves them through the
+portal's API, so the analysis reproduces from source for any licence holder. No
+user identifier is stored in the replication repository and the local cache is
+written outside it. All simulation results reproduce from the repository alone.
+
+\section*{Replication}
+
+Every number in this paper traces to a row of \texttt{docs/CLAIMS.md} in the
+replication repository, which also records the protocol written before each
+experiment was run and the claims that were subsequently retracted.
+
 \bibliographystyle{apalike}
 \bibliography{refs}
 \end{document}

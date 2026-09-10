@@ -39,6 +39,26 @@ is not a property of conformal prediction: it follows from dividing by
 $\sqrt{A+L}$ and multiplying by $\sqrt A$, and any construction of that form
 inherits it.
 
+Figure~\ref{fig:elasticity} shows both halves of the claim: the relative cost of
+a loose bound on the left, and on the right the elasticity measured in eight
+simulation cells against the predicted $\rho^2/2$. The measurement sits below
+the prediction in every cell, averaging $0.86$ of it---the damping is real and is
+slightly stronger than the first-order calculation says, which is the safe
+direction for a claim of the form ``this construction reacts less''.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_elasticity}
+\caption{\textbf{Left:} the exchange identity of
+Proposition~\ref{prop:exchange}. Evaluated at a bound loose by $\lambda$, the
+deconvolution band's half-width moves by $\lambda^{\rho^2/2}$ where a band
+proportional to $\sqrt{A}$ moves by $\lambda^{1/2}$; the curves are their exact
+ratio, with no fitted constant. \textbf{Right:} elasticity measured in eight
+cells ($K\in\{60,200\}$, $\bar D/A\in\{1,4\}$, $\nu=10$) against the predicted
+$\rho^2/2$. The line is equality.}
+\label{fig:elasticity}
+\end{figure}
+
 \begin{proposition}[Exchange identity]\label{prop:exchange}
 For the deconvolution band $R_c$ and any band $R_g\propto\sqrt A$, evaluated at a
 common upper bound $A_U\ge A$,
@@ -68,12 +88,15 @@ is a property of the problem and not of the estimator used to realise it.
 $e_1<e_2$ and oracle width ratio $r_0$ realise $r_0\lambda^{e_1-e_2}$ at a bound
 loose by $\lambda=A_U/A$, and cross at $\lambda^\star=r_0^{-1/(e_2-e_1)}$: below
 it the higher-elasticity form is narrower, above it the lower one is. A single
-pair of constructions therefore changes places between survey settings. We
-observe exactly this: against a loose scale limit the deconvolution band is
-narrower, and against a tight one the normal-theory band is, in the same eight
-cells and with the same data (Section~\ref{sec:simulation}). Before the
-elasticity was isolated these two readings looked like a contradiction and one of
-them was retracted as an error; they are the two sides of $\lambda^\star$.
+pair of constructions therefore changes places between survey settings. Two of
+our own experiments straddle that point---one finds the normal-theory band
+narrower by 2 to 22\%, the other finds it wider by 7 to 14\%---and the
+elasticity reconciles them, since the first uses a tight scale limit and the
+second a loose one. \textbf{We do not present this as a measured crossing.} The
+two runs differ in more than the tightness of the limit and the later supersedes
+the earlier, so what the calculus supplies here is an explanation for a
+disagreement we had previously recorded as an error, not an experiment designed
+to locate $\lambda^\star$.
 
 \paragraph{Consequence 3: sometimes the bound cancels.} If the comparator's bound
 is built from the deconvolution band's own statistic---$A_U=\bar

@@ -884,3 +884,25 @@ separation as `delta = 4 eps` rather than solving `((1+eps)/(1-eps))^2 - 1`. Tha
 places the two points too close together and **inflates the lower bound** — by
 11% at `eps = 0.05`. The error was in the unsafe direction. All numbers above use
 the exact solve.
+
+
+## Figure check — measured elasticity against the prediction (2026-09-10)
+
+Produced by `manuscript/figures.py` from `results/exp16_band_comparison.csv`; no
+new computation.
+
+| claim | cells | value | note |
+|---|---|---|---|
+| Measured elasticity below the predicted `rho^2/2` | 8 | ratio **0.84--0.91**, mean **0.86** | never above 1 |
+| Predicted values | `Dbar/A = 1 / 4` | `rho^2/2 = 0.25 / 0.40` | measured `0.20--0.22 / 0.34--0.36` |
+
+The damping is real and slightly stronger than the first-order calculation gives.
+That is the safe direction for a claim of the form "this construction reacts
+less", but the gap is unexplained and is not a fitted correction.
+
+**Not plotted, deliberately.** `exp15` and `exp16` disagree on which construction
+is narrower, and the elasticity explains the disagreement as a crossing. Because
+`exp16` supersedes `exp15`'s normal comparison, the two differ in more than the
+tightness of the scale limit, so the manuscript reports this as a reconciliation
+of a recorded disagreement and **not** as a measured crossing. An experiment
+varying only the looseness of the limit has not been run.
