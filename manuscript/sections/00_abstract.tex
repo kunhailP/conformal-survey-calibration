@@ -1,30 +1,28 @@
 \begin{abstract}
-Repeated probability surveys estimate a summary for each of many populations, and
-those estimates are used to predict the corresponding summary for a population
-that was not surveyed. The prediction must separate between-population variation
-from sampling error, and the sampling error is itself estimated, from designs
-with limited degrees of freedom. We ask what that costs.
+\noindent
+A survey covering many regions produces one estimate for each. Those
+estimates are then used to describe a place the survey did not cover: a region
+newly added to a frame, or one too small to sample. That means separating real
+variation between places from sampling error, and the sampling error is itself
+estimated, from designs supplying few degrees of freedom. We ask what that
+costs.
 
-The answer turns on a quantity this literature does not usually separate out:
-the \emph{scale elasticity} of the interval, $\partial\log R/\partial\log\theta$,
-where $R$ is the half-width and $\theta$ the latent scale nobody knows. What
-separates competing constructions is not how well they estimate $\theta$---they
-can be given the same estimate---but how hard the interval reacts to being wrong
-about it. A band that deconvolves has elasticity $\rho^2/2$, damped by the design
-share $\rho^2$; any band proportional to $\sqrt\theta$ has elasticity exactly
-$1/2$. We give an exact exchange identity between the two, three consequences
-that resolve otherwise puzzling reversals in which construction is narrower, and
-a closed-form prediction of the width ratio that we register in advance and test
-on a fresh grid, where it reproduces the dependence on the error budget to six
-decimal places and its constant requires a located $1+1.9/K$ correction.
+The answer is not about estimation accuracy. Competing methods can be given
+exactly the same information about the unknown spread of the true values and
+still report very different widths, because they differ in how strongly the
+reported width reacts to being wrong about that spread. We define that reaction,
+show it is weaker for a method that subtracts the sampling error than for methods
+whose width is proportional to the square root of a variance bound, and prove an
+exact identity relating the two. Three things follow. The number of places a
+practitioner needs is far smaller than a requirement stated on the variance alone
+implies, and this is a property of the problem, not of the estimator. Two methods can change places, one narrower in one survey
+and wider in another, at a computable point. And in one matched case the width
+ratio depends on nothing but the number of places and the error budget; we
+recorded that prediction before testing it, and one of its three parts failed.
 
-We then give a procedure that exploits the damping: an exact confidence set for a
-relative design-variance structure, an exact pivot for the correction ratio, and
-a conservative computational bound making the resulting interval an algorithm
-rather than an optimisation. Under a restricted normal model it has a stated
-guarantee. In finite-population complex-sample simulation we report both the
-regimes where it delivers and those where it loses its intermediate guarantee.
-On three pre-specified items from European Social Survey rounds 9--11 we report
-what each construction needs as input and how far the intervals differ, under
-stated approximations and with no coverage claim.
+We then give an interval exploiting the weaker reaction, with a guarantee stated
+under a normal model and a bound computed rather than searched for, and report
+where it stops working. On three European Social Survey questions
+across three rounds it is narrower than a comparable method in 44 of 45 configurations,
+under stated approximations and with no claim about coverage.
 \end{abstract}

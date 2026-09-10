@@ -22,6 +22,49 @@ than two design degrees of freedom (18 of 825) are excluded and counted; regions
 with a zero variance estimate (13, 39, 55 by item) receive no shrinkage, which is
 conservative.
 
+\subsection{Survey documentation}
+
+\emph{Population and selection.} The European Social Survey samples residents
+aged 15 and over in private households, regardless of nationality or citizenship,
+by strict probability methods in each participating country; designs are
+country-specific and include stratified and multi-stage cluster selection. We use
+the integrated data files for rounds 9, 10 and 11 with their design variables
+(\texttt{stratum}, \texttt{psu}, \texttt{region}, inclusion probability
+\texttt{prob}) and the design weight \texttt{dweight}. The analysis unit here is
+the region within a country-round, defined by the file's \texttt{region}
+variable.
+
+\emph{Fieldwork dates and response rates.} These are country-specific, published
+by round, and \textbf{must be tabulated in an appendix before submission};
+they are not reproduced here.
+
+\emph{Exact question wording.} Three items, fixed in advance. Quoted from the ESS
+source questionnaire; the authors should confirm the wording against the round
+9--11 source questionnaires, since only the round~1 instrument was consulted.
+
+\begin{quote}\small
+\textbf{\texttt{trstprl}} (B7). ``Using this card, please tell me on a score of
+0--10 how much you personally trust each of the institutions I read out. 0 means
+you do not trust an institution at all, and 10 means you have complete trust.
+Firstly \dots{} [country]'s parliament?''
+
+\textbf{\texttt{stflife}} (B29). ``All things considered, how satisfied are you
+with your life as a whole nowadays? Please answer using this card, where 0 means
+extremely dissatisfied and 10 means extremely satisfied.''
+
+\textbf{\texttt{happy}} (C1). ``Taking all things together, how happy would you
+say you are? Please use this card,'' with endpoints labelled extremely unhappy
+and extremely happy.
+\end{quote}
+
+\emph{Estimator and variance estimator.} For region $r$ of country-round $c$ the
+direct estimate is the design-weighted proportion
+$\Fhat_{cr}=\sum_{i\in r}w_iz_i/\sum_{i\in r}w_i$ with
+$z_i=\mathbf 1\{$response $\le t_0\}$, and its design variance is estimated by
+ultimate-cluster Taylor linearisation over primary sampling units within strata,
+in the form given in Section~\ref{sec:ess} below. Degrees of freedom are counted
+as clusters minus strata within the country-round.
+
 \subsection{The score and its variance must match}
 
 The score is $Y_{cr}=\Fhat_{cr}-\Fhat_c$, a deviation from an \emph{estimated}
@@ -60,6 +103,12 @@ Bars are medians. All three comparisons use the variance of the centred score
 (Section~\ref{sec:ess}); with the uncorrected variance the middle comparison
 moves to a median of $0.992$. \textbf{No coverage is claimed}: the latent target
 is unobserved.}
+
+\noindent\emph{Alt text:} Three horizontal strips of points, one per
+comparison, showing width ratios for 45 configurations. Almost all points lie to
+the left of a vertical line at one, meaning the proposed interval is narrower;
+median bars are at 0.82, 0.83 and 0.73.
+
 \label{fig:ess}
 \end{figure}
 
