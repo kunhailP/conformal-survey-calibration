@@ -7,7 +7,10 @@ interval reacts to being wrong about it.}
 
 \begin{definition}
 For a half-width $R$ depending on a scale $\theta$, the \emph{scale elasticity}
-is $e(\theta)=\partial\log R/\partial\log\theta$.
+is
+\[
+e(\theta)=\frac{\partial\log R}{\partial\log\theta}.
+\]
 \end{definition}
 
 \paragraph{What is held fixed.} The derivative is taken in the scale at which
@@ -23,6 +26,8 @@ quality of the estimate, that decides which is narrower.
 With latent scale $A$ and design variance $L$, so $\rho^2=L/(A+L)$:
 
 \begin{center}
+\begin{singlespace}
+\small
 \begin{tabular}{lll}
 \toprule
 construction & half-width & elasticity in $A$\\
@@ -32,6 +37,7 @@ any band $\propto\sqrt A$ & $z\sqrt A$ & $1/2$\\
 uncorrected anchor & $q$ & $0$\\
 \bottomrule
 \end{tabular}
+\end{singlespace}
 \end{center}
 
 The deconvolution band's elasticity is \textbf{damped by the design share}. This
@@ -125,15 +131,18 @@ $\rho^2\in\{0.20,0.45,0.70\}$, $\nu\in\{6,20\}$, correct and misspecified
 structure; none of these values used in the experiment that suggested the law).
 
 \begin{center}
+\begin{singlespace}
+\small
 \begin{tabular}{lccc}
 \toprule
 registered prediction & result & tolerance & verdict\\
 \midrule
-dependence on the error-budget split & error \textbf{identical to $10^{-6}$} across six splits & monotone, 5\% & \textbf{passes}\\
+budget-split dependence & \textbf{identical to $10^{-6}$}, six splits & monotone, 5\% & \textbf{passes}\\
 level of the ratio & worst cell \textbf{7.07\%} & 5\% & \textbf{fails}\\
-invariance in $\rho^2$ and $\nu$ & within-$K$ spread 0.0200/0.0110/0.0089 & 0.02 & marginal\\
+invariance in $\rho^2,\nu$ & within-$K$ spread $0.0200/0.0110/0.0089$ & 0.02 & marginal\\
 \bottomrule
 \end{tabular}
+\end{singlespace}
 \end{center}
 
 The first row is the sharpest test and it passes exactly: across six splits

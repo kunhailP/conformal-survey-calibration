@@ -38,9 +38,12 @@ $F_{\nu,K}$, satisfying $\Pr\{t\ge t_L\}=1-\eta_t$.
 \end{proposition}
 
 The band is \eqref{eq:band} with the heteroscedastic standardisation, so its
-oracle half-width is $R(t)=\operatorname{ord}_m\{|Y_c|/\sqrt{1+a_ct}\}$ and
-Lemma~\ref{lem:rank} applies at the true $t$ with $\alpha_0=1-m/(K+1)$. Since
-$R(t)$ is
+oracle half-width is
+\[
+R(t)=\operatorname{ord}_m\big\{|Y_c|/\sqrt{1+a_ct}\big\},
+\]
+and Lemma~\ref{lem:rank} applies at the true $t$ with $\alpha_0=1-m/(K+1)$.
+Since $R(t)$ is
 decreasing in $t$, $R(t_L)$ bounds it above on that event. \textbf{One parameter,
 one budget, one bound}---against a construction that spends one budget on an
 upper limit for $A$ and another on $K$ simultaneous lower limits for the $D_c$,
@@ -101,7 +104,7 @@ R(t_L(\gamma),\gamma)$ for every $\gamma$ in the set.
 \end{proposition}
 
 The bound needs two structure evaluations, one convex minimisation and one
-monotone inversion---cheaper than the grid it replaces. An optimiser's returned
+monotone inversion, which is cheaper than the grid it replaces. An optimiser's returned
 value is not a lower bound and is not used: the endpoint cases are exact and the
 interior case uses a supporting line at a certified bracket, with every returned
 quantity shrunk by a relative $10^{-9}$ for rounding. Verified: no violations in

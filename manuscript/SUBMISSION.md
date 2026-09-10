@@ -28,6 +28,8 @@ human must supply*, and nothing on that list is optional.
 | Data availability statement | yes |
 | Exact question wording for the survey items | yes, §6, quoted from the ESS source questionnaire |
 | Preregistration statement | on the title page; protocols are in `docs/` |
+| PRICSSA checklist | drafted, `PRICSSA.md`; four items need the authors |
+| Compiles | yes: `main.pdf` 27 pages, `titlepage.pdf` 1 page, no undefined references, no citation warnings, no overfull box above 10pt |
 
 ## What a human must supply
 
@@ -41,18 +43,18 @@ human must supply*, and nothing on that list is optional.
    requirement is explicit about this and the data files do not carry it; ESS
    publishes it per round. §6 currently says it must be tabulated in an appendix
    and does not report it. **This is a blocking item.**
-4. **PRICSSA checklist.** Required for studies using complex sample designs, which
-   this is. Not drafted here.
+4. **PRICSSA checklist.** Drafted in `PRICSSA.md` against the published item
+   list. Four items are marked **AUTHOR** because they cannot come from the data
+   files: collection dates, modes, response rates, and whether any embedded
+   experiment touches the three items used.
 5. **AAPOR Code of Professional Ethics compliance**, mandatory for survey-based
    submissions.
 6. **Confirmation of the question wording against the round 9--11 source
    questionnaires.** The wording in §6 is verbatim from the round 1 instrument;
    the items are core and stable, but the round used should be the round cited.
 7. **A cover letter.**
-8. **A compile.** No TeX installation was available here, so the manuscript has
-   been checked structurally — balanced environments, every `\ref` resolving,
-   every citation having a `\bibitem` — but never compiled. Build it before
-   trusting any of the formatting claims above.
+8. **Item-level missingness rate.** PRICSSA 2.1. The selection rule is stated in
+   `PRICSSA.md`; the resulting rate is not computed anywhere and should be.
 
 ## What a referee will attack, and where the paper answers
 
